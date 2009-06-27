@@ -5,9 +5,11 @@ Requires at least: 2.0.2
 Tested up to: 0.0
 Stable tag: 0.0
 
-Convert your WordPress blog into a Flash application - Still in a conception phase
+Convert your WordPress blog into a Flash application
 
 == Description ==
+
+*Still in a conception phase - Nothing to download yet*
 
 Substitute your worpress theme by a Flash template
 
