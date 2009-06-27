@@ -52,3 +52,9 @@ Requirements
 == Help wanted ==
 
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
+
+== To Do ==
+
+* embed flash
+
+* test if_exist for all hooks

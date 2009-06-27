@@ -43,7 +43,7 @@ FlashTheme class (FlashTheme.php)
 - html page
 	headers, keywords, meta, ... from the WP page 
 	
-Wordpress "Silex/Flash" theme (wp_theme/comments.php, wp_theme/index.php, wp_theme/, wp_theme/
+Wordpress "Flash" theme (wp_theme/comments.php, wp_theme/index.php, wp_theme/, wp_theme/
 - all files instanciate the FlashTheme class
 
 Wordpress "Framed" theme
