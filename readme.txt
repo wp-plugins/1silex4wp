@@ -49,6 +49,10 @@ Requirements
 * Specifications
 * Description and communication elements
 
+= 0.1 =
+* Plugin core (index.php) - substitution of the theme
+
+
 == Help wanted ==
 
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
