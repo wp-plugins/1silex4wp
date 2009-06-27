@@ -11,13 +11,12 @@ Convert your WordPress blog into a Flash application - Still in a conception pha
 
 Substitute your worpress theme by a Flash template
 
-* only for Flash enabled browsers and not for search engines
-* keep the posts and comments of your WP blog unchanged (database is not modified at all)
-* keep the structure of your WP blog: posts, categories, tags, pages, archives, start page...
-* keep comments related functionnalities
-* use WP URL rewrite and adds a deep linking system
-* choose one of the included Flash templates
-* create your own dynamic Flash templates with Silex WYSIWYG
+* visible only by Flash enabled browsers - **search engines or phones will see your blog normally**
+* keeps the **posts and comments** of your WP blog unchanged. The database is not modified at all. Keeps comments related functionnalities.
+* keeps **the structure of your WP blog**: posts, categories, tags, pages, archives, start page...
+* use WP URL rewrite and adds a **deep linking system**
+* choose one of the **included Flash templates**
+* create your own dynamic Flash templates with **Silex WYSIWYG**
 
 This plug-in is SEO friendly and makes use of [Silex the #1 opensource Flash CMS](http://silex-ria.org/ "Silex project website"), to build dynamic Flash templates without the Flash IDE. These templates can display your blog data, the posts, pages and comments. And you will be able to modify the appearance in [Silex WYSIWYG](http://www.youtube.com/watch?v=rzFqfuiLQ4k&hl=fr "Silex WYSIWYG video demo").
 
