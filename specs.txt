@@ -15,31 +15,14 @@ CMS2Flash plugin
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-Convert your WordPress blog into a Flash application
-
-Substitution of the worpress theme
-- only for Flash enabled browsers and not for search engines
-- keep the content of your WP blog unchanged
-- keep the structure of your WP blog: posts, categories, tags, pages, archives, start page...
-- use WP URL rewrite and adds a deep linking system
-- choose one of the included Flash templates
-- create your own dynamic Flash templates with Silex WYSIWYG
-
-Requirements
-- php5
-- WP 2.x
-
-
-----------------------------------------------------------------------------------------------------------------------------------------------
-
-Plugin core
+Plugin core (index.php)
 - substitution of the theme
 	if no_flash value in get
 		-> do nothing
 	if is_framed value in get
 		-> Framed theme
 
-FlashTheme class
+FlashTheme class (FlashTheme.php)
 - inputs
 	constructor params: type of the request (page, posts, single post...)
 	retrieve id_site from options
@@ -60,7 +43,7 @@ FlashTheme class
 - html page
 	headers, keywords, meta, ... from the WP page 
 	
-Wordpress "Silex/Flash" theme 
+Wordpress "Silex/Flash" theme (wp_theme/comments.php, wp_theme/index.php, wp_theme/, wp_theme/
 - all files instanciate the FlashTheme class
 
 Wordpress "Framed" theme
