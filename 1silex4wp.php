@@ -28,7 +28,7 @@ Author: Lexa Yo
 Version: 0.0
 Author URI: http://silex-ria.org/lex
 */
-function headerLex()
+function headerLex($result='',$show='')
 {
 /*
 	YES :
@@ -36,15 +36,31 @@ function headerLex()
 	$postId = $wp_query->post->ID;
 	echo "header Lex ".$postId;
 	*/
+/*	
+	YES
 	global $post;
 	echo "header Lex ".$post->ID." - ".is_single();
+	*/
+	if(is_single())
+	{
+		echo "<noscript>";
+	}
 }
 function footerLex()
 {
+/*	
+	YES
 	global $wp_query;
 	$postId = $wp_query->post->ID;
 	echo "footer Lex ".$postId;
+	*/
+	if(is_single())
+	{
+		echo "</noscript>";
+	}
 }
-add_action('wp_head', 'headerLex',2,0);
-add_action('wp_footer', 'footerLex',20,0);
+//add_action('get_posts', 'headerLex',2,1);
+//add_action('wp_footer', 'footerLex',20,0);
+add_action('loop_start', 'headerLex',2,1);
+add_action('loop_end', 'footerLex',20,0);
 ?>

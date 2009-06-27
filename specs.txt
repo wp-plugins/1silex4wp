@@ -1,0 +1,94 @@
+SilexPress
+FPress
+OSFlashPress
+WordPress OSF
+Flashoot
+WordPress OSFlash templates
+WordPress Flash templates
+WF templates
+
+
+WordPress2ActionScript 
+WordPress2Flash
+
+CMS2Flash plugin
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Convert your WordPress blog into a Flash application
+
+Substitution of the worpress theme
+- only for Flash enabled browsers and not for search engines
+- keep the content of your WP blog unchanged
+- keep the structure of your WP blog: posts, categories, tags, pages, archives, start page...
+- use WP URL rewrite and adds a deep linking system
+- choose one of the included Flash templates
+- create your own dynamic Flash templates with Silex WYSIWYG
+
+Requirements
+- php5
+- WP 2.x
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Plugin core
+- substitution of the theme
+	if no_flash value in get
+		-> do nothing
+	if is_framed value in get
+		-> Framed theme
+
+FlashTheme class
+- inputs
+	constructor params: type of the request (page, posts, single post...)
+	retrieve id_site from options
+	open conf.txt
+- javascript redirection
+	submit form
+	direct access (with # in the URL) <=> if the deeplink is different from post data (postID)
+	build the deeplink in function of conf.txt and postinfo (postID, category, ...)
+- Embed Flash
+	use swfObject
+	Silex embeded technic so that Silex cgi is not needed
+	no flash => redirect to the same page with no_flash value in get
+	FlashVars = pages, categories, tags, archives, blogroll, meta = links with href+asfunction OR array
+- noscript tag
+	content of the WP page
+- noembed tag
+	no flash => redirect to the same page with no_flash value in get
+- html page
+	headers, keywords, meta, ... from the WP page 
+	
+Wordpress "Silex/Flash" theme 
+- all files instanciate the FlashTheme class
+
+Wordpress "Framed" theme
+- used to display the pages and single posts in Flash
+- css
+	transparent background
+	no header nor footer
+- remove or alter links in order to navigate in Flash, not in the frame
+
+
+Admin pannel
+- create your own templates
+	silex links (website, ressources, video)
+	link to the manager if it is installed OR message "Install Silex WYSIWYG"
+- plugin parameters
+	selected template (drop down list)
+	override WordPress URL rewrite rule (check box) / only if URL rewrite is activated
+- Silex installer
+
+
+Silex "WordPress" themes
+- structure
+	page
+	post
+	posts
+	
+
+RSS feed of posts and pages
+- search
+- list by date with offset
+- list by archive, tags, category
