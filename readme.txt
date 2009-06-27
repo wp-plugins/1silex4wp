@@ -28,6 +28,8 @@ Now I want this plugin to make Silex a Flash equivalent of a WordPress blog.
  
 == Installation ==
 
+*Still in a conception phase - Nothing to download yet*
+
 Upload the 1silex4wp plugin to your blog, Activate it, choose your Flash template. You are done, Your blog is in Flash
 
 Requirements
@@ -43,6 +45,7 @@ Requirements
 == Changelog ==
 
 = 0.0 =
+* Still in a conception phase - Nothing to download yet
 * Specifications
 * Description and communication elements
 
