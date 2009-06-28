@@ -121,6 +121,12 @@
 																		<array>
 																			<property>
 																				<object>
+																					<property id="modifier">
+																						<string><![CDATA[onRelease]]></string>
+																					</property>
+																					<property id="functionName">
+																						<string><![CDATA[openUrl]]></string>
+																					</property>
 																					<property id="parameters">
 																						<array>
 																							<property>
@@ -130,12 +136,6 @@
 																								<string><![CDATA[_self:]]></string>
 																							</property>
 																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[openUrl]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onRelease]]></string>
 																					</property>
 																				</object>
 																			</property>
@@ -221,22 +221,6 @@
 														<object>
 															<property id="main">
 																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
 																	<property id="_y">
 																		<number>80</number>
 																	</property>
@@ -245,75 +229,6 @@
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<false/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																	<property id="wordWrap">
-																		<true/>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[dynamic]]></string>
-																	</property>
-																	<property id="password">
-																		<false/>
-																	</property>
-																	<property id="mouseWheelEnabled">
-																		<true/>
-																	</property>
-																	<property id="backgroundColor">
-																		<number>16777215</number>
-																	</property>
-																	<property id="background">
-																		<false/>
-																	</property>
-																	<property id="borderColor">
-																		<number>0</number>
-																	</property>
-																	<property id="border">
-																		<false/>
-																	</property>
-																	<property id="multiline">
-																		<true/>
-																	</property>
-																	<property id="selectable">
-																		<true/>
-																	</property>
-																	<property id="scrollBarWidth">
-																		<number>16</number>
-																	</property>
-																	<property id="scrollbar">
-																		<false/>
-																	</property>
-																	<property id="useCss">
-																		<false/>
-																	</property>
-																	<property id="embedFonts">
-																		<false/>
-																	</property>
-																	<property id="height">
-																		<number>180</number>
-																	</property>
-																	<property id="width">
-																		<number>280</number>
-																	</property>
-																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><U><B>Users</B></U></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0">[[http://sourceforge.net/project/showfiles.php?group_id=51077,_self|Download MIScha Flight Information System files]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0">[[http://sourceforge.net/project/project_donations.php?group_id=51077,_self|Donate money]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0">[[http://sourceforge.net/projects/misfis/,_self|Project detail and discuss]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0">[[http://sourceforge.net/support/getsupport.php?group_id=51077,_self|Get support]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT>]]></string>
-																	</property>
-																	<property id="html">
-																		<true/>
 																	</property>
 																</object>
 															</property>
@@ -532,10 +447,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>85</number>
+																		<number>322.75</number>
 																	</property>
 																	<property id="_x">
-																		<number>364</number>
+																		<number>69.55</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -652,13 +567,13 @@
 																		<false/>
 																	</property>
 																	<property id="height">
-																		<number>50.55</number>
+																		<number>50.5</number>
 																	</property>
 																	<property id="width">
-																		<number>440</number>
+																		<number>856.4</number>
 																	</property>
 																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"><U>[[http://sourceforge.net/projects/misfis/,_self|MIScha Flight Information System]]</U><FONT COLOR="#000000"> : Project Web Hosting - Open Source Software<FONT COLOR="#0033FF"></FONT></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="5"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="20" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>MIScha Flight Information System</B></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="5"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT>]]></string>
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#0033FF" LETTERSPACING="0" KERNING="0"><U>[[http://sourceforge.net/projects/misfis/,_self|Go to project page]]</U><FONT COLOR="#000000"> - Project Web Hosting - Open Source Software<FONT COLOR="#0033FF"></FONT></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="20" COLOR="#000000" LETTERSPACING="0" KERNING="0">((&lt;&lt;_root.post_title&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
 																	</property>
 																	<property id="html">
 																		<true/>
@@ -1127,99 +1042,14 @@
 														<object>
 															<property id="main">
 																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
 																	<property id="_y">
-																		<number>280</number>
+																		<number>259.25</number>
 																	</property>
 																	<property id="_x">
-																		<number>70</number>
+																		<number>217.9</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<false/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																	<property id="wordWrap">
-																		<true/>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[dynamic]]></string>
-																	</property>
-																	<property id="password">
-																		<false/>
-																	</property>
-																	<property id="mouseWheelEnabled">
-																		<true/>
-																	</property>
-																	<property id="backgroundColor">
-																		<number>16777215</number>
-																	</property>
-																	<property id="background">
-																		<false/>
-																	</property>
-																	<property id="borderColor">
-																		<number>0</number>
-																	</property>
-																	<property id="border">
-																		<false/>
-																	</property>
-																	<property id="multiline">
-																		<true/>
-																	</property>
-																	<property id="selectable">
-																		<true/>
-																	</property>
-																	<property id="scrollBarWidth">
-																		<number>16</number>
-																	</property>
-																	<property id="scrollbar">
-																		<false/>
-																	</property>
-																	<property id="useCss">
-																		<false/>
-																	</property>
-																	<property id="embedFonts">
-																		<false/>
-																	</property>
-																	<property id="height">
-																		<number>281.3</number>
-																	</property>
-																	<property id="width">
-																		<number>273.8</number>
-																	</property>
-																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><U><B>Not what you&apos;re looking for?</B></U></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">SourceForge.net hosts over 100,000 Open Source projects. You may find what you&apos;re looking for by <FONT COLOR="#0033FF"><U>[[http://sourceforge.net/search/,_self|searching our site]]</U></FONT> or using our <FONT COLOR="#0033FF"><U>[[http://sourceforge.net/softwaremap/,_self|Software Map]]</U></FONT>.</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">You may also want to consider these similarly-categorized projects:</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">    • <FONT COLOR="#0033FF"><U>[[http://sourceforge.net/projects/jedit,_self|jEdit]]</U></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">    • <FONT COLOR="#0033FF"><U>[[http://sourceforge.net/projects/ganttproject,_self|GanttProject]]</U></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">    • <FONT COLOR="#0033FF"><U>[[http://sourceforge.net/projects/covide,_self|Covide]]</U></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">    • <FONT COLOR="#0033FF"><U>[[http://sourceforge.net/projects/pdfcreator,_self|PDFCreator]]</U></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">    •<FONT COLOR="#0033FF"><U> [[http://sourceforge.net/projects/notepad-plus,_self|Notepad++]]</U></FONT></FONT></P></TEXTFORMAT>]]></string>
-																	</property>
-																	<property id="html">
-																		<true/>
 																	</property>
 																</object>
 															</property>
@@ -1357,10 +1187,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>1.1</number>
+																		<number>0.35</number>
 																	</property>
 																	<property id="_x">
-																		<number>-219.2</number>
+																		<number>-125</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -1378,10 +1208,10 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="height">
-																		<number>597.85</number>
+																		<number>599.3</number>
 																	</property>
 																	<property id="width">
-																		<number>1388.4</number>
+																		<number>1200.05</number>
 																	</property>
 																	<property id="playerName">
 																		<string><![CDATA[new_cv_background.swf]]></string>
@@ -1397,26 +1227,15 @@
 														<array>
 															<property>
 																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
+																	<property id="label">
 																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Text_new_media_1245168293853]]></string>
 																	</property>
-																	<property id="label">
+																	<property id="type">
 																		<string><![CDATA[Text]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1424,27 +1243,18 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[log_sourceforge.swf]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Image_log_sourceforge_1245152449618]]></string>
 																	</property>
-																	<property id="label">
-																		<string><![CDATA[log_sourceforge.swf]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="label">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Text_new_media_1245143267415]]></string>
-																	</property>
 																	<property id="type">
-																		<string><![CDATA[Text]]></string>
+																		<string><![CDATA[Image]]></string>
 																	</property>
 																	<property id="contextAccepted">
 																		<array>
@@ -1457,26 +1267,15 @@
 															</property>
 															<property>
 																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
+																	<property id="label">
 																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Text_new_media_1245140259900]]></string>
 																	</property>
-																	<property id="label">
+																	<property id="type">
 																		<string><![CDATA[Text]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1484,59 +1283,59 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[new_cv_filet_horizontal.swf]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Image_new_cv_filet_horizontal_1245139737072]]></string>
 																	</property>
-																	<property id="label">
-																		<string><![CDATA[new_cv_filet_horizontal.swf]]></string>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
 																	</property>
 																</object>
 															</property>
 															<property>
 																<object>
-																	<property id="label">
-																		<string><![CDATA[asframe]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[AsFrame_asframe_1245139393259]]></string>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
 																	</property>
 																	<property id="type">
 																		<string><![CDATA[AsFrame]]></string>
 																	</property>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
+																	<property id="_name">
+																		<string><![CDATA[AsFrame_asframe_1245139393259]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[asframe]]></string>
 																	</property>
 																</object>
 															</property>
 															<property>
 																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
+																	<property id="label">
 																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Text_new_media_1245139261884]]></string>
 																	</property>
-																	<property id="label">
+																	<property id="type">
 																		<string><![CDATA[Text]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1544,19 +1343,19 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="label">
-																		<string><![CDATA[new_cv_filet_vertical.swf]]></string>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Image_new_cv_filet_vertical_1245084969900]]></string>
 																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
+																	<property id="label">
+																		<string><![CDATA[new_cv_filet_vertical.swf]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1564,19 +1363,19 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="label">
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="type">
 																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Text_new_media_1245091503447]]></string>
 																	</property>
-																	<property id="type">
+																	<property id="label">
 																		<string><![CDATA[Text]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1584,19 +1383,19 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="label">
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="type">
 																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Text_new_media_1245085030775]]></string>
 																	</property>
-																	<property id="type">
+																	<property id="label">
 																		<string><![CDATA[Text]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1604,19 +1403,19 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="label">
-																		<string><![CDATA[new_cv_filet_vertical.swf]]></string>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Image_new_cv_filet_vertical_1245083329853]]></string>
 																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
+																	<property id="label">
+																		<string><![CDATA[new_cv_filet_vertical.swf]]></string>
 																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
@@ -1624,14 +1423,25 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="label">
-																		<string><![CDATA[new_cv_filet_horizontal.swf]]></string>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Image_new_cv_filet_horizontal_1245083108040]]></string>
 																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
+																	<property id="label">
+																		<string><![CDATA[new_cv_filet_horizontal.swf]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
 																	</property>
 																</object>
 															</property>
@@ -1645,53 +1455,33 @@
 																		</array>
 																	</property>
 																	<property id="type">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Text_new_media_1245083029259]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="label">
-																		<string><![CDATA[sourceforge_theme.swf]]></string>
+																		<string><![CDATA[Image]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Image_sourceforge_theme_1245082311978]]></string>
 																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
+																	<property id="label">
+																		<string><![CDATA[sourceforge_theme.swf]]></string>
 																	</property>
 																</object>
 															</property>
 															<property>
 																<object>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Image_new_cv_background_1245151833884]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[new_cv_background.swf]]></string>
+																	</property>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
 																				<string><![CDATA[*]]></string>
 																			</property>
 																		</array>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[new_cv_background.swf]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_new_cv_background_1245151833884]]></string>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
 																	</property>
 																</object>
 															</property>
