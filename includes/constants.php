@@ -18,10 +18,17 @@
 // Pre-2.6 compatibility
 if ( ! defined( 'WP_CONTENT_URL' ) )
       define( 'WP_CONTENT_URL', get_option( 'siteurl' ) . '/wp-content' );
-if ( ! defined( 'WP_CONTENT_DIR' ) )
-      define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 if ( ! defined( 'WP_PLUGIN_URL' ) )
       define( 'WP_PLUGIN_URL', WP_CONTENT_URL. '/plugins' );
+if ( ! defined( 'SILEX_THEME_URL' ) )
+	define( 'SILEX_THEME_URL', WP_CONTENT_URL.'/themes/flash_theme' );
+if ( ! defined( 'SILEX_SERVER_URL' ) )
+	define( 'SILEX_SERVER_URL', SILEX_THEME_URL.'/silex_server' );
+
+	  
+	  
+if ( ! defined( 'WP_CONTENT_DIR' ) )
+      define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 if ( ! defined( 'WP_PLUGIN_DIR' ) )
       define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 
@@ -29,7 +36,14 @@ if ( ! defined( 'WP_PLUGIN_DIR' ) )
 if ( ! defined( 'SILEX_PLUGIN_DIR' ) )
 	define( 'SILEX_PLUGIN_NAME', "1silex4wp" );
 if ( ! defined( 'SILEX_PLUGIN_DIR' ) )
-	define( 'SILEX_PLUGIN_DIR', WP_PLUGIN_URL.'/'.SILEX_PLUGIN_NAME );
+	define( 'SILEX_PLUGIN_DIR', WP_PLUGIN_DIR.'/'.SILEX_PLUGIN_NAME );
+if ( ! defined( 'SILEX_INCLUDE_DIR' ) )
+	define( 'SILEX_INCLUDE_DIR', SILEX_PLUGIN_DIR.'/includes' );
+
+if ( ! defined( 'SILEX_THEME_DIR' ) )
+	define( 'SILEX_THEME_DIR', WP_CONTENT_DIR.'/themes/flash_theme' );
+if ( ! defined( 'SILEX_SERVER_DIR' ) )
+	define( 'SILEX_SERVER_DIR', SILEX_THEME_DIR.'/silex_server' );
 
 
 ?>

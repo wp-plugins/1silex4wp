@@ -58,7 +58,6 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do ==
-
-* embed flash
-
-* test if_exist for all hooks
+* add no-flash page param to silex.js
+* install
+* add tests "if_exist" for all hooks (wp versions)

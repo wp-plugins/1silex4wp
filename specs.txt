@@ -70,7 +70,10 @@ Silex "WordPress" themes
 	page
 	post
 	posts
-	
+
+Plugin installer
+- install themes: flash_theme and framed_theme
+- font folder of Silex?
 
 RSS feed of posts and pages
 - search

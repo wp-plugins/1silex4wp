@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><object>
+	<property id="application" silexXmlVersion="2">
+		<object>
+			<property id="show">
+				<object>
+					<property id="contentContainer_mc">
+						<object>
+							<property id="content_mc">
+								<object>
+									<property id="container_mc">
+										<object>
+											<property id="main">
+												<object>
+													<property id="Image_filet_vertical_1243936543177">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabChildren">
+																		<false/>
+																	</property>
+																	<property id="_focusrect">
+																		<false/>
+																	</property>
+																	<property id="shadowOffsetY">
+																		<number>10</number>
+																	</property>
+																	<property id="shadowOffsetX">
+																		<number>10</number>
+																	</property>
+																	<property id="shadow">
+																		<false/>
+																	</property>
+																	<property id="visibleFrame_bool">
+																		<false/>
+																	</property>
+																	<property id="scaleMode">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="url">
+																		<string><![CDATA[media/corporate_new_medias/filet_vertical.swf]]></string>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>160</number>
+																	</property>
+																	<property id="_x">
+																		<number>230</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="height">
+																		<number>390</number>
+																	</property>
+																	<property id="width">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[filet_vertical.swf]]></string>
+																	</property>
+																	<property id="clickable">
+																		<false/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Text_new_media_1243953941421">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>155</number>
+																	</property>
+																	<property id="_x">
+																		<number>250.05</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[dynamic]]></string>
+																	</property>
+																	<property id="password">
+																		<false/>
+																	</property>
+																	<property id="mouseWheelEnabled">
+																		<true/>
+																	</property>
+																	<property id="backgroundColor">
+																		<number>16777215</number>
+																	</property>
+																	<property id="background">
+																		<false/>
+																	</property>
+																	<property id="borderColor">
+																		<number>0</number>
+																	</property>
+																	<property id="border">
+																		<false/>
+																	</property>
+																	<property id="multiline">
+																		<true/>
+																	</property>
+																	<property id="selectable">
+																		<true/>
+																	</property>
+																	<property id="scrollBarWidth">
+																		<number>16</number>
+																	</property>
+																	<property id="scrollbar">
+																		<true/>
+																	</property>
+																	<property id="useCss">
+																		<false/>
+																	</property>
+																	<property id="embedFonts">
+																		<true/>
+																	</property>
+																	<property id="height">
+																		<number>33.6</number>
+																	</property>
+																	<property id="width">
+																		<number>233.75</number>
+																	</property>
+																	<property id="htmlText">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="20" COLOR="#A69A60" LETTERSPACING="0" KERNING="0"><U>SOLUTIONS</U></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Image_orange_spot_644978402800">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabChildren">
+																		<false/>
+																	</property>
+																	<property id="_focusrect">
+																		<false/>
+																	</property>
+																	<property id="shadowOffsetY">
+																		<number>10</number>
+																	</property>
+																	<property id="shadowOffsetX">
+																		<number>10</number>
+																	</property>
+																	<property id="shadow">
+																		<false/>
+																	</property>
+																	<property id="visibleFrame_bool">
+																		<false/>
+																	</property>
+																	<property id="scaleMode">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="url">
+																		<string><![CDATA[media/corporate_new_medias/orange_spot.swf]]></string>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>522.3</number>
+																	</property>
+																	<property id="_x">
+																		<number>1033.8</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>0</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<true/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<true/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[00]]></string>
+																	</property>
+																	<property id="height">
+																		<number>20</number>
+																	</property>
+																	<property id="width">
+																		<number>20</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[ICONE 00]]></string>
+																	</property>
+																	<property id="clickable">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Image_orange_spot_1121007434473">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabChildren">
+																		<false/>
+																	</property>
+																	<property id="_focusrect">
+																		<false/>
+																	</property>
+																	<property id="shadowOffsetY">
+																		<number>10</number>
+																	</property>
+																	<property id="shadowOffsetX">
+																		<number>10</number>
+																	</property>
+																	<property id="shadow">
+																		<false/>
+																	</property>
+																	<property id="visibleFrame_bool">
+																		<false/>
+																	</property>
+																	<property id="scaleMode">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="url">
+																		<string><![CDATA[media/corporate_new_medias/orange_spot.swf]]></string>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>511.5</number>
+																	</property>
+																	<property id="_x">
+																		<number>1048.1</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>0</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<true/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[03]]></string>
+																	</property>
+																	<property id="height">
+																		<number>20</number>
+																	</property>
+																	<property id="width">
+																		<number>20</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[ICONE 03]]></string>
+																	</property>
+																	<property id="clickable">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Image_orange_spot_240381030979">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabChildren">
+																		<false/>
+																	</property>
+																	<property id="_focusrect">
+																		<false/>
+																	</property>
+																	<property id="shadowOffsetY">
+																		<number>10</number>
+																	</property>
+																	<property id="shadowOffsetX">
+																		<number>10</number>
+																	</property>
+																	<property id="shadow">
+																		<false/>
+																	</property>
+																	<property id="visibleFrame_bool">
+																		<false/>
+																	</property>
+																	<property id="scaleMode">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="url">
+																		<string><![CDATA[media/corporate_new_medias/orange_spot.swf]]></string>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>536.7</number>
+																	</property>
+																	<property id="_x">
+																		<number>1049.6</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>0</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<true/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[02]]></string>
+																	</property>
+																	<property id="height">
+																		<number>20</number>
+																	</property>
+																	<property id="width">
+																		<number>20</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[ICONE 02]]></string>
+																	</property>
+																	<property id="clickable">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Image_orange_spot_1082101593940">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabChildren">
+																		<false/>
+																	</property>
+																	<property id="_focusrect">
+																		<false/>
+																	</property>
+																	<property id="shadowOffsetY">
+																		<number>10</number>
+																	</property>
+																	<property id="shadowOffsetX">
+																		<number>10</number>
+																	</property>
+																	<property id="shadow">
+																		<false/>
+																	</property>
+																	<property id="visibleFrame_bool">
+																		<false/>
+																	</property>
+																	<property id="scaleMode">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="url">
+																		<string><![CDATA[media/corporate_new_medias/orange_spot.swf]]></string>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>561.15</number>
+																	</property>
+																	<property id="_x">
+																		<number>1048.9</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>0</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<true/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[01]]></string>
+																	</property>
+																	<property id="height">
+																		<number>20</number>
+																	</property>
+																	<property id="width">
+																		<number>20.05</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[ICONE 01]]></string>
+																	</property>
+																	<property id="clickable">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Text_undefined_611412628001">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>195</number>
+																	</property>
+																	<property id="_x">
+																		<number>250</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[TXT principal _ Main]]></string>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[dynamic]]></string>
+																	</property>
+																	<property id="password">
+																		<false/>
+																	</property>
+																	<property id="mouseWheelEnabled">
+																		<true/>
+																	</property>
+																	<property id="backgroundColor">
+																		<number>16777215</number>
+																	</property>
+																	<property id="background">
+																		<false/>
+																	</property>
+																	<property id="borderColor">
+																		<number>0</number>
+																	</property>
+																	<property id="border">
+																		<false/>
+																	</property>
+																	<property id="multiline">
+																		<true/>
+																	</property>
+																	<property id="selectable">
+																		<false/>
+																	</property>
+																	<property id="scrollBarWidth">
+																		<number>16</number>
+																	</property>
+																	<property id="scrollbar">
+																		<false/>
+																	</property>
+																	<property id="useCss">
+																		<false/>
+																	</property>
+																	<property id="embedFonts">
+																		<true/>
+																	</property>
+																	<property id="height">
+																		<number>350.65</number>
+																	</property>
+																	<property id="width">
+																		<number>580</number>
+																	</property>
+																	<property id="htmlText">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="15" COLOR="#FF3300" LETTERSPACING="0" KERNING="0"><U>Velit dip ea olent</U></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2" BLOCKINDENT="20"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#666666" LETTERSPACING="0" KERNING="0">faciduis adit ad dolendipit lut lortis alit augue magniat am zzriusto od magnit iriustrud magnim voleniam zzriure min ut lut ipit iriusting ero corper sed tion eugue modolob oreet, conseni amcorercilla feugiam, quam, conulla faci bla commy nulpute vel utat nulluptat lorem augiatis adio exero er ing ea alit iril iniat. Consequ isciduis accum. [[open:start/solutions/01|<FONT COLOR="#FF3300"><U>clic</U></FONT>]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#FF3300" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="15" COLOR="#FF3300" LETTERSPACING="0" KERNING="0"><U>Praesenit velequisit</U></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2" BLOCKINDENT="20"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#666666" LETTERSPACING="0" KERNING="0">tismodignim inciduis alis doluptat, consed Consequ isciduis accum diatet, senibh et lamcon endre magnisit ulput la ad te magniatuero core dignisi.digniam, sum dunt augiat, veliqui blan ex etum quat aliquat. odipsum eratet adit, vel ing eugait dolute cons dolor sum del il iril ulputpat adiatum venim quisi blaorperos nec mergitur flucutuat mare nostrum nonsenis eumsan hendiam digna faccummy nim doloborer sum dolorem. [[open:start/solutions/02|<FONT COLOR="#FF3300"><U>clic</U></FONT>]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#FF3300" LETTERSPACING="0" KERNING="0"></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="15" COLOR="#FF3300" LETTERSPACING="0" KERNING="0"><U>Venim umsan volorti</U></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2" BLOCKINDENT="20"><P ALIGN="LEFT"><FONT FACE="arial" SIZE="12" COLOR="#666666" LETTERSPACING="0" KERNING="0">vendrem acipit et del ullandre velis alit at. Equam Consequ isciduis accum diatet, senibh et lamcon endre magnisit ulput la ad te magniatuero core dignisi.do odipsum eratet adit, vel ing eugait dolute cons dolor sum del il iril ulputpat adiatum venim quisi blaorperos nonsenis eumsan hendiam digna faccummy nim doloborer sum consed Consequ isciduis accum diatet, senib dolorem veliqui blanex.<FONT COLOR="#FF3300"> [[open:start/solutions/03|<U>clic</U>]]</FONT></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="players">
+														<array>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[filet_vertical.swf]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Image_filet_vertical_1243936543177]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_new_media_1243953941421]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[ICONE 00]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Image_orange_spot_644978402800]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Image_orange_spot_1121007434473]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[ICONE 03]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[ICONE 02]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Image_orange_spot_240381030979]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[ICONE 01]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Image_orange_spot_1082101593940]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Image]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_undefined_611412628001]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[TXT principal _ Main]]></string>
+																	</property>
+																</object>
+															</property>
+														</array>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+				</object>
+			</property>
+		</object>
+	</property>
+</object>
