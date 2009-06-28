@@ -61,6 +61,7 @@ Admin pannel
 - plugin parameters
 	selected template (drop down list)
 	override WordPress URL rewrite rule (check box) / only if URL rewrite is activated
+	flash by default / html by default
 - Silex installer
 
 

@@ -1,8 +1,8 @@
-FLASH
+FLASH<br><br><br>
 <?php
 /**
  * @package WordPress
- * @subpackage Classic_Theme
+ * @subpackage Flash_Theme
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,51 +10,92 @@ FLASH
 
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-
 	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-
-	<style type="text/css" media="screen">
-		@import url( "wp-content/plugins/1silex4wp/flashTheme/style.css" );
-	</style>
-
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
-	<?php //comments_popup_script(); // off by default ?>
+	<?php comments_popup_script(); // off by default ?>
 	<?php wp_head(); ?>
 </head>
+<body>
+<?php
 
-<body <?php body_class(); ?>>
-<div id="rap">
-<h1 id="header"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
+function getPostListByType($type){
 
-<div id="content">
+	$query = new WP_Query('post_type='.$type.'&posts_per_page=-1');
+	echo "getPostListByType ($type)<br><br>";
+	$array = Array();
+	// the Loop
+	while ($query->have_posts()){
+		$query->the_post(); 
+		$array[]=$post->post_title;
+		echo "-".$post->post_title."<br>";
+	}
+	return $array;
+}
+/*
+	$queryType = "post";
+	$flashTheme = new FlashTheme($queryType);
+	
+	$list_pages = 
+	$list_authors = 
+	$list_categories
+	$list_bookmarks = 
+	$get_archives = 
+	$page_menu = 
+	
+	$flashTheme->writeHtml($list_pages, $list_authors , $list_categories, $list_bookmarks , $get_archives , $page_menu);
+*/
+/*
+
+query_posts('post_type=page&posts_per_page=-1');
+      
+// the Loop
+while (have_posts()) : the_post(); 
+  //the_content('Read the full post »'); 
+  echo "[open:start/page/";
+  //the_title();
+  echo $post->post_title;
+  echo "]<br>";
+endwhile;
+*/
+getPostListByType("page");
+getPostListByType("post");
+?>
+
+<noscript>
+<h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 <!-- end header -->
+<?php 
+echo "<!-- pages<br>";
+wp_list_pages();
+echo "<!-- authors --><br>";
+wp_list_authors(); 
+echo "<!-- categories --><br>";
+wp_list_categories(); 
+echo "<!-- bookmarks --><br>";
+wp_list_bookmarks(); 
+echo "<!-- archives --><br>";
+wp_get_archives(); 
+echo "<!-- menu --><br>";
+wp_page_menu(); 
+?> 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
 <?php the_date('','<h2>','</h2>'); ?>
+<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+<?php the_category(',') ?>
+<?php the_tags(__('Tags: '), ', ', ' &#8212; '); ?>
+<?php the_author() ?> @ <?php the_time() ?>
+<?php the_content(__('(more...)')); ?>
+<?php wp_link_pages(); ?>
 
-<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-	 <h3 class="storytitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-	<div class="meta"><?php _e("Filed under:"); ?> <?php the_category(',') ?> &#8212; <?php the_tags(__('Tags: '), ', ', ' &#8212; '); ?> <?php the_author() ?> @ <?php the_time() ?></div>
-
-	<div class="storycontent">
-		<?php the_content(__('(more...)')); ?>
-	</div>
-
-	<div class="feedback">
-		<?php wp_link_pages(); ?>
-	</div>
-
-</div>
-
-
-<?php comments_template(); // Get wp-comments.php template ?>
-
+<?php comments_number(); 
+comments_template("./comments.php") ; ?> 
 
 
 <?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
+</noscript>
 
-<?php posts_nav_link(' &#8212; ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
-
+</body>
+</html>

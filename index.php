@@ -28,21 +28,23 @@ Author: Lexa Yo
 Version: 0.1
 Author URI: http://silex-ria.org/lex
 */
+
 include('includes/constants.php');
-function newThemeFolder(){
+function silex_get_theme(){
 	global $wp_query;
 	if (isset( $_GET["is_framed"] )){
-		return 'framedTheme';
+		return 'framed_theme';
 	}
 	else if (!isset( $_GET["no_flash"] )){
-		return 'flashTheme';
+		return 'flash_theme';
 	}
 	return '';
 }
+/*
 function do_template_redirect ($notused) {
-	$newThemeFolderStr = newThemeFolder();
-	if ($newThemeFolderStr!=""){
-		include($newThemeFolderStr.'/index.php');
+	$silex_get_themeStr = silex_get_theme();
+	if ($silex_get_themeStr!=""){
+		include($silex_get_themeStr.'/index.php');
 		exit;
 	}
 }
@@ -54,21 +56,44 @@ add_action('template_redirect', 'do_template_redirect');
  * filter stylesheet_directory_uri
  * @see get_stylesheet_directory_uri()
  */
+/**
 function filter_stylesheet_directory_uri($stylesheet_dir_uri, $theme_name){
-	$newThemeFolderStr = newThemeFolder();
-	if ($newThemeFolderStr!="")
-		return SILEX_PLUGIN_DIR."/".$newThemeFolderStr;
+	$silex_get_themeStr = silex_get_theme();
+	if ($silex_get_themeStr!="")
+		return SILEX_PLUGIN_DIR."/".$silex_get_themeStr;
 	return $stylesheet_dir_uri;
 }
 add_filter('stylesheet_directory_uri','filter_stylesheet_directory_uri',10,2);
 
-/**
- */
 function filter_template_directory_uri($template_dir_uri){
-	$newThemeFolderStr = newThemeFolder();
-	if ($newThemeFolderStr!="")
-		return SILEX_PLUGIN_DIR."/".$newThemeFolderStr;
+	$silex_get_themeStr = silex_get_theme();
+	if ($silex_get_themeStr!="")
+		return SILEX_PLUGIN_DIR."/".$silex_get_themeStr;
 	return $template_dir_uri;
 }
 add_filter('template_directory_uri','filter_template_directory_uri');
+ */
+
+
+function silex_get_template($template) {
+	$theme = silex_get_theme();
+	if (!empty($theme)) {
+		$theme = get_theme($theme);
+		return $theme['Template'];;
+	}
+	return $template;
+}
+
+function silex_get_stylesheet($stylesheet) {
+	$theme = silex_get_theme();
+	if (!empty($theme)) {
+		$theme = get_theme($theme);
+		return $theme['Stylesheet'];
+	}
+	return $stylesheet;
+}
+
+add_filter('template', 'silex_get_template');
+add_filter('stylesheet', 'silex_get_stylesheet');
+
 ?>
