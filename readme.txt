@@ -59,5 +59,5 @@ I am looking for people who could do video tutorials and templates. Feel free to
 
 == To Do ==
 * add no-flash page param to silex.js
-* install
+* detect when flash_theme or framed_theme is missing
 * add tests "if_exist" for all hooks (wp versions)
