@@ -158,7 +158,7 @@ function getPostListByType($type){
 			$php_id_site,
 			"",
 			$rootUrl);
-	</script>
+	</script> 
 <noscript>
 <h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 <!-- end header -->
