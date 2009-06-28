@@ -21,6 +21,8 @@ Plugin core (index.php)
 		-> do nothing
 	if is_framed value in get
 		-> Framed theme
+		
+------------------------------------------------
 
 FlashTheme class (FlashTheme.php)
 - inputs
@@ -62,7 +64,11 @@ Admin pannel
 	selected template (drop down list)
 	override WordPress URL rewrite rule (check box) / only if URL rewrite is activated
 	flash by default / html by default
-- Silex installer
+
+- plugin installer
+	install themes: flash_theme and framed_theme
+	font folder of Silex?
+	Silex installer
 
 
 Silex "WordPress" themes
@@ -71,9 +77,7 @@ Silex "WordPress" themes
 	post
 	posts
 
-Plugin installer
-- install themes: flash_theme and framed_theme
-- font folder of Silex?
+
 
 RSS feed of posts and pages
 - search

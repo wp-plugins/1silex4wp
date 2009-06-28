@@ -58,6 +58,13 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do ==
+* add in FlashVars: get_bookmarks, get_tags, get_pages, get_categories - see http://codex.wordpress.org/Function_Reference
+* rss feeds
+* admin pannel
+* deeplinks
+* templates silex
+
 * add no-flash page param to silex.js
 * detect when flash_theme or framed_theme is missing
 * add tests "if_exist" for all hooks (wp versions)
+* add more info in Flashvars : http://codex.wordpress.org/Function_Reference
