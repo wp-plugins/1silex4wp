@@ -69,7 +69,7 @@ while (have_posts()){
 	echo "]<br>";
 }
 */
-$list_pages = Array();
+/*$list_pages = Array();
 $list_authors = Array();
 $list_categories = Array();
 $list_bookmarks = Array();
@@ -93,6 +93,7 @@ function getPostListByType($type){
 	return $array;
 }
 
+
 //echo count(getPostListByType("page"))."<br>";
 //$array = getPostListByType("post");
 // echo $array[0]."--";
@@ -115,9 +116,52 @@ function getPostListByType($type){
 		<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 		<?php } ?>
 		<div id="stats"></div>
+<!-- ----------------------------------------------------------------------------------------------------- -->
+<noscript>
+<h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
+<!-- end header -->
+<?php 
+echo "<!-- pages<br>";
+wp_list_pages();
+echo "<!-- authors --><br>";
+wp_list_authors(); 
+echo "<!-- categories --><br>";
+wp_list_categories(); 
+echo "<!-- bookmarks --><br>";
+wp_list_bookmarks(); 
+echo "<!-- archives --><br>";
+wp_get_archives(); 
+echo "<!-- menu --><br>";
+wp_page_menu(); 
+?> 
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php the_date('','<h2>','</h2>'); ?>
+<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+<?php the_category(',') ?>
+<?php the_tags(__('Tags: '), ', ', ' &#8212; '); ?>
+<?php the_author() ?> @ <?php the_time() ?>
+<?php the_content(__('(more...)')); ?>
+<?php wp_link_pages(); ?>
+
+<?php comments_number(); 
+comments_template("./comments.php") ; ?> 
+
+<?php 
+// build FlashVars
+include_once SILEX_INCLUDE_DIR.'/build_flashvars.php';
+?>
+
+<?php endwhile; else: ?>
+<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
+</noscript>
+<!-- ----------------------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------------------------------------------------------- -->
 	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>silex.min.js"></script>
 	<script type="text/javascript">
 		$rootUrl = "<?php echo SILEX_SERVER_URL.'/'; ?>";
+		$flashVars = "<?php echo $flashVars; ?>";
 	
 		$enableDeeplinking = "<?php if(isset($websiteConfig["ENABLE_DEEPLINKING"])) echo $websiteConfig["ENABLE_DEEPLINKING"]; else echo "true"; ?>";
 		$DEFAULT_WEBSITE="<?php echo $serverConfig->silex_server_ini["DEFAULT_WEBSITE"]; ?>";
@@ -156,43 +200,8 @@ function getPostListByType($type){
 			$bgColor,
 			$php_str,
 			$php_id_site,
-			"",
+			$flashVars,
 			$rootUrl);
 	</script> 
-<noscript>
-<h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
-<!-- end header -->
-<?php 
-echo "<!-- pages<br>";
-wp_list_pages();
-echo "<!-- authors --><br>";
-wp_list_authors(); 
-echo "<!-- categories --><br>";
-wp_list_categories(); 
-echo "<!-- bookmarks --><br>";
-wp_list_bookmarks(); 
-echo "<!-- archives --><br>";
-wp_get_archives(); 
-echo "<!-- menu --><br>";
-wp_page_menu(); 
-?> 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<?php the_date('','<h2>','</h2>'); ?>
-<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-<?php the_category(',') ?>
-<?php the_tags(__('Tags: '), ', ', ' &#8212; '); ?>
-<?php the_author() ?> @ <?php the_time() ?>
-<?php the_content(__('(more...)')); ?>
-<?php wp_link_pages(); ?>
-
-<?php comments_number(); 
-comments_template("./comments.php") ; ?> 
-
-
-<?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
-</noscript>
-
 </body>
 </html>
