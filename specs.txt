@@ -3,7 +3,9 @@ FPress
 OSFlashPress
 WordPress OSF
 Flashoot
-WordPress OSFlash templates
+
+-> WordPress OSFlash templates / WordPress OSF
+
 WordPress Flash templates
 WF templates
 
@@ -12,6 +14,24 @@ WordPress2ActionScript
 WordPress2Flash
 
 CMS2Flash plugin
+
+Wordplex
+Wordplex OS
+Wordplex OSFlash
+
+
+SXPress OS
+sxPress 
+SX-Press Flash-OS
+SX+Press Flash+OS
+SXPress FlashOS
+SXPress-FlashOS
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+?feed=silex_categories_feed
+?no_flash
+?is_framed
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -22,8 +42,8 @@ Plugin core (index.php)
 	if is_framed value in get
 		-> Framed theme
 		
-------------------------------------------------
 
+------------------------------------------------
 FlashTheme class (FlashTheme.php)
 - inputs
 	constructor params: type of the request (page, posts, single post...)

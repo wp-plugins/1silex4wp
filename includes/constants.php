@@ -45,5 +45,8 @@ if ( ! defined( 'SILEX_THEME_DIR' ) )
 if ( ! defined( 'SILEX_SERVER_DIR' ) )
 	define( 'SILEX_SERVER_DIR', SILEX_THEME_DIR.'/silex_server' );
 
+if ( ! defined( 'SILEX_FEED_THEME_DIR' ) )
+	define( 'SILEX_FEED_THEME_DIR', SILEX_PLUGIN_DIR.'/feed_theme' );
+
 
 ?>
