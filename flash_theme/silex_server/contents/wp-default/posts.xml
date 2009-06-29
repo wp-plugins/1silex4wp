@@ -11,8 +11,464 @@
 										<object>
 											<property id="main">
 												<object>
+													<property id="Cmp_listui_1246314869053">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>386</number>
+																	</property>
+																	<property id="_x">
+																		<number>75</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="height">
+																		<number>22.2</number>
+																	</property>
+																	<property id="width">
+																		<number>39.95</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[ListUi.cmp.swf]]></string>
+																	</property>
+																	<property id="visible">
+																		<true/>
+																	</property>
+																	<property id="scrollStep">
+																		<number>1</number>
+																	</property>
+																	<property id="loopList">
+																		<false/>
+																	</property>
+																	<property id="isHorizontal">
+																		<false/>
+																	</property>
+																	<property id="listPath">
+																		<string><![CDATA[RichTextList]]></string>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Cmp_dataselector_1246314282146">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																			<property>
+																				<object>
+																					<property id="modifier">
+																						<string><![CDATA[onRelease]]></string>
+																					</property>
+																					<property id="functionName">
+																						<string><![CDATA[open]]></string>
+																					</property>
+																					<property id="parameters">
+																						<array>
+																							<property>
+																								<string><![CDATA[p/post]]></string>
+																							</property>
+																						</array>
+																					</property>
+																				</object>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>200</number>
+																	</property>
+																	<property id="_x">
+																		<number>200</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="height">
+																		<number>21</number>
+																	</property>
+																	<property id="width">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[DataSelector.cmp.swf]]></string>
+																	</property>
+																	<property id="resultContainerPath">
+																		<string><![CDATA[DataContainer.post]]></string>
+																	</property>
+																	<property id="orderBy">
+																		<array>
+																			<property>
+																				<string><![CDATA[label]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="offset">
+																		<number>0</number>
+																	</property>
+																	<property id="limit">
+																		<number>50</number>
+																	</property>
+																	<property id="idField">
+																		<string><![CDATA[id]]></string>
+																	</property>
+																	<property id="iconFieldName">
+																		<string><![CDATA[]]></string>
+																	</property>
+																	<property id="selectedFieldNames">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="deeplinkFormat">
+																		<string><![CDATA[<<title>>]]></string>
+																	</property>
+																	<property id="whereClause">
+																		<string><![CDATA[1]]></string>
+																	</property>
+																	<property id="cellFormat">
+																		<string><![CDATA[<b><<title>></b><<description>>]]></string>
+																	</property>
+																	<property id="visible">
+																		<true/>
+																	</property>
+																	<property id="listBoxPath">
+																		<string><![CDATA[RichTextList]]></string>
+																	</property>
+																	<property id="getIndividualRecordsOnClick">
+																		<true/>
+																	</property>
+																	<property id="getRecordsOnLoad">
+																		<true/>
+																	</property>
+																	<property id="formName">
+																		<string><![CDATA[?feed=rss2]]></string>
+																	</property>
+																	<property id="connectorPath">
+																		<string><![CDATA[RssConnector]]></string>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Cmp_rssconnector_1246314287412">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>200</number>
+																	</property>
+																	<property id="_x">
+																		<number>200</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="height">
+																		<number>17.4</number>
+																	</property>
+																	<property id="width">
+																		<string><![CDATA[none]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[RssConnector]]></string>
+																	</property>
+																	<property id="visible">
+																		<true/>
+																	</property>
+																	<property id="urlBase">
+																		<string><![CDATA[]]></string>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Cmp_richtextlist_1246314272193">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>207</number>
+																	</property>
+																	<property id="_x">
+																		<number>141</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="height">
+																		<number>498.45</number>
+																	</property>
+																	<property id="width">
+																		<number>680.95</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[RichTextList]]></string>
+																	</property>
+																	<property id="minWidth">
+																		<number>0</number>
+																	</property>
+																	<property id="minHeight">
+																		<number>0</number>
+																	</property>
+																	<property id="visible">
+																		<true/>
+																	</property>
+																	<property id="enabled">
+																		<true/>
+																	</property>
+																	<property id="useVariableRowHeight">
+																		<true/>
+																	</property>
+																	<property id="multipleSelection">
+																		<false/>
+																	</property>
+																	<property id="isHorizontal">
+																		<false/>
+																	</property>
+																	<property id="itemsPerRow">
+																		<number>1</number>
+																	</property>
+																	<property id="rowHeight">
+																		<number>41</number>
+																	</property>
+																	<property id="easingDuration">
+																		<number>0.5</number>
+																	</property>
+																	<property id="cellRenderer">
+																		<string><![CDATA[RichTextCellRenderer]]></string>
+																	</property>
+																	<property id="cellMarginY">
+																		<number>10</number>
+																	</property>
+																	<property id="cellMarginX">
+																		<number>10</number>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="_useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																	<property id="embedFonts">
+																		<false/>
+																	</property>
+																	<property id="autoSize">
+																		<string><![CDATA[center]]></string>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
 													<property id="players">
 														<array>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[ListUi.cmp.swf]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Cmp_listui_1246314869053]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Component]]></string>
+																	</property>
+																	<property id="mediaUrl">
+																		<string><![CDATA[media/wp-default/oof/ListUi.cmp.swf]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="mediaUrl">
+																		<string><![CDATA[media/components/oof/RssConnector.cmp.swf]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Component]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Cmp_rssconnector_1246314287412]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[RssConnector]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="mediaUrl">
+																		<string><![CDATA[media/components/oof/DataSelector.cmp.swf]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Component]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Cmp_dataselector_1246314282146]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[DataSelector.cmp.swf]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="mediaUrl">
+																		<string><![CDATA[media/wp-default/oof/RichTextList.cmp.swf]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Component]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Cmp_richtextlist_1246314272193]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[RichTextList]]></string>
+																	</property>
+																</object>
+															</property>
 														</array>
 													</property>
 												</object>
