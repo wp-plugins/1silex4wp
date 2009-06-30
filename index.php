@@ -73,7 +73,7 @@ function silex_get_stylesheet($stylesheet) {
 add_filter('stylesheet', 'silex_get_stylesheet');
 
 /**
- * declare our feeds for listing of the categories, tags, ...
+ * make the feeds available with url rewrite
  */
 function silex_rewrite_rules( $wp_rewrite ) {
   $new_rules = array(
@@ -81,14 +81,19 @@ function silex_rewrite_rules( $wp_rewrite ) {
   );
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 }
-function silex_add_feed() {
+/**
+ * declare the feeds for listing of the categories, tags, ...
+ */
+function silex_add_feeds() {
   global $wp_rewrite;
-  // add feed
+  // add feeds
   add_feed('silex_categories_feed', 'silex_create_categories_feed');
+  add_feed('silex_tags_feed', 'silex_create_tags_feed');
+
   // add rewrite rule action
   add_action('generate_rewrite_rules', 'silex_rewrite_rules');
   $wp_rewrite->flush_rules();
 }
-add_action('init', 'silex_add_feed');
+add_action('init', 'silex_add_feeds');
 
 ?>
