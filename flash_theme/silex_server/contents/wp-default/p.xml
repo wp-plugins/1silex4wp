@@ -23,345 +23,6 @@
 																						<string><![CDATA[//]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[POST INFO - see http]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																							<property>
-																								<string><![CDATA[//codex.wordpress.org/WPMU_Functions/get_blog_post]]></string>
-																							</property>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.guid=<<_root.post_guid>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.title=<<_root.post_title>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.name=<<_root.post_name>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.content=<<_root.post_content>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.excerpt=<<_root.post_excerpt>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.content_filtered=<<_root.post_content_filtered>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.type=<<_root.post_type>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.tags_input=<<_root.post_tags_input>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.status=<<_root.post_status>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.author=<<_root.post_author>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.parent=<<_root.post_parent >>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.date=<<_root.post_date>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.date_gmt=<<_root.post_date_gmt>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.modified=<<_root.post_modified>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.modified_gmt=<<_root.post_modified_gmt>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.ping_status=<<_root.post_ping_status>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.to_ping=<<_root.post_to_ping>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.pinged=<<_root.post_pinged>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.menu_order=<<_root.post_menu_order>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.mime_type=<<_root.post_mime_type>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.comment_count=<<_root.post_comment_count>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[//]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[! category is an ARRAY !]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.post.category=<<_root.post_category>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[//]]></string>
-																					</property>
-																					<property id="functionName">
 																						<string><![CDATA[BLOG INFO - see http]]></string>
 																					</property>
 																					<property id="parameters">
@@ -393,7 +54,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.atom_url=<<_root.blog_atom_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.atom_url=<<_root.atom_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -407,7 +68,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.charset=<<_root.blog_charset>>]]></string>
+																						<string><![CDATA[DataContainer.blog.charset=<<_root.charset>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -421,7 +82,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.comments_atom_url=<<_root.blog_comments_atom_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.comments_atom_url=<<_root.comments_atom_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -435,7 +96,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.comments_rss2_url=<<_root.blog_comments_rss2_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.comments_rss2_url=<<_root.comments_rss2_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -449,7 +110,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.description=<<_root.blog_description>>]]></string>
+																						<string><![CDATA[DataContainer.blog.description=<<_root.description>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -463,7 +124,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.home=<<_root.blog_home>>]]></string>
+																						<string><![CDATA[DataContainer.blog.home=<<_root.home>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -477,7 +138,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.html_type=<<_root.blog_html_type>>]]></string>
+																						<string><![CDATA[DataContainer.blog.html_type=<<_root.html_type>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -491,7 +152,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.language=<<_root.blog_language>>]]></string>
+																						<string><![CDATA[DataContainer.blog.language=<<_root.language>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -505,7 +166,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.name=<<_root.blog_name>>]]></string>
+																						<string><![CDATA[DataContainer.blog.name=<<_root.name>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -519,7 +180,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.pingback_url=<<_root.blog_pingback_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.pingback_url=<<_root.pingback_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -533,7 +194,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.rdf_url=<<_root.blog_rdf_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.rdf_url=<<_root.rdf_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -547,7 +208,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.rss2_url=<<_root.blog_rss2_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.rss2_url=<<_root.rss2_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -561,7 +222,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.rss_url=<<_root.blog_rss_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.rss_url=<<_root.rss_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -575,7 +236,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.siteurl=<<_root.blog_siteurl>>]]></string>
+																						<string><![CDATA[DataContainer.blog.siteurl=<<_root.siteurl>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -589,7 +250,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.stylesheet_directory=<<_root.blog_stylesheet_directory>>]]></string>
+																						<string><![CDATA[DataContainer.blog.stylesheet_directory=<<_root.stylesheet_directory>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -603,7 +264,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.stylesheet_url=<<_root.blog_stylesheet_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.stylesheet_url=<<_root.stylesheet_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -617,7 +278,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.template_directory=<<_root.blog_template_directory>>]]></string>
+																						<string><![CDATA[DataContainer.blog.template_directory=<<_root.template_directory>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -631,7 +292,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.template_url=<<_root.blog_template_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.template_url=<<_root.template_url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -645,7 +306,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.text_direction=<<_root.blog_text_direction>>]]></string>
+																						<string><![CDATA[DataContainer.blog.text_direction=<<_root.text_direction>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -659,7 +320,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.url=<<_root.blog_url>>]]></string>
+																						<string><![CDATA[DataContainer.blog.url=<<_root.url>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -673,7 +334,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.version=<<_root.blog_version>>]]></string>
+																						<string><![CDATA[DataContainer.blog.version=<<_root.version>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -687,7 +348,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.wpurl=<<_root.blog_wpurl>>]]></string>
+																						<string><![CDATA[DataContainer.blog.wpurl=<<_root.wpurl>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -788,122 +449,7 @@
 																						<string><![CDATA[onLoad]]></string>
 																					</property>
 																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.name=<<_root.user_display_name>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[//]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[AUTHOR INFO - see http]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																							<property>
-																								<string><![CDATA[//codex.wordpress.org/Function_Reference/get_the_author]]></string>
-																							</property>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.url=<<_root.author_url>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.registered=<<_root.author_registered>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.status=<<_root.author_status>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.nickname=<<_root.author_nickname>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.description=<<_root.author_description>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.level=<<_root.author_level>>]]></string>
-																					</property>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.author.ID=<<_root.author_ID>>]]></string>
+																						<string><![CDATA[DataContainer.user.name=<<_root.display_name>>]]></string>
 																					</property>
 																					<property id="parameters">
 																						<array>
@@ -987,7 +533,7 @@
 															</property>
 														</object>
 													</property>
-													<property id="Text_new_media_1246313064615">
+													<property id="Text_new_media_1246478633218">
 														<object>
 															<property id="main">
 																<object>
@@ -1008,10 +554,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>62</number>
+																		<number>-14</number>
 																	</property>
 																	<property id="_x">
-																		<number>97</number>
+																		<number>96</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -1029,7 +575,7 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[Text]]></string>
+																		<string><![CDATA[Text- login]]></string>
 																	</property>
 																	<property id="wordWrap">
 																		<true/>
@@ -1074,13 +620,115 @@
 																		<false/>
 																	</property>
 																	<property id="height">
-																		<number>136.5</number>
+																		<number>21.5</number>
+																	</property>
+																	<property id="width">
+																		<number>724.05</number>
+																	</property>
+																	<property id="htmlText">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="RIGHT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">((loged in as &lt;&lt;_root.display_name&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Text_new_media_1246313064615">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>56</number>
+																	</property>
+																	<property id="_x">
+																		<number>97</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[Text- title]]></string>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[dynamic]]></string>
+																	</property>
+																	<property id="password">
+																		<false/>
+																	</property>
+																	<property id="mouseWheelEnabled">
+																		<true/>
+																	</property>
+																	<property id="backgroundColor">
+																		<number>16777215</number>
+																	</property>
+																	<property id="background">
+																		<false/>
+																	</property>
+																	<property id="borderColor">
+																		<number>0</number>
+																	</property>
+																	<property id="border">
+																		<false/>
+																	</property>
+																	<property id="multiline">
+																		<true/>
+																	</property>
+																	<property id="selectable">
+																		<true/>
+																	</property>
+																	<property id="scrollBarWidth">
+																		<number>16</number>
+																	</property>
+																	<property id="scrollbar">
+																		<true/>
+																	</property>
+																	<property id="useCss">
+																		<false/>
+																	</property>
+																	<property id="embedFonts">
+																		<false/>
+																	</property>
+																	<property id="height">
+																		<number>101.5</number>
 																	</property>
 																	<property id="width">
 																		<number>718</number>
 																	</property>
 																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="44" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;_root.blog_name&gt;&gt;))</B><FONT FACE="_sans" SIZE="25"><B></B></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="17" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;_root.blog_description&gt;&gt;))<FONT FACE="_sans" SIZE="25"><B></B></FONT></FONT></P></TEXTFORMAT>]]></string>
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="44" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>[[open:p/posts|((&lt;&lt;_root.name&gt;&gt;))</B>]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="17" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;_root.description&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
 																	</property>
 																	<property id="html">
 																		<true/>
@@ -1503,7 +1151,7 @@
 																		<string><![CDATA[kubrickbgwide.jpg]]></string>
 																	</property>
 																	<property id="clickable">
-																		<true/>
+																		<false/>
 																	</property>
 																</object>
 															</property>
@@ -1587,7 +1235,7 @@
 																		<string><![CDATA[kubrickfooter.jpg]]></string>
 																	</property>
 																	<property id="clickable">
-																		<true/>
+																		<false/>
 																	</property>
 																</object>
 															</property>
@@ -1671,7 +1319,7 @@
 																		<string><![CDATA[kubrickheader.jpg]]></string>
 																	</property>
 																	<property id="clickable">
-																		<true/>
+																		<false/>
 																	</property>
 																</object>
 															</property>
@@ -1679,6 +1327,26 @@
 													</property>
 													<property id="players">
 														<array>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_new_media_1246478633218]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[Text- login]]></string>
+																	</property>
+																</object>
+															</property>
 															<property>
 																<object>
 																	<property id="label">
@@ -1693,12 +1361,19 @@
 																	<property id="mediaUrl">
 																		<string><![CDATA[media/components/oof/DataContainer.cmp.swf]]></string>
 																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
 																</object>
 															</property>
 															<property>
 																<object>
 																	<property id="label">
-																		<string><![CDATA[Text]]></string>
+																		<string><![CDATA[Text- title]]></string>
 																	</property>
 																	<property id="_name">
 																		<string><![CDATA[Text_new_media_1246313064615]]></string>
