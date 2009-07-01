@@ -51,11 +51,11 @@ $websiteConfig = $siteEditor->getWebsiteConfig($id_site);
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php comments_popup_script(); // off by default ?>
 	<?php wp_head(); ?>
-	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>jsframe.min.js"></script>
-	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>swfobject.min.js"></script>
-	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>deeplink.min.js"></script>
-	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>wmodepatch.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>jsframe.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>swfobject.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>deeplink.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>wmodepatch.min.js"></script>
 </head>
 <?php
 
@@ -158,7 +158,7 @@ include_once SILEX_INCLUDE_DIR.'/build_flashvars.php';
 <!-- ----------------------------------------------------------------------------------------------------- -->
 
 <!-- ----------------------------------------------------------------------------------------------------- -->
-	<script type="text/javascript" src="<?php echo "wp-content/themes/flash_theme/silex_server/".$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>silex.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>silex.min.js"></script>
 	<script type="text/javascript">
 		$rootUrl = "<?php echo SILEX_SERVER_URL.'/'; ?>";
 		$flashVars = "<?php echo $flashVars; ?>";

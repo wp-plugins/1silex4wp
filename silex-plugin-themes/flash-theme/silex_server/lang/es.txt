@@ -1,0 +1,237 @@
+﻿; Dates
+; months
+DATE_JANUARY=January&
+DATE_FEBRUARY=February&
+DATE_MARCH=March&
+DATE_APRIL=April&
+DATE_MAY=May&
+DATE_JUNE=June&
+DATE_JULY=July&
+DATE_AUGUST=August&
+DATE_SEPTEMBER=September&
+DATE_OCTOBER=October&
+DATE_NOVEMBER=November&
+DATE_DECEMBER=December&
+; days
+DATE_SUNDAY=Sunday&
+DATE_MONDAY=Monday&
+DATE_TUESDAY=Tuesday&
+DATE_WEDNESDAY=Wednesday&
+DATE_THURSDAY=Thursday&
+DATE_FRIDAY=Friday&
+DATE_SATURDAY=Saturday&
+
+
+; context menu
+CONTEXT_MENU_ABOUT_CAPTION=Acerca de SILEX ((<<silex.config.version>>))&
+CONTEXT_MENU_ABOUT_COMMAND=http://silex-ria.org/&
+CONTEXT_MENU_REFRESH_COMMAND=actualizar (F5)&
+CONTEXT_MENU_REFRESH_NO_CACHE_COMMAND=actualizar(sin cache) (CTRL+F5)&
+CONTEXT_MENU_LOGIN_CAPTION=Entrar / editor SILEX (CTRL + L)&
+CONTEXT_MENU_LOGOUT_CAPTION=Salir (CTRL + L)&
+CONTEXT_MENU_FLUSH_LOGINS_CAPTION=Eliminar cookie de sesión&
+
+; authentication
+MESSAGE_AUTH_FAILD=Usuario o contraseña incorrectos.&
+MESSAGE_AUTH_SUCCESS=Bienvenid*(( <<silex.authentication.currentLogin>>))&
+PROMPT_LOGIN_PASS=por favor introduce tu usuario y contraseña&
+MESSAGE_PLEASE_WAIT_WHILE_CHECKING_LOGIN_PASS=Por favor espere...& ; use accessors: login and pass
+
+
+; Layout
+MESSAGE_SECTION_DOES_NOT_EXIST=<i>((<<sectionName>>))</i> does not exist yet. <b>RIGHT CLICK THEN "LOGIN" TO ENTRER ADMIN.</b>&
+
+
+; application 
+MESSAGE_WEBSITE_DOES_NOT_EXIST=The website '<i>((<<id_site>>))</i>' no existe. Si quieres crearla, por favor entra y utiliza la caja de herramientas Sitio Web.&
+ERROR_LOADING_LAYOUT=Error: Falta la plantilla de diseño '((<<layoutFileName>>))': ((<<error>>))&
+
+; com
+ERROR_WEBSERVICE_ERROR=Error del servidor : ((<<fault.fault.faultstring>>))& ; also used in authentication
+
+
+
+
+; HELP LINKS
+HELP_URL_DOCUMENTATION_ROOT=http://silex-ria.org/help/documentation/&
+HELP_URL_WYSIWYG_LIBRARY=editing/library.toolbox.and.ftp.client&
+HELP_URL_WYSIWYG_PLAYERS=editing/media.toolbox&
+HELP_URL_WYSIWYG_LAYERS=editing/layer-page.toolbox&
+HELP_URL_WYSIWYG_PROPERTIES=editing/properties.toolbox&
+HELP_URL_WYSIWYG_WEBSITE=editing/website.toolbox&
+HELP_URL_WYSIWYG_ACTIONS=editing/actions.toolbox&
+HELP_URL_WYSIWYG_KEYBOARD_SHORTCUTS=editing/keyboard.shortcuts&
+HELP_URL_WYSIWYG_VIEW_MENU=editing/view.menu&
+HELP_URL_WYSIWYG_SELECTION=editing/editing.home&
+
+
+; Layout
+WARNING_MULTIPLE_DEFAULT_ICON=Ya existe un icono primario para esta página ((<<layout.sectionName>>)): ((<<layout.defaultIcon.playerName>>)) and ((<<player.playerName>>))&
+
+; application 
+MESSAGE_SCREEN_SAVER_LOGGED_IN=si no estuvieras identificado en el sistema, el salvapantallas estaría activo&
+ERROR_PAGE_SAVE_ERROR=Ocurrió un error al guardar, no se guardó ningún dato: ((<<error>>))&
+
+; com
+MESSAGE_SAVE_PAGE_DONE=<i>((<<sectionName>>))</i> se guardó correctamente.& ; accesos disponibles: xmlData, xmlFileName, sectionName, title, keywords, description, href, htmlEquivalent
+MESSAGE_REGENERATE_INDEX_DONE=Índice recreado correctamente para <i>((<<id_site>>))</i> - <b>((<<indexedPages>>)) páginas indexadas</b>&
+
+; UIBase
+QUIT_DIRTY_PAGE_WARNING=Va a salir de una página sin guardar, desea continuar? ((page name: <<sectionName>>))&
+
+; tools manager
+MESSAGE_ADMIN_WELCOME_SUCCESS=Bienvenid*, <b>((<<authentication.currentLogin>>))</b>.<br><u>Tip</u>: acerque el cursor al borde superior para ver el menú principal.&
+WARNING_OLD_VERSION_OF_SILEX=<br><u>Info</u>: hay una nueva versión de Silex disponible en el <u><a href='http://silex-ria.org/open.source.flash.cms/silex/telecharger'>sitio web de SILEX</a></u>.& ; accesos disponibles: todas las variables de la API
+
+; tool boxes
+ERROR_NO_SELECTION=Seleccione un item primero!&
+PROMPT_ENTER_URL_FOR_MEDIA_IMPORT=Proporcione la URL del archivo (swf, jpg, flv)&
+MESSAGE_COPY_SELECTED_MEDIA_URL=la URL del medio seleccionado, ((<<url>>)), está ahora en el portapapeles, puedes pegarla en la barra de direcciones del navegador, en un editor de texto, ...&
+MESSAGE_WEBSITE_SAVED=<i>((<<id_site>>))</i> se guardó correctamente& ; available accessors : all vars in config object
+ERROR_WEBSITE_SAVE_ERROR=Ocurrió un error. No se pudo guardar nada.& ; available accessors : all vars in config object
+WARNING_WEBSITE_DELETE_CONFIRM=Vas a BORRAR el sitio ((<<id_site>>)) PERMANENTEMENTE, realmente deseas hacerlo?& ; available accessors : all vars in config object
+PROMPT_ENTER_NEW_NAME_FOR_WEBSITE=Escriba un nombre nuevo para ((<<id_site>>))& ; available accessors : all vars in config object
+MESSAGE_WEBSITE_DUPLICATION_SUCCESS=<i>((<<id_site>>))</i> duplicada con éxito& ; available accessors : all vars in config object
+ERROR_WEBSITE_DUPLICATION_ERROR=Ocurrió un error. ((<<config.id_site>>)) No se guardaron datos. Error: ((<<error>>))& ; available accessors : config and error
+
+; **
+; tools titles
+TOOL_BOX_TITLE_ACTION=ACCIONES&
+TOOL_BOX_TITLE_WEBSITE=SITIO WEB&
+TOOL_BOX_TITLE_PROPERTIES=PROPIEDADES&
+TOOL_BOX_TITLE_PLAYERS=MEDIOS&
+TOOL_BOX_TITLE_LIBRARY=LIBRERÍA&
+TOOL_BOX_TITLE_LAYERS=PÁGINAS&
+TOOL_BOX_MENU_MANAGER_BTN_LABEL=MANAGER&
+
+TOOL_BOX_TITLE_MULTICONTEXT=CONTEXTOS&
+
+; buttons of view menu
+TOOL_BOX_BUTTON_TOOLTIP_HIDE_STANDARD_TOOLS=Ocultar herramientas estándard&
+TOOL_BOX_BUTTON_TOOLTIP_SHOW_STANDARD_TOOLS=Mostrar herramientas estándard&
+TOOL_BOX_BUTTON_TOOLTIP_VIEW_BORDERS=Ver los bordes de la escena&
+TOOL_BOX_BUTTON_TOOLTIP_SAVE_ALL=Guardar todas las páginas&
+TOOL_BOX_MENU_REGENERATE_INDEX_BTN_LABEL=Reindexar&
+
+; buttons titles
+TOOL_BOX_BUTTON_TOOLTIP_help_btn=Ayuda&
+TOOL_BOX_BUTTON_TOOLTIP_apply_btn=Aplicar&
+TOOL_BOX_BUTTON_TOOLTIP_refresh_btn=Refrescar&
+TOOL_BOX_BUTTON_TOOLTIP_text_btn=Añadir un campo de texto&
+TOOL_BOX_BUTTON_TOOLTIP_url_btn=Añadir un medio (desde URL)&
+TOOL_BOX_BUTTON_TOOLTIP_component_btn=Añadir un componente&
+TOOL_BOX_BUTTON_TOOLTIP_ftp_btn=import/export de medios&
+TOOL_BOX_BUTTON_TOOLTIP_del_btn=Borrar&
+TOOL_BOX_BUTTON_TOOLTIP_up_btn=Subir (profundidad)&
+TOOL_BOX_BUTTON_TOOLTIP_down_btn=Bajar (profundidad)&
+TOOL_BOX_BUTTON_TOOLTIP_toTop_btn=Traer al frente&
+TOOL_BOX_BUTTON_TOOLTIP_toBottom_btn=Llevar al fondo&
+TOOL_BOX_BUTTON_TOOLTIP_duplicate_btn=Duplicar este sitio web&
+TOOL_BOX_BUTTON_TOOLTIP_reload_btn=Recargar el sitio web&
+TOOL_BOX_BUTTON_TOOLTIP_helpKeys_btn=Ayuda - atajos de teclado&
+
+; properties labels
+PROPERTIES_LABEL_PLAYER_NAME=Nombre&
+PROPERTIES_LABEL_SEO_DESCRIPTION=Descripción&
+PROPERTIES_LABEL_SEO_TAGS=tags o categoría&
+PROPERTIES_LABEL_X_POSITION=posición _X&
+PROPERTIES_LABEL_Y_POSITION=posición _Y&
+PROPERTIES_LABEL_WIDTH=Ancho&
+PROPERTIES_LABEL_HEIGHT=Alto&
+PROPERTIES_LABEL_SCALE=Escala&
+PROPERTIES_LABEL_ICON_NAME_OF_TARGETED_PAGE=Nombre de la página&
+PROPERTIES_LABEL_ICON_DEEPLINK_OF_TARGETED_PAGE=deeplink de la página&
+PROPERTIES_LABEL_ICON_NAME_OF_LAYOUT=Nombre del Layout&
+PROPERTIES_LABEL_ICON_IS_ICON=Icono?&
+PROPERTIES_LABEL_ICON_IS_DEFAULT_ICON=Icono primario?&
+PROPERTIES_LABEL_OPACITY=Opacidad&
+PROPERTIES_LABEL_ROTATION=Rotación&
+PROPERTIES_LABEL_URL=URL&
+PROPERTIES_LABEL_IS_VISIBLE=Visibilidad&
+PROPERTIES_LABEL_TOOLTIP=tooltip&
+PROPERTIES_LABEL_SHOW_HAND_ON_ROLLOVER=Mostrar cursor activo (useHandCursor)&
+PROPERTIES_LABEL_CLICKABLE=clickable&
+PROPERTIES_LABEL_CENTERED_H=Centrar el texto horizontalmente&
+PROPERTIES_LABEL_ATTRIBUTES=label - normal (_up)&
+PROPERTIES_LABEL_LABEL_SELECT=label - seleccionado (_selected)&
+PROPERTIES_LABEL_LABEL_OVER=label - sobre (_over)&
+PROPERTIES_LABEL_LABEL_PRESS=label - presionado (_pressed)&
+PROPERTIES_LABEL_AUTOPLAY=autoplay on/off&
+PROPERTIES_LABEL_SHOW_UI=Mostrar controles&
+PROPERTIES_LABEL_AUTOSIZE=autoSize&
+PROPERTIES_LABEL_AUTOREPLAY=loop&
+PROPERTIES_LABEL_BUFFER_SIZE_MS=tamaño de buffer (milisegundos)&
+PROPERTIES_LABEL_IS_MUTED=Silenciado? (mute)&
+PROPERTIES_LABEL_VOLUME_LEVEL=volumen&
+PROPERTIES_LABEL_LABEL=label (etiqueta)&
+PROPERTIES_LABEL_ENABLE_HTML=html&
+PROPERTIES_LABEL_ENABLE_EMBEDDED_FONTS=Incrustar fuentes&
+PROPERTIES_LABEL_USE_CSS=utilizar CSS&
+PROPERTIES_LABEL_CSS_URL=Archivo CSS&
+PROPERTIES_LABEL_TYPE_WRITER_EFFECT_SPEED=Velocidad del efecto máquina de escribir&
+PROPERTIES_LABEL_ENABLE_SCROLL_BAR=Mostrar escrol&
+PROPERTIES_LABEL_SCROLL_BAR_WIDTH=Ancho del escrol&
+PROPERTIES_LABEL_IS_SELECTABLE=Seleccionable&
+PROPERTIES_LABEL_IS_MULTILINE=Multilínea&
+PROPERTIES_LABEL_HAS_BORDER=Borde&
+PROPERTIES_LABEL_BORDER_COLOR=Color del borde&
+PROPERTIES_LABEL_HAS_BACKGROUND=Fondo?&
+PROPERTIES_LABEL_BACKGROUND_COLOR=Color del Fondo&
+PROPERTIES_LABEL_MAX_NUMBER_OF_CHARACTERS=Máximo de caracteres&
+PROPERTIES_LABEL_ENABLE_MOUSE_WHEEL=Rueda del ratón activa&
+PROPERTIES_LABEL_IS_PASSWORD=Es contraseña&
+PROPERTIES_LABEL_ALLOWED_CHARACTERS=Caracteres permitidos&
+PROPERTIES_LABEL_INPUT_TYPE=Es Input&
+PROPERTIES_LABEL_WORD_WRAP=wordWrap&
+
+PROPERTIES_LABEL_TEXT_FORMAT_ARRAY=text format&
+
+PROPERTIES_LABEL_NAME_OF_MASK=Nombre de la máscara&
+PROPERTIES_LABEL_SCALE_MODE=Modo de Escalado&
+PROPERTIES_LABEL_SHOW_LOADING=Mostrar carga&
+PROPERTIES_LABEL_SHOW_SHADOW=Sombra&
+PROPERTIES_LABEL_SHADOW_X_POSITION=Sombra offset X&
+PROPERTIES_LABEL_SHADOW_Y_POSITION=Sombra offset Y&
+PROPERTIES_LABEL_SHOW_FOCUS=Mostrar rectángulo de foco&
+PROPERTIES_LABEL_ENABLE_TABULATION=Permitir tabulaciones&
+PROPERTIES_LABEL_ENABLE_CHILDREN_TABULATION=Hijos para la tabulación&
+PROPERTIES_LABEL_TABULATION_INDEX=Índice de tabulación&
+
+PROPERTIES_LABEL_FRAME_SWF_AS3=AS3&
+PROMPT_ENTER_SWF_URL=&
+
+PROPERTIES_LABEL_FRAME_HTML_LOCATION=HTML&
+PROMPT_ENTER_HTML_PAGE_URL=&
+
+PROPERTIES_LABEL_FRAME_WIDGET_HTML_TEXT=Widget&
+PROMPT_ENTER_WIDGET_HTML_CODE=&
+
+PROPERTIES_LABEL_FRAME_IS_BACKGROUND_VISIBLE=Fondo?&
+
+
+; available methods
+METHODS_LABEL_PLAY=play&
+METHODS_LABEL_PAUSE=pause&
+METHODS_LABEL_STOP=stop&
+
+; COMPONENTS
+; playlists
+METHODS_LABEL_NEXT=Siguiente&
+METHODS_LABEL_PREVIOUS=Anterior&
+PROPERTIES_LABEL_SOURCE_FOLDER=Carpeta de archivos&
+PROPERTIES_LABEL_DESCRIPTIONS=Descripciones de archivo&
+PROPERTIES_LABEL_TEXT_PLAYER_NAME=Nombre del campo de texto&
+PROPERTIES_LABEL_SHOW_LIST=Mostrar Playlist&
+; animated
+PROPERTIES_LABEL_DELAYED_APPARITION_MS=Retraso en milisegunddos&
+PROPERTIES_LABEL_IMAGE_URL=URL de la imagen&
+
+; context menu
+UI_PLAYERS_CONTEXT_MENU_LABEL_RESET_ROTATION=Resetear rotación a 0°&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_DOWN=Bajar&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_UP=Subir&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_TO_BOTTOM=Al fondo&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_TO_TOP=Al frente&
+
+; interpreter messages
+SCRIPT_ERROR=Error de script - ((<<file>>))(( : <<message>>))&

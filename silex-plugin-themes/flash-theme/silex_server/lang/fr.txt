@@ -1,0 +1,234 @@
+﻿; Dates
+; months
+DATE_JANUARY=janvier&
+DATE_FEBRUARY=fevrier&
+DATE_MARCH=mars&
+DATE_APRIL=avril&
+DATE_MAY=mai&
+DATE_JUNE=juin&
+DATE_JULY=juillet&
+DATE_AUGUST=août&
+DATE_SEPTEMBER=septembre&
+DATE_OCTOBER=octobre&
+DATE_NOVEMBER=novembre&
+DATE_DECEMBER=décembre&
+; days
+DATE_SUNDAY=dimanche&
+DATE_MONDAY=lundi&
+DATE_TUESDAY=mardi&
+DATE_WEDNESDAY=mercredi&
+DATE_THURSDAY=jeudi&
+DATE_FRIDAY=vendredi&
+DATE_SATURDAY=samedi&
+
+; context menu
+CONTEXT_MENU_ABOUT_CAPTION=A propos de SILEX ((<<silex.config.version>>))&
+CONTEXT_MENU_ABOUT_COMMAND=http://silex-ria.org/&
+CONTEXT_MENU_REFRESH_COMMAND=rafraîchir (F5)&
+CONTEXT_MENU_REFRESH_NO_CACHE_COMMAND=rafraîchir(pas de cache) (CTRL+F5)&
+CONTEXT_MENU_LOGIN_CAPTION=login - éditeur SILEX (CTRL + L)&
+CONTEXT_MENU_LOGOUT_CAPTION=logout (CTRL + L)&
+CONTEXT_MENU_FLUSH_LOGINS_CAPTION=supprimer le cookie&
+
+; authentication
+MESSAGE_AUTH_FAILD=Erreur d'identifiant ou de mot de passe.&
+MESSAGE_AUTH_SUCCESS=Bienvenue à vous((, <<silex.authentication.currentLogin>>))&
+MESSAGE_PLEASE_WAIT_WHILE_CHECKING_LOGIN_PASS=veuillez patienter pendant le chargement de vos identifiants& ; use accessors: login and pass
+PROMPT_LOGIN_PASS=veuillez entrer votre identifiant et mot de passse&
+
+; com
+ERROR_WEBSERVICE_ERROR=Erreur du server : ((<<fault.fault.faultstring>>))& ; also used in authentication
+
+; Gabarit
+MESSAGE_SECTION_DOES_NOT_EXIST=<i>((<<sectionName>>))</i> n'existe pas. <b>CLICK DROIT PUIS "LOGIN" POUR ENTRER EN ADMIN.</b>&
+
+; application
+MESSAGE_WEBSITE_DOES_NOT_EXIST=Le site web '<i>((<<id_site>>))</i>' n'existe pas. Si vous souhaitez le créer, veuillez vous identifier et utiliser la boite à outils siteWeb.&
+ERROR_LOADING_LAYOUT=Error: Le gabarit n'a pas été trouvé '((<<layoutFileName>>))': ((<<error>>))&
+
+
+
+
+; HELP LINKS
+HELP_URL_DOCUMENTATION_ROOT=http://silex-ria.org/aide/documentation/&
+HELP_URL_WYSIWYG_LIBRARY=mise.en.page/boite.librairie.et.client.ftp&
+HELP_URL_WYSIWYG_PLAYERS=mise.en.page/boite.medias&
+HELP_URL_WYSIWYG_LAYERS=mise.en.page/boite.pages.calques&
+HELP_URL_WYSIWYG_PROPERTIES=mise.en.page/boite.proprietes&
+HELP_URL_WYSIWYG_WEBSITE=mise.en.page/boite.site.web&
+HELP_URL_WYSIWYG_ACTIONS=mise.en.page/boite.actions&
+HELP_URL_WYSIWYG_KEYBOARD_SHORTCUTS=mise.en.page/raccourcis.clavier&
+HELP_URL_WYSIWYG_VIEW_MENU=mise.en.page/menu.affichage&
+HELP_URL_WYSIWYG_SELECTION=mise.en.page/mise.en.page.resume&
+
+
+; Gabarit
+WARNING_MULTIPLE_DEFAULT_ICON=il existe déjà une icone par défaut pour cette page ((<<layout.sectionName>>)): ((<<layout.defaultIcon.playerName>>)) and ((<<player.playerName>>))&
+
+; application 
+MESSAGE_SCREEN_SAVER_LOGGED_IN=si vous n'étiez pas loggé, le screen saver serait actif&
+ERROR_PAGE_SAVE_ERROR=Une erreur a empéché l'enregistrement : ((<<error>>))&
+
+
+; com
+MESSAGE_SAVE_PAGE_DONE=<i>((<<sectionName>>))</i> enregistré avec succcès.& ; available accessors: xmlData, xmlFileName, sectionName, title, keywords, description, href, htmlEquivalent
+MESSAGE_REGENERATE_INDEX_DONE=L'index a été régénéré avec succès pour <i>((<<id_site>>))</i> - <b>((<<indexedPages>>)) pages indexées</b>&
+
+; UIBase
+QUIT_DIRTY_PAGE_WARNING=Vous êtes sur le point de quitter une page sans l'avoir enregistrée. Voulez-vous continuer? ((page name: <<sectionName>>))&
+
+; tools manager
+MESSAGE_ADMIN_WELCOME_SUCCESS=Bienvenue, <b>((<<authentication.currentLogin>>))</b>.<br><u>Tip</u>: placer votre souris en haut de la page, afin de faire apparaître le menu dynamique.&
+WARNING_OLD_VERSION_OF_SILEX=<br><u>Info</u>: une nouvelle version de SILEX existe, veillez à la télécharger <u><a href='http://silex-ria.org/open.source.flash.cms/silex/telecharger'>site de SILEX </a></u> pour plus d’informations .& ; available accessors: all variables in Api
+
+; Boites à outils
+ERROR_NO_SELECTION=Selectionner d'abord votre calque!&
+PROMPT_ENTER_URL_FOR_MEDIA_IMPORT=Entrer l'Url de votre media (swf, jpg, flv)&
+MESSAGE_COPY_SELECTED_MEDIA_URL=l’Url du media, ((<<url>>)), est maintenant copié, vous pouvez le coller dans la barre d'adresse du navigateur, dans l'éditeur de texte, ...&
+MESSAGE_WEBSITE_SAVED=<i>((<<id_site>>))</i> enregistré avec succès& ; available accessors : all vars in config object
+ERROR_WEBSITE_SAVE_ERROR=Erreur d'enregistrement& ; available accessors : all vars in config object
+WARNING_WEBSITE_DELETE_CONFIRM= souhaitez-vous SUPPRIMER définitivement le site ((<<id_site>>))?& ; available accessors : all vars in config object
+PROMPT_ENTER_NEW_NAME_FOR_WEBSITE=Entrer le nouveau nom de votre site ((<<id_site>>))& ; available accessors : all vars in config object
+MESSAGE_WEBSITE_DUPLICATION_SUCCESS=<i>((<<id_site>>))</i> duppliqué avec succès& ; available accessors : all vars in config object
+ERROR_WEBSITE_DUPLICATION_ERROR=Erreur d'enregistrement. ((<<config.id_site>>)) n'a pas été enregistré. Erreur: ((<<error>>))& ; available accessors : config and error
+
+; **
+; tools titles
+TOOL_BOX_TITLE_ACTION=ACTIONS&
+TOOL_BOX_TITLE_WEBSITE=SITEWEB&
+TOOL_BOX_TITLE_PROPERTIES=PROPRIETES&
+TOOL_BOX_TITLE_PLAYERS=MEDIAS&
+TOOL_BOX_TITLE_LIBRARY=LIBRAIRIE&
+TOOL_BOX_TITLE_LAYERS=PAGES-CALQUES&
+TOOL_BOX_MENU_MANAGER_BTN_LABEL=MANAGER&
+
+TOOL_BOX_TITLE_MULTICONTEXT=CONTEXTES&
+
+; boutons du view menu
+TOOL_BOX_BUTTON_TOOLTIP_HIDE_STANDARD_TOOLS=Masquer les outils standard&
+TOOL_BOX_BUTTON_TOOLTIP_SHOW_STANDARD_TOOLS=Montrer les outils standard&
+TOOL_BOX_BUTTON_TOOLTIP_VIEW_BORDERS=Voir l'espace de travail&
+TOOL_BOX_BUTTON_TOOLTIP_SAVE_ALL=Sauver toutes la pages&
+TOOL_BOX_MENU_REGENERATE_INDEX_BTN_LABEL=INDEXER&
+
+
+; buttons titles
+TOOL_BOX_BUTTON_TOOLTIP_help_btn=aide&
+TOOL_BOX_BUTTON_TOOLTIP_apply_btn=appliquer&
+TOOL_BOX_BUTTON_TOOLTIP_refresh_btn=rafraichir&
+TOOL_BOX_BUTTON_TOOLTIP_text_btn=ajouter un champ de texte&
+TOOL_BOX_BUTTON_TOOLTIP_url_btn=ajouter un media depuis une Url&
+TOOL_BOX_BUTTON_TOOLTIP_component_btn=ajouter un composant&
+TOOL_BOX_BUTTON_TOOLTIP_ftp_btn=import/export de medias&
+TOOL_BOX_BUTTON_TOOLTIP_del_btn=supprimer&
+TOOL_BOX_BUTTON_TOOLTIP_up_btn=vers le premier plan&
+TOOL_BOX_BUTTON_TOOLTIP_down_btn=vers l'arrière plan&
+TOOL_BOX_BUTTON_TOOLTIP_toTop_btn=mettre au premier plan&
+TOOL_BOX_BUTTON_TOOLTIP_toBottom_btn=metre à l'arrière plan&
+TOOL_BOX_BUTTON_TOOLTIP_duplicate_btn=dupliquer ce site&
+TOOL_BOX_BUTTON_TOOLTIP_reload_btn=recharger le site&
+TOOL_BOX_BUTTON_TOOLTIP_helpKeys_btn=raccourcis clavier&
+
+; properties labels
+PROPERTIES_LABEL_PLAYER_NAME=nom&
+PROPERTIES_LABEL_SEO_DESCRIPTION=description&
+PROPERTIES_LABEL_SEO_TAGS=étiquette&
+PROPERTIES_LABEL_X_POSITION=position x&
+PROPERTIES_LABEL_Y_POSITION=position y&
+PROPERTIES_LABEL_WIDTH=largeur&
+PROPERTIES_LABEL_HEIGHT=hauteur&
+PROPERTIES_LABEL_SCALE=echelle&
+PROPERTIES_LABEL_ICON_NAME_OF_TARGETED_PAGE=nom de la page&
+PROPERTIES_LABEL_ICON_DEEPLINK_OF_TARGETED_PAGE=deeplink de la page&
+PROPERTIES_LABEL_ICON_NAME_OF_LAYOUT=nom du gabarit&
+PROPERTIES_LABEL_ICON_IS_ICON=icone?&
+PROPERTIES_LABEL_ICON_IS_DEFAULT_ICON=icone par défaut?&
+PROPERTIES_LABEL_OPACITY=opacité&
+PROPERTIES_LABEL_ROTATION=rotation&
+PROPERTIES_LABEL_URL=Url du media&
+PROPERTIES_LABEL_IS_VISIBLE=visible?&
+PROPERTIES_LABEL_TOOLTIP=tooltip&
+PROPERTIES_LABEL_SHOW_HAND_ON_ROLLOVER=curseur main&
+PROPERTIES_LABEL_CLICKABLE=cliquable ?&
+PROPERTIES_LABEL_CENTERED_H=centrer le texte &
+PROPERTIES_LABEL_ATTRIBUTES=label - normal&
+PROPERTIES_LABEL_LABEL_SELECT=label - selectionné&
+PROPERTIES_LABEL_LABEL_OVER=label – au dessus&
+PROPERTIES_LABEL_LABEL_PRESS=label - cliqué&
+PROPERTIES_LABEL_AUTOPLAY=autoplay on/off&
+PROPERTIES_LABEL_SHOW_UI=boutons apparents&
+PROPERTIES_LABEL_AUTOSIZE=redimension automatique&
+PROPERTIES_LABEL_AUTOREPLAY=boucle?&
+PROPERTIES_LABEL_BUFFER_SIZE_MS=taille du buffer&
+PROPERTIES_LABEL_IS_MUTED=son coupé?&
+PROPERTIES_LABEL_VOLUME_LEVEL=niveau sonore&
+PROPERTIES_LABEL_LABEL=label&
+PROPERTIES_LABEL_ENABLE_HTML=html?&
+PROPERTIES_LABEL_ENABLE_EMBEDDED_FONTS=polices inclues dans le gabarit de page?&
+PROPERTIES_LABEL_USE_CSS=utiliser une feuille de style?&
+PROPERTIES_LABEL_CSS_URL=Url de la feuille de style&
+PROPERTIES_LABEL_TYPE_WRITER_EFFECT_SPEED=vitesse machine à ecrire&
+PROPERTIES_LABEL_ENABLE_SCROLL_BAR=scrollbar visible?&
+PROPERTIES_LABEL_SCROLL_BAR_WIDTH=largeur de la scrollbar&
+PROPERTIES_LABEL_IS_SELECTABLE=selectionnable?&
+PROPERTIES_LABEL_IS_MULTILINE=multi ligne&
+PROPERTIES_LABEL_HAS_BORDER=contour?&
+PROPERTIES_LABEL_BORDER_COLOR=couleur de contour&
+PROPERTIES_LABEL_HAS_BACKGROUND=fond?&
+PROPERTIES_LABEL_BACKGROUND_COLOR=couleur de fond&
+PROPERTIES_LABEL_MAX_NUMBER_OF_CHARACTERS=nombre maximum de caractère&
+PROPERTIES_LABEL_ENABLE_MOUSE_WHEEL=roulette de la souris autorisée&
+PROPERTIES_LABEL_IS_PASSWORD=mot de passe?&
+PROPERTIES_LABEL_ALLOWED_CHARACTERS=caractères autorisés&
+PROPERTIES_LABEL_INPUT_TYPE=style de saisie&
+PROPERTIES_LABEL_WORD_WRAP=retour a la ligne&
+PROPERTIES_LABEL_NAME_OF_MASK=nom du masque&
+PROPERTIES_LABEL_SCALE_MODE=style d'échelle&
+PROPERTIES_LABEL_SHOW_LOADING=chargement apparent?&
+PROPERTIES_LABEL_SHOW_SHADOW=ombre?&
+PROPERTIES_LABEL_SHADOW_X_POSITION=ombre offset X&
+PROPERTIES_LABEL_SHADOW_Y_POSITION=ombre offset Y&
+PROPERTIES_LABEL_SHOW_FOCUS=contour jaune?&
+PROPERTIES_LABEL_ENABLE_TABULATION=tabulation&
+PROPERTIES_LABEL_ENABLE_CHILDREN_TABULATION=children during tab&
+PROPERTIES_LABEL_TABULATION_INDEX=index de tabulation&
+
+PROPERTIES_LABEL_TEXT_FORMAT_ARRAY=text format&
+
+PROPERTIES_LABEL_FRAME_SWF_AS3=AS3&
+PROMPT_ENTER_SWF_URL=Saisir l'adresse d'un fichier swf.<br>Par exemple :<br>http://www.afcomponents.com/components/umap_as3/umap_preview_movie.swf&
+
+PROPERTIES_LABEL_FRAME_HTML_LOCATION=HTML&
+PROMPT_ENTER_HTML_PAGE_URL=Saisir l'adresse d'une page HTML.<br>Par exemple :<br>http://goole.com&
+
+PROPERTIES_LABEL_FRAME_WIDGET_HTML_TEXT=Widget&
+PROMPT_ENTER_WIDGET_HTML_CODE=Saisir le code d'un widget ou du code HTML quelconque.<br>Par exemple, <u><a href="http://www.w3schools.com/Html/html_examples.asp" target="_blank">voir ces exemples de HTML</a></u> et cette <u><a href="http://www.fancygens.com/" target="_blank">liste de widgets</a></u>.&
+
+PROPERTIES_LABEL_FRAME_IS_BACKGROUND_VISIBLE=fond?&
+
+; available methods
+METHODS_LABEL_PLAY=play&
+METHODS_LABEL_PAUSE=pause&
+METHODS_LABEL_STOP=stop&
+
+; COMPONENTS
+; playlists
+METHODS_LABEL_NEXT=suivant&
+METHODS_LABEL_PREVIOUS=précédent&
+PROPERTIES_LABEL_SOURCE_FOLDER=dossier des fichiers&
+PROPERTIES_LABEL_DESCRIPTIONS=description des fichiers&
+PROPERTIES_LABEL_TEXT_PLAYER_NAME=nom du champ texte&
+PROPERTIES_LABEL_SHOW_LIST=liste apparente?&
+; animated
+PROPERTIES_LABEL_DELAYED_APPARITION_MS=délais d'apparition en ms&
+PROPERTIES_LABEL_IMAGE_URL=Url de l'image&
+
+; context menu
+UI_PLAYERS_CONTEXT_MENU_LABEL_RESET_ROTATION=rotation O°&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_DOWN=vers l’arrière plan&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_UP=vers le premier plan&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_TO_BOTTOM=arrière plan&
+UI_PLAYERS_CONTEXT_MENU_LABEL_ZORDER_TO_TOP=premier plan&
+
+; interpreter messages
+SCRIPT_ERROR=Erreur du script ((<<file>>))(( : <<message>>))&
