@@ -3,8 +3,8 @@
  * @package WordPress
  * @subpackage Flash_Theme
  */
-include (ABSPATH."wp-content/plugins/1silex4wp/includes/constants.php");
-//require_once (SILEX_INCLUDE_DIR."/flash_theme.php");
+include (ABSPATH.'wp-content/plugins/1silex4wp/includes/constants.php');
+//require_once (SILEX_INCLUDE_DIR.'/flash_theme.php');
 
 set_include_path(get_include_path() . PATH_SEPARATOR . SILEX_SERVER_DIR);
 set_include_path(get_include_path() . PATH_SEPARATOR . SILEX_SERVER_DIR."/cgi/library/");
