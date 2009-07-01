@@ -30,70 +30,9 @@ Author URI: http://silex-ria.org/lex
 */
 
 include('includes/constants.php');
-include(SILEX_INCLUDE_DIR."/rss_functions.php");
-
-/**
- * determine the name of the theme to display
- * the user theme, the flash_theme or the framed_theme
- */
-function silex_get_theme(){
-	global $wp_query;
-	if (isset( $_GET["is_framed"] )){
-		return 'framed_theme';
-	}
-	else if (!isset( $_GET["no_flash"] )){
-		return 'flash_theme';
-	}
-	return '';
-}
-/*
- * force the theme to the appropriate theme template
- */
-function silex_get_template($template) {
-	$theme = silex_get_theme();
-	if (!empty($theme)) {
-		$theme = get_theme($theme);
-		return $theme['Template'];;
-	}
-	return $template;
-}
-add_filter('template', 'silex_get_template');
-
-/*
- * force the theme to the appropriate theme css
- */
-function silex_get_stylesheet($stylesheet) {
-	$theme = silex_get_theme();
-	if (!empty($theme)) {
-		$theme = get_theme($theme);
-		return $theme['Stylesheet'];
-	}
-	return $stylesheet;
-}
-add_filter('stylesheet', 'silex_get_stylesheet');
-
-/**
- * make the feeds available with url rewrite
- */
-function silex_rewrite_rules( $wp_rewrite ) {
-  $new_rules = array(
-    'feed/(.+)' => 'index.php?feed='.$wp_rewrite->preg_index(1)
-  );
-  $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
-}
-/**
- * declare the feeds for listing of the categories, tags, ...
- */
-function silex_add_feeds() {
-  global $wp_rewrite;
-  // add feeds
-  add_feed('silex_categories_feed', 'silex_create_categories_feed');
-  add_feed('silex_tags_feed', 'silex_create_tags_feed');
-
-  // add rewrite rule action
-  add_action('generate_rewrite_rules', 'silex_rewrite_rules');
-  $wp_rewrite->flush_rules();
-}
-add_action('init', 'silex_add_feeds');
+include(SILEX_INCLUDE_DIR.'/rss-functions.php');
+include(SILEX_INCLUDE_DIR.'/feed-index.php');
+include(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
+include(SILEX_INCLUDE_DIR.'/install-index.php');
 
 ?>

@@ -27,10 +27,10 @@
 function silex_get_theme(){
 	global $wp_query;
 	if (isset( $_GET['is_framed'] )){
-		return 'framed_theme';
+		return SILEX_THEMES_DIR_NAME.'/'.SILEX_FRAMED_THEME_NAME;
 	}
 	else if (!isset( $_GET['no_flash'] )){
-		return 'flash_theme';
+		return SILEX_THEMES_DIR_NAME.'/'.SILEX_FLASH_THEME_NAME;
 	}
 	return '';
 }
