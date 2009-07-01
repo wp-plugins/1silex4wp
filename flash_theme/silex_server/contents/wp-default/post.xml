@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><object>
+	<property id="application" silexXmlVersion="2">
+		<object>
+			<property id="show">
+				<object>
+					<property id="contentContainer_mc">
+						<object>
+							<property id="content_mc">
+								<object>
+									<property id="container_mc">
+										<object>
+											<property id="main">
+												<object>
+													<property id="Text_new_media_1246315670881">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>228</number>
+																	</property>
+																	<property id="_x">
+																		<number>139</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[dynamic]]></string>
+																	</property>
+																	<property id="password">
+																		<false/>
+																	</property>
+																	<property id="mouseWheelEnabled">
+																		<true/>
+																	</property>
+																	<property id="backgroundColor">
+																		<number>16777215</number>
+																	</property>
+																	<property id="background">
+																		<false/>
+																	</property>
+																	<property id="borderColor">
+																		<number>0</number>
+																	</property>
+																	<property id="border">
+																		<false/>
+																	</property>
+																	<property id="multiline">
+																		<true/>
+																	</property>
+																	<property id="selectable">
+																		<true/>
+																	</property>
+																	<property id="scrollBarWidth">
+																		<number>16</number>
+																	</property>
+																	<property id="scrollbar">
+																		<false/>
+																	</property>
+																	<property id="useCss">
+																		<false/>
+																	</property>
+																	<property id="embedFonts">
+																		<false/>
+																	</property>
+																	<property id="height">
+																		<number>62.5</number>
+																	</property>
+																	<property id="width">
+																		<number>662.95</number>
+																	</property>
+																	<property id="htmlText">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="23" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;DataContainer.post.title&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Text_new_media_1246315490490">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>711</number>
+																	</property>
+																	<property id="_x">
+																		<number>91</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[dynamic]]></string>
+																	</property>
+																	<property id="password">
+																		<false/>
+																	</property>
+																	<property id="mouseWheelEnabled">
+																		<true/>
+																	</property>
+																	<property id="backgroundColor">
+																		<number>16777215</number>
+																	</property>
+																	<property id="background">
+																		<false/>
+																	</property>
+																	<property id="borderColor">
+																		<number>0</number>
+																	</property>
+																	<property id="border">
+																		<false/>
+																	</property>
+																	<property id="multiline">
+																		<true/>
+																	</property>
+																	<property id="selectable">
+																		<true/>
+																	</property>
+																	<property id="scrollBarWidth">
+																		<number>16</number>
+																	</property>
+																	<property id="scrollbar">
+																		<false/>
+																	</property>
+																	<property id="useCss">
+																		<false/>
+																	</property>
+																	<property id="embedFonts">
+																		<false/>
+																	</property>
+																	<property id="height">
+																		<number>62.45</number>
+																	</property>
+																	<property id="width">
+																		<number>599.9</number>
+																	</property>
+																	<property id="htmlText">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">-&gt; ((&lt;&lt;DataContainer.post.link&gt;&gt;))&amp;is_framed</FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="AsFrame_asframe_1246315243849">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="backgroundVisible">
+																		<false/>
+																	</property>
+																	<property id="location">
+																		<string><![CDATA[<<DataContainer.post.link>>&is_framed]]></string>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>290</number>
+																	</property>
+																	<property id="_x">
+																		<number>135</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<false/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[new page name]]></string>
+																	</property>
+																	<property id="height">
+																		<number>406.45</number>
+																	</property>
+																	<property id="width">
+																		<number>665.95</number>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[asframe]]></string>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="players">
+														<array>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_new_media_1246315670881]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_new_media_1246315490490]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[AsFrame]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[AsFrame_asframe_1246315243849]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[asframe]]></string>
+																	</property>
+																</object>
+															</property>
+														</array>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+				</object>
+			</property>
+		</object>
+	</property>
+</object>
