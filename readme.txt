@@ -74,5 +74,6 @@ x* rss feeds
 * add no-flash page param to silex.js
 * detect when flash_theme or framed_theme is missing
 * add a version control and update
+* remove silex files needed only for editing 
 * add tests "if_exist" for all hooks (wp versions)
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
