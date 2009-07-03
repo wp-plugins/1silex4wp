@@ -33,7 +33,8 @@ else
 		$id_site=$_GET["id_site"];
 	else
 	{
-//		$isDefaultWebsite = true;
+		id_site=get_option('selected_template');
+		if ();
 		$id_site=$serverConfig->silex_server_ini["DEFAULT_WEBSITE"];
 	}
 

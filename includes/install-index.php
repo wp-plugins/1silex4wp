@@ -51,6 +51,8 @@ function silex_activation_hook(){
 	catch (Exception $e) {
 		silex_error('file-error',$e->getMessage());
 	}
+	// add options
+	add_silex_options();
 }
 
 // does not work => call it directly register_activation_hook( __FILE__, 'silex_activation_hook');
