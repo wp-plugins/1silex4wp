@@ -31,8 +31,12 @@ SXPress-FlashOS
 
 ?feed=silex_categories_feed
 ?feed=silex_tags_feed
+?feed=silex_pages_feed
+?feed=silex_bookmarks_feed
+?feed=silex_posts_feed
 ?no_flash
 ?is_framed
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 

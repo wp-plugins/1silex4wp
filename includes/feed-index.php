@@ -35,6 +35,7 @@ function silex_rewrite_rules( $wp_rewrite ) {
 function silex_add_feeds() {
   global $wp_rewrite;
   // add feeds
+  add_feed('silex_posts_feed', 'silex_create_posts_feed');
   add_feed('silex_categories_feed', 'silex_create_categories_feed');
   add_feed('silex_tags_feed', 'silex_create_tags_feed');
   add_feed('silex_pages_feed', 'silex_create_pages_feed');

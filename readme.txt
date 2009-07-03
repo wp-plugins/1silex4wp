@@ -56,10 +56,19 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do ==
-* add in FlashVars: get_bookmarks, get_tags, get_pages, get_categories - see http://codex.wordpress.org/Function_Reference
-* rss feeds
+x* add in FlashVars: get_bookmarks, get_tags, get_pages, get_categories - see http://codex.wordpress.org/Function_Reference
+x* rss feeds
+* Install
+    Copie
 * admin pannel
-* deeplinks
+    Url rewrite silex
+    Override url rewrite wp?
+* Fonctions js 
+    convertDeepLink : wp <-> silex
+    openSilexPage : commande
+* Liens reecrits avec appel js
+* Reecriture url initiale (juste url base) et deeplink initial
+
 * templates silex
 
 * add no-flash page param to silex.js
