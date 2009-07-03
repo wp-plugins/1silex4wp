@@ -20,7 +20,43 @@
  * @author Lexa Yo
  * @version 0.1
  */
-function silex_install(){
+/**
+ *
+ */
+function silex_activation_hook(){
+	$path = SILEX_PLUGIN_DIR.'/'.SILEX_THEMES_DIR_NAME;
+	$newPath = WP_CONTENT_DIR.'/themes/'.SILEX_THEMES_DIR_NAME;
+	
 	// copy the themes into the theme directory
+	try{
+		$error = false;
+		if (is_dir($newPath)===true){
+			// rename as "bkp"
+			$bkp_name = $newPath."_backup_".date('Y-m-d_H-i-s');
+			if (!rename($newPath,$bkp_name)){
+				$error = true;
+			}
+		}
+		// only do the rename action if no error
+		if (!$error){
+			if (!copy($path,$newPath)){
+				silex_error('file-error','Impossible to copy Silex themes to themes directory: '.$path." -> ".$newPath);
+			}
+		}
+		else{
+			silex_error('warning','The themes were allready installed. The previous version has been renamed '.$bkp_name);
+		}
+		
+	}
+	catch (Exception $e) {
+		silex_error('file-error',$e->getMessage());
+	}
+
+}
+
+// does not work => call it directly register_activation_hook( __FILE__, 'silex_activation_hook');
+if ($_GET['activate'] == true)
+{
+	silex_activation_hook();
 }
 ?>

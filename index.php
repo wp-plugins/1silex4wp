@@ -29,10 +29,20 @@ Version: 0.1
 Author URI: http://silex-ria.org/lex
 */
 
-include('includes/constants.php');
-include(SILEX_INCLUDE_DIR.'/rss-functions.php');
-include(SILEX_INCLUDE_DIR.'/feed-index.php');
-include(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
-include(SILEX_INCLUDE_DIR.'/install-index.php');
-
+require_once('includes/constants.php');
+require_once(SILEX_INCLUDE_DIR.'/functions.php');
+if (version_compare(PHP_VERSION, '5.0', '<'))
+{
+	if ($_GET['activate'] == true)
+	{
+		silex_error('Error: Silex requires PHP 5.0 or newer and you are running '.PHP_VERSION);;
+	}
+}
+else
+{
+	require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
+	require_once(SILEX_INCLUDE_DIR.'/feed-index.php');
+	require_once(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
+	require_once(SILEX_INCLUDE_DIR.'/install-index.php');
+}
 ?>
