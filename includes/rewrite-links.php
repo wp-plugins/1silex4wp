@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*  Copyright 2009  Alexandre Hoyau  (email : lex [at] silex-ria . org)
 
     This program is free software; you can redistribute it and/or modify
@@ -20,31 +20,28 @@
  * @author Lexa Yo
  * @version 0.1
  */
-/*
-Plugin Name: 1silex4wp
-Plugin URI: http://wordpress.org/extend/plugins/1silex4wp/
-Description: 1silex4wp
-Author: Lexa Yo
-Version: 0.1
-Author URI: http://silex-ria.org/lex
-*/
+//http://codex.wordpress.org/Plugin_API/Filter_Reference#Link_Filters 
 
-require_once('includes/constants.php');
-require_once(SILEX_INCLUDE_DIR.'/functions.php');
-if (version_compare(PHP_VERSION, '5.0', '<'))
-{
-	if ($_GET['activate'] == true)
-	{
-		silex_error('Error: Silex requires PHP 5.0 or newer and you are running '.PHP_VERSION);;
-	}
+ 
+/*
+ * rewrite link
+ */
+function silex_post_link($link) {
+	global $post;
+	$link = 'javascript:parent.openPost(\''.$post->ID.'\')';
+	return $link;
 }
-else
-{
-	require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
-	require_once(SILEX_INCLUDE_DIR.'/feed-index.php');
-	require_once(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
-	require_once(SILEX_INCLUDE_DIR.'/install-index.php');
-	require_once(SILEX_INCLUDE_DIR.'/admin-pages.php');
-	require_once(SILEX_INCLUDE_DIR.'/rewrite-links.php');
+/*
+ * rewrite link
+ */
+function silex_category_link($linkUrl,$categoryId) {
+//	global $post;
+	$link = 'javascript:parent.openCategory(\''.$categoryId.'\')';
+	return $link;
+}
+if(is_framed()){
+	add_filter('the_permalink', 'silex_post_link',10,1);
+	add_filter('category_link', 'silex_category_link',10,2);
+	echo "-----------------------------------".$post->ID;
 }
 ?>

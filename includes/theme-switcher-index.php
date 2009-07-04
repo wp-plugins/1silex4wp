@@ -34,6 +34,9 @@ function silex_get_theme(){
 	}
 	return '';
 }
+function is_framed(){
+	return isset( $_GET['is_framed'] );
+}
 /*
  * force the theme to the appropriate theme template
  */

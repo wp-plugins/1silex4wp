@@ -39,6 +39,7 @@ onLoad DataContainer.user.name=<<_root.display_name>>
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 // POST INFO - see http://codex.wordpress.org/WPMU_Functions/get_blog_post
+onLoad DataContainer.post.ID
 onLoad DataContainer.post.guid=<<_root.post_guid>>
 onLoad DataContainer.post.title=<<_root.post_title>>
 onLoad DataContainer.post.name=<<_root.post_name>>

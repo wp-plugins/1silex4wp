@@ -1,8 +1,26 @@
 <?php
+/*  Copyright 2009  Alexandre Hoyau  (email : lex [at] silex-ria . org)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 /**
- * @package WordPress
- * @subpackage Flash_Theme
+ * @package 1silex4wp
+ * @author Lexa Yo
+ * @version 0.1
  */
+
 include (ABSPATH.'wp-content/plugins/1silex4wp/includes/constants.php');
 //require_once (SILEX_INCLUDE_DIR.'/flash_theme.php');
 
@@ -33,9 +51,9 @@ else
 		$id_site=$_GET["id_site"];
 	else
 	{
-		id_site=get_option('selected_template');
-		if ();
-		$id_site=$serverConfig->silex_server_ini["DEFAULT_WEBSITE"];
+		$id_site=get_option('selected_template');
+		if (!$id_site);
+			$id_site=$serverConfig->silex_server_ini["DEFAULT_WEBSITE"];
 	}
 
 // **
@@ -104,7 +122,7 @@ function getPostListByType($type){
 ?>
 <body style="padding:0px;height:100%; margin-top:0; margin-left:0; margin-bottom:0; margin-right:0;" onload="setTimeout(function(){initWModePatch('silex');}, 500 );">
 	<div style="position: absolute; z-index: 1000;" id="frameContainer"></div>
-	<div id="flashcontent" align="center" style="position: absolute; z-index: 0; width: 100%; height: 100%;">
+	<div id="flashcontent" align="center" style="position: absolute; z-index: 0; width: 100%; height: 100%;"> -->
 	</div>
 		<iframe style="display:none" id="downloadFrame" name="downloadFrame"></iframe>
 		<?php if(isset($websiteConfig["googleAnaliticsAccountNumber"]) && $websiteConfig["googleAnaliticsAccountNumber"]!="") { ?>
@@ -157,6 +175,16 @@ include_once SILEX_INCLUDE_DIR.'/build_flashvars.php';
 <?php endif; ?>
 </noscript>
 <!-- ----------------------------------------------------------------------------------------------------- -->
+		<script type="text/javascript">
+			function openSilexPage($deeplink){
+				//parent.document.getElementById('silex').SetVariable('silex_exec_str','open:'+$deeplink);
+				document.getElementById('silex').SetVariable('silex_exec_str','open:'+$deeplink);
+			}
+			function openPost($postID){
+				document.getElementById('silex').SetVariable('silex_exec_str','DataContainer.post.ID='+$postID);
+				openSilexPage("p/pp/");
+			}
+		</script>
 
 <!-- ----------------------------------------------------------------------------------------------------- -->
 	<script type="text/javascript" src="<?php echo 'wp-content/themes/silex-plugin-themes/flash-theme/silex_server/'.$serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>silex.min.js"></script>

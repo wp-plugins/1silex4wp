@@ -42,13 +42,21 @@ Requirements
 
 == Changelog ==
 
+= 0.1 =
+* Plugin core: 
+	installation
+	settings
+	substitution of the themes
+	auto-configured Silex server
+	FlashVars
+	url rewrite
+	javascript communication between Silex and wordpress
+
 = 0.0 =
 * Still in a conception phase - Nothing to download yet
 * Specifications
 * Description and communication elements
 
-= 0.1 =
-* Plugin core (index.php) - substitution of the theme
 
 
 == Help wanted ==
@@ -58,15 +66,15 @@ I am looking for people who could do video tutorials and templates. Feel free to
 == To Do ==
 x* add in FlashVars: get_bookmarks, get_tags, get_pages, get_categories - see http://codex.wordpress.org/Function_Reference
 x* rss feeds
-* Install
-    Copie
-* admin pannel
-    Url rewrite silex
-    Override url rewrite wp?
-* Fonctions js 
+x* Install
+x    Copie
+x* admin pannel
+x    Url rewrite silex
+x    Override url rewrite wp?
+x* Fonctions js 
     convertDeepLink : wp <-> silex
-    openSilexPage : commande
-* Liens reecrits avec appel js
+x    openSilexPage : commande
+-* Liens reecrits avec appel js
 * Reecriture url initiale (juste url base) et deeplink initial
 
 * templates silex
