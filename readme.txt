@@ -85,3 +85,6 @@ x    openSilexPage : commande
 * remove silex files needed only for editing 
 * add tests "if_exist" for all hooks (wp versions)
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
+
+* security tests
+	* blog_public option

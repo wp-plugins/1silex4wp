@@ -125,7 +125,7 @@ function getPostListByType($type){
 ?>
 <body style="padding:0px;height:100%; margin-top:0; margin-left:0; margin-bottom:0; margin-right:0;" onload="setTimeout(function(){initWModePatch('silex');}, 500 );">
 	<div style="position: absolute; z-index: 1000;" id="frameContainer"></div>
-	<div id="flashcontent" align="center" style="position: absolute; z-index: 0; width: 100%; height: 100%;"> -->
+	<div id="flashcontent" align="center" style="position: absolute; z-index: 0; width: 100%; height: 100%;">
 	</div>
 		<iframe style="display:none" id="downloadFrame" name="downloadFrame"></iframe>
 		<?php if(isset($websiteConfig["googleAnaliticsAccountNumber"]) && $websiteConfig["googleAnaliticsAccountNumber"]!="") { ?>

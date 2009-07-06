@@ -106,13 +106,8 @@ Silex "WordPress" themes
 	no-flash version
 	project page
 	silex
-
-
-RSS feed of posts and pages
-- search
-- list by date with offset
-- list by archive, tags, category
-
+	wp-admin
+	permalink of the current page
 
 -------------------
 
@@ -138,17 +133,61 @@ javascript to do
 WP URLs
 
 recent posts
+> is_front_page() 
+> is_home() 
 > /
 > /?paged=1
 
 single post
+> is_single() 
 > /?p=12
 
+single page
+> is_single()  ??
+> is_page() 
+> /?page_id=15
+
 tag list
-/?tag=atag
+> /?tag=atag
+> is_tag() 
 
 category list
-/?cat=4
+> /?cat=4
+> is_category() 
+
+
+> is_search()
 
 archives
-/?paged=2
+> /?paged=2
+> is_paged() 
+
+
+author list
+> ??
+> is_author() 
+
+
+is_404() 
+
+is_archive()  -> When any type of Archive page is being displayed. Category, Tag, Author and Date based pages are all types of Archives.
+
+is_date() 
+When any date-based archive page is being displayed (i.e. a monthly, yearly, daily or time-based archive).
+is_year() 
+When a yearly archive is being displayed.
+is_month() 
+When a monthly archive is being displayed.
+is_day() 
+When a daily archive is being displayed.
+is_time() 
+
+
+http://codex.wordpress.org/Conditional_Tags
+
+-<?php echo get_option('permalink_structure'); ?>- /%year%/%monthnum%/%postname%/
+-<?php echo get_option('category_base'); ?>-
+-<?php echo get_option('tag_base'); ?>-
+-<?php echo get_option('blogname'); ?>-
+-<?php echo get_option('admin_email'); ?>-
+
