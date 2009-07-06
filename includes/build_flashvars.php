@@ -3,6 +3,7 @@
 // build FlashVars
 $flashVars='';
 
+$flashVars.='post_ID='.urlencode($post->ID).'&';
 /*
 // POST INFO - see http://codex.wordpress.org/WPMU_Functions/get_blog_post
 $flashVars.='post_guid='.urlencode($post->guid).'&';

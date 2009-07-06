@@ -98,13 +98,57 @@ Admin pannel
 
 Silex "WordPress" themes
 - structure
-	page
-	post
-	posts
-
+	single (page, post)
+	list (posts, category, search, archives)
+	credits
+	
+- links
+	no-flash version
+	project page
+	silex
 
 
 RSS feed of posts and pages
 - search
 - list by date with offset
 - list by archive, tags, category
+
+
+-------------------
+
+
+javascript to do
+- override cSilex::changeSection
+	store the displayed section
+	GetVariable => data about the post, page or section which is displayed
+	wp getOption => URL rewrite rule of WP
+	setUrlHash in fucntion of these data
+	
+- override cSilex::urlHashChanged
+	take data from php websiteConfig: URL rewrite rule of the Silex website
+	SetVariable of the section data (id and or title of the page/post)
+	call silex open command to the right section
+	
+- override 	cSilex::getIdFromHash and cSilex::setUrlHash
+	wp getOption gives the template
+	id_site is allways the chosen template
+	
+----------------------
+
+WP URLs
+
+recent posts
+> /
+> /?paged=1
+
+single post
+> /?p=12
+
+tag list
+/?tag=atag
+
+category list
+/?cat=4
+
+archives
+/?paged=2

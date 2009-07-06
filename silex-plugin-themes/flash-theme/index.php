@@ -51,9 +51,12 @@ else
 		$id_site=$_GET["id_site"];
 	else
 	{
-		$id_site=get_option('selected_template');
-		if (!$id_site);
-			$id_site=$serverConfig->silex_server_ini["DEFAULT_WEBSITE"];
+//		$id_site=get_option('selected_template');
+
+//		if (!isset($id_site) || $id_site==='')
+//			$id_site=$serverConfig->silex_server_ini["DEFAULT_WEBSITE"];
+
+//		$id_site=$serverConfig->silex_server_ini["DEFAULT_WEBSITE"];
 	}
 
 // **
@@ -182,7 +185,7 @@ include_once SILEX_INCLUDE_DIR.'/build_flashvars.php';
 			}
 			function openPost($postID){
 				document.getElementById('silex').SetVariable('silex_exec_str','DataContainer.post.ID='+$postID);
-				openSilexPage("p/pp/");
+				openSilexPage(<?php echo $websiteConfig["CONFIG_START_SECTION"]; ?>"/post/"+$postID);
 			}
 		</script>
 
@@ -193,7 +196,7 @@ include_once SILEX_INCLUDE_DIR.'/build_flashvars.php';
 		$flashVars = "<?php echo $flashVars; ?>";
 	
 		$enableDeeplinking = "<?php if(isset($websiteConfig["ENABLE_DEEPLINKING"])) echo $websiteConfig["ENABLE_DEEPLINKING"]; else echo "true"; ?>";
-		$DEFAULT_WEBSITE="<?php echo $serverConfig->silex_server_ini["DEFAULT_WEBSITE"]; ?>";
+		$DEFAULT_WEBSITE="<?php echo get_option('selected_template');//$serverConfig->silex_server_ini["DEFAULT_WEBSITE"]; ?>";
 		$php_id_site="<?php echo $id_site; ?>";
 		$php_website_conf_file="<?php echo $serverConfig->silex_server_ini["CONTENT_FOLDER"].$id_site."/".$serverConfig->silex_server_ini["WEBSITE_CONF_FILE"]; ?>";
 

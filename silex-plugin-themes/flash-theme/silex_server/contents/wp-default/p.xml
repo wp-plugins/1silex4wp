@@ -11,529 +11,27 @@
 										<object>
 											<property id="main">
 												<object>
-													<property id="Cmp_datacontainer_1246315085287">
+													<property id="Image_loading_1246478028343">
 														<object>
 															<property id="main">
 																<object>
-																	<property id="actions">
-																		<array>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																							<property>
-																								<string><![CDATA[//codex.wordpress.org/Bloginfo#Parameters]]></string>
-																							</property>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[BLOG INFO - see http]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[//]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.admin_email=<<_root.blog_admin_email>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.atom_url=<<_root.atom_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.charset=<<_root.charset>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.comments_atom_url=<<_root.comments_atom_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.comments_rss2_url=<<_root.comments_rss2_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.description=<<_root.description>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.home=<<_root.home>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.html_type=<<_root.html_type>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.language=<<_root.language>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.name=<<_root.name>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.pingback_url=<<_root.pingback_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.rdf_url=<<_root.rdf_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.rss2_url=<<_root.rss2_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.rss_url=<<_root.rss_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.siteurl=<<_root.siteurl>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.stylesheet_directory=<<_root.stylesheet_directory>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.stylesheet_url=<<_root.stylesheet_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.template_directory=<<_root.template_directory>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.template_url=<<_root.template_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.text_direction=<<_root.text_direction>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.url=<<_root.url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.version=<<_root.version>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.blog.wpurl=<<_root.wpurl>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																							<property>
-																								<string><![CDATA[//codex.wordpress.org/Function_Reference/wp_get_current_user]]></string>
-																							</property>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[USER INFO - see http]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[//]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.login=<<_root.user_login>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.level=<<_root.user_level>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.ID=<<_root.user_ID>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.email=<<_root.user_email>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.url=<<_root.user_url>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																			<property>
-																				<object>
-																					<property id="parameters">
-																						<array>
-																						</array>
-																					</property>
-																					<property id="functionName">
-																						<string><![CDATA[DataContainer.user.name=<<_root.display_name>>]]></string>
-																					</property>
-																					<property id="modifier">
-																						<string><![CDATA[onLoad]]></string>
-																					</property>
-																				</object>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
+																	<property id="useHandCursor">
 																		<true/>
 																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
 																	<property id="_y">
-																		<number>200</number>
+																		<number>413</number>
 																	</property>
 																	<property id="_x">
-																		<number>200</number>
+																		<number>442</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<false/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
-																	</property>
-																	<property id="height">
-																		<number>0</number>
-																	</property>
-																	<property id="width">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[DataContainer]]></string>
-																	</property>
-																	<property id="minWidth">
-																		<number>0</number>
-																	</property>
-																	<property id="minHeight">
-																		<number>0</number>
-																	</property>
-																	<property id="visible">
-																		<true/>
-																	</property>
-																	<property id="enabled">
-																		<true/>
-																	</property>
-																	<property id="dataNames">
-																		<array>
-																			<property>
-																				<string><![CDATA[post]]></string>
-																			</property>
-																			<property>
-																				<string><![CDATA[blog]]></string>
-																			</property>
-																			<property>
-																				<string><![CDATA[user]]></string>
-																			</property>
-																			<property>
-																				<string><![CDATA[author]]></string>
-																			</property>
-																		</array>
 																	</property>
 																</object>
 															</property>
 														</object>
 													</property>
-													<property id="Text_new_media_1246478633218">
+													<property id="Text_new_media_1246315670881">
 														<object>
 															<property id="main">
 																<object>
@@ -554,10 +52,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>-14</number>
+																		<number>143</number>
 																	</property>
 																	<property id="_x">
-																		<number>96</number>
+																		<number>106</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -575,7 +73,7 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[Text- login]]></string>
+																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="wordWrap">
 																		<true/>
@@ -611,7 +109,7 @@
 																		<number>16</number>
 																	</property>
 																	<property id="scrollbar">
-																		<true/>
+																		<false/>
 																	</property>
 																	<property id="useCss">
 																		<false/>
@@ -620,13 +118,13 @@
 																		<false/>
 																	</property>
 																	<property id="height">
-																		<number>21.5</number>
+																		<number>53.5</number>
 																	</property>
 																	<property id="width">
-																		<number>724.05</number>
+																		<number>707.95</number>
 																	</property>
 																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="RIGHT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">((loged in as &lt;&lt;_root.display_name&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="_sans" SIZE="23" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;DataContainer.post.title&gt;&gt;))</B></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="_sans" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">by <U>[[author/((&lt;&lt;DataContainer.post.dc:creator&gt;&gt;))|((&lt;&lt;DataContainer.post.dc:creator&gt;&gt;))]]</U> - ((&lt;&lt;DataContainer.post.pubDate&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
 																	</property>
 																	<property id="html">
 																		<true/>
@@ -635,7 +133,7 @@
 															</property>
 														</object>
 													</property>
-													<property id="Text_new_media_1246313064615">
+													<property id="Text_new_media_1246315490490">
 														<object>
 															<property id="main">
 																<object>
@@ -656,10 +154,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>56</number>
+																		<number>711</number>
 																	</property>
 																	<property id="_x">
-																		<number>97</number>
+																		<number>91</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -677,7 +175,7 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[Text- title]]></string>
+																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="wordWrap">
 																		<true/>
@@ -713,7 +211,7 @@
 																		<number>16</number>
 																	</property>
 																	<property id="scrollbar">
-																		<true/>
+																		<false/>
 																	</property>
 																	<property id="useCss">
 																		<false/>
@@ -722,13 +220,13 @@
 																		<false/>
 																	</property>
 																	<property id="height">
-																		<number>101.5</number>
+																		<number>62.45</number>
 																	</property>
 																	<property id="width">
-																		<number>718</number>
+																		<number>599.9</number>
 																	</property>
 																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="44" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>[[open:p/posts|((&lt;&lt;_root.name&gt;&gt;))</B>]]</FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="17" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;_root.description&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">-&gt; ((&lt;&lt;DataContainer.post.link&gt;&gt;))&amp;is_framed</FONT></P></TEXTFORMAT>]]></string>
 																	</property>
 																	<property id="html">
 																		<true/>
@@ -737,7 +235,7 @@
 															</property>
 														</object>
 													</property>
-													<property id="Image_logosilex_1246312999224">
+													<property id="AsFrame_asframe_1246315243849">
 														<object>
 															<property id="main">
 																<object>
@@ -745,29 +243,11 @@
 																		<array>
 																		</array>
 																	</property>
-																	<property id="tabChildren">
+																	<property id="backgroundVisible">
 																		<false/>
 																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
+																	<property id="location">
+																		<string><![CDATA[<<DataContainer.post.link>>&is_framed]]></string>
 																	</property>
 																	<property id="tabIndex">
 																		<number>1</number>
@@ -778,353 +258,14 @@
 																	<property id="visibleOutOfAdmin">
 																		<true/>
 																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/logosilex.jpg]]></string>
-																	</property>
 																	<property id="rotation">
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>-42</number>
+																		<number>215</number>
 																	</property>
 																	<property id="_x">
-																		<number>-16</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<true/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[author]]></string>
-																	</property>
-																	<property id="height">
-																		<number>64</number>
-																	</property>
-																	<property id="width">
-																		<number>64</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[spot author]]></string>
-																	</property>
-																	<property id="clickable">
-																		<true/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="Image_logosilex_1246312962990">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabChildren">
-																		<false/>
-																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/logosilex.jpg]]></string>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>-42</number>
-																	</property>
-																	<property id="_x">
-																		<number>-81</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<true/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[pages]]></string>
-																	</property>
-																	<property id="height">
-																		<number>64</number>
-																	</property>
-																	<property id="width">
-																		<number>64</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[spot pages]]></string>
-																	</property>
-																	<property id="clickable">
-																		<true/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="Image_logosilex_1246312883131">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabChildren">
-																		<false/>
-																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/logosilex.jpg]]></string>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>-41</number>
-																	</property>
-																	<property id="_x">
-																		<number>-143</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<true/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[pp]]></string>
-																	</property>
-																	<property id="height">
-																		<number>64</number>
-																	</property>
-																	<property id="width">
-																		<number>64</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[spot post]]></string>
-																	</property>
-																	<property id="clickable">
-																		<true/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="Image_logosilex_1246312871396">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabChildren">
-																		<false/>
-																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/logosilex.jpg]]></string>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>-39</number>
-																	</property>
-																	<property id="_x">
-																		<number>-211</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<true/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[posts]]></string>
-																	</property>
-																	<property id="height">
-																		<number>64</number>
-																	</property>
-																	<property id="width">
-																		<number>64</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[spot posts ]]></string>
-																	</property>
-																	<property id="clickable">
-																		<true/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="Image_kubrickbgwide_1246312201787">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabChildren">
-																		<false/>
-																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/wp-default/kubrickbgwide.jpg]]></string>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>202</number>
-																	</property>
-																	<property id="_x">
-																		<number>80</number>
+																		<number>94</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -1142,184 +283,13 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="height">
-																		<number>451.5</number>
+																		<number>481.45</number>
 																	</property>
 																	<property id="width">
-																		<number>760</number>
+																		<number>723.95</number>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[kubrickbgwide.jpg]]></string>
-																	</property>
-																	<property id="clickable">
-																		<false/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="Image_kubrickfooter_1246312199959">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabChildren">
-																		<false/>
-																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/wp-default/kubrickfooter.jpg]]></string>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>653</number>
-																	</property>
-																	<property id="_x">
-																		<number>80</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<false/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
-																	</property>
-																	<property id="height">
-																		<number>63</number>
-																	</property>
-																	<property id="width">
-																		<number>760</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[kubrickfooter.jpg]]></string>
-																	</property>
-																	<property id="clickable">
-																		<false/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="Image_kubrickheader_1246312197459">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="tabChildren">
-																		<false/>
-																	</property>
-																	<property id="_focusrect">
-																		<false/>
-																	</property>
-																	<property id="shadowOffsetY">
-																		<number>10</number>
-																	</property>
-																	<property id="shadowOffsetX">
-																		<number>10</number>
-																	</property>
-																	<property id="shadow">
-																		<false/>
-																	</property>
-																	<property id="visibleFrame_bool">
-																		<false/>
-																	</property>
-																	<property id="scaleMode">
-																		<string><![CDATA[none]]></string>
-																	</property>
-																	<property id="useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="url">
-																		<string><![CDATA[media/wp-default/kubrickheader.jpg]]></string>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>3</number>
-																	</property>
-																	<property id="_x">
-																		<number>80</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<false/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
-																	</property>
-																	<property id="height">
-																		<number>200</number>
-																	</property>
-																	<property id="width">
-																		<number>760</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[kubrickheader.jpg]]></string>
-																	</property>
-																	<property id="clickable">
-																		<false/>
+																		<string><![CDATA[asframe]]></string>
 																	</property>
 																</object>
 															</property>
@@ -1329,11 +299,31 @@
 														<array>
 															<property>
 																<object>
-																	<property id="label">
-																		<string><![CDATA[Text- login]]></string>
+																	<property id="contextAccepted">
+																		<array>
+																			<property>
+																				<string><![CDATA[*]]></string>
+																			</property>
+																		</array>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
 																	</property>
 																	<property id="_name">
-																		<string><![CDATA[Text_new_media_1246478633218]]></string>
+																		<string><![CDATA[Text_new_media_1246315670881]]></string>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_new_media_1246315490490]]></string>
 																	</property>
 																	<property id="type">
 																		<string><![CDATA[Text]]></string>
@@ -1356,177 +346,14 @@
 																			</property>
 																		</array>
 																	</property>
-																	<property id="mediaUrl">
-																		<string><![CDATA[media/components/oof/DataContainer.cmp.swf]]></string>
-																	</property>
 																	<property id="type">
-																		<string><![CDATA[Component]]></string>
+																		<string><![CDATA[AsFrame]]></string>
 																	</property>
 																	<property id="_name">
-																		<string><![CDATA[Cmp_datacontainer_1246315085287]]></string>
+																		<string><![CDATA[AsFrame_asframe_1246315243849]]></string>
 																	</property>
 																	<property id="label">
-																		<string><![CDATA[DataContainer]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Text_new_media_1246313064615]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[Text- title]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_logosilex_1246312999224]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[spot author]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_logosilex_1246312962990]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[spot pages]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_logosilex_1246312883131]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[spot post]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_logosilex_1246312871396]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[spot posts ]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_kubrickbgwide_1246312201787]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[kubrickbgwide.jpg]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_kubrickfooter_1246312199959]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[kubrickfooter.jpg]]></string>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Image]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Image_kubrickheader_1246312197459]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[kubrickheader.jpg]]></string>
+																		<string><![CDATA[asframe]]></string>
 																	</property>
 																</object>
 															</property>
