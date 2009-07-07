@@ -46,9 +46,11 @@ Plugin core (index.php)
 		-> do nothing
 	if is_framed value in get
 		-> Framed theme
-		
+- javascript silex
+	override cSilex::changeSection
+	override cSilex::urlHashChanged
+	override 	cSilex::getIdFromHash and cSilex::setUrlHash
 
-------------------------------------------------
 FlashTheme class (FlashTheme.php)
 - inputs
 	constructor params: type of the request (page, posts, single post...)
@@ -101,6 +103,7 @@ Silex "WordPress" themes
 	single (page, post)
 	list (posts, category, search, archives)
 	credits
+	404
 	
 - links
 	no-flash version
@@ -110,25 +113,32 @@ Silex "WordPress" themes
 	permalink of the current page
 
 -------------------
+page types (only one at a time possible):
+	is_home
+	is_single
+	is_page
+	is_archive
+	is_search
+	is_404
+
+	
+--
+sub types (several possible at the same time)
+is_front_page
+is_paged
+
+is_author
+
+is_tag
+is_category
+is_date
+is_year
+is_month
+is_day
+is_time 
+-------------------
 
 
-javascript to do
-- override cSilex::changeSection
-	store the displayed section
-	GetVariable => data about the post, page or section which is displayed
-	wp getOption => URL rewrite rule of WP
-	setUrlHash in fucntion of these data
-	
-- override cSilex::urlHashChanged
-	take data from php websiteConfig: URL rewrite rule of the Silex website
-	SetVariable of the section data (id and or title of the page/post)
-	call silex open command to the right section
-	
-- override 	cSilex::getIdFromHash and cSilex::setUrlHash
-	wp getOption gives the template
-	id_site is allways the chosen template
-	
-----------------------
 
 WP URLs
 
@@ -191,3 +201,25 @@ http://codex.wordpress.org/Conditional_Tags
 -<?php echo get_option('blogname'); ?>-
 -<?php echo get_option('admin_email'); ?>-
 
+	<?php 
+		$_array = Array();
+		$_array[] = is_front_page;
+		$_array[] = is_home;
+		$_array[] = is_single;
+		$_array[] = is_page;
+		$_array[] = is_tag;
+		$_array[] = is_category;
+		$_array[] = is_search;
+		$_array[] = is_paged;
+		$_array[] = is_author;
+		$_array[] = is_404;
+		$_array[] = is_archive;
+		$_array[] = is_date;
+		$_array[] = is_year;
+		$_array[] = is_month;
+		$_array[] = is_day;
+		$_array[] = is_time;
+		foreach($_array as $func){
+			echo $func.' = '.$func().'<br>';
+		}
+	?>

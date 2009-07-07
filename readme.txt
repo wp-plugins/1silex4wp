@@ -74,15 +74,31 @@ x    Override url rewrite wp?
 x* Fonctions js 
     convertDeepLink : wp <-> silex
 x    openSilexPage : commande
+* override cSilex::changeSection
+	store the displayed section
+	GetVariable => data about the post, page or section which is displayed
+	wp getOption => URL rewrite rule of WP
+	setUrlHash in fucntion of these data
+	
+* override cSilex::urlHashChanged
+	take data from php websiteConfig: URL rewrite rule of the Silex website
+	SetVariable of the section data (id and or title of the page/post)
+	call silex open command to the right section
+	
+* override 	cSilex::getIdFromHash and cSilex::setUrlHash
+	wp getOption gives the template
+	id_site is allways the chosen template
 -* Liens reecrits avec appel js
 * Reecriture url initiale (juste url base) et deeplink initial
-
+* make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
 * templates silex
+	use the content:encoded in a frame and the comments rss feed for the comments
+	a frame to add a comment?
 
 * add no-flash page param to silex.js
 * detect when flash_theme or framed_theme is missing
 * add a version control and update
-* remove silex files needed only for editing 
+no* remove silex files needed only for editing 
 * add tests "if_exist" for all hooks (wp versions)
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
 
