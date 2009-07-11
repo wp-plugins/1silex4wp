@@ -64,16 +64,7 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do ==
-x* add in FlashVars: get_bookmarks, get_tags, get_pages, get_categories - see http://codex.wordpress.org/Function_Reference
-x* rss feeds
-x* Install
-x    Copie
-x* admin pannel
-x    Url rewrite silex
-x    Override url rewrite wp?
-x* Fonctions js 
-    convertDeepLink : wp <-> silex
-x    openSilexPage : commande
+* selector to retrieve data of a single post
 * override cSilex::changeSection
 	store the displayed section
 	GetVariable => data about the post, page or section which is displayed
