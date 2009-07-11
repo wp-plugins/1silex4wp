@@ -44,13 +44,13 @@ Requirements
 
 = 0.1 =
 * Plugin core: 
-	installation
-	settings
-	substitution of the themes
-	auto-configured Silex server
-	FlashVars
-	url rewrite
-	javascript communication between Silex and wordpress
+	* installation
+	* settings
+	* substitution of the themes
+	* auto-configured Silex server
+	* FlashVars
+	* url rewrite
+	* javascript communication between Silex and wordpress
 
 = 0.0 =
 * Still in a conception phase - Nothing to download yet
