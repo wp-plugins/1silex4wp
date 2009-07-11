@@ -90,15 +90,15 @@ x    openSilexPage : commande
 	id_site is allways the chosen template
 -* Liens reecrits avec appel js
 * Reecriture url initiale (juste url base) et deeplink initial
-* make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
+?* make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
+?* remove silex files needed only for editing 
 * templates silex
-	use the content:encoded in a frame and the comments rss feed for the comments
-	a frame to add a comment?
+x	use the content:encoded in a frame and the comments rss feed for the comments
+x	a frame to add a comment?
 
 * add no-flash page param to silex.js
 * detect when flash_theme or framed_theme is missing
 * add a version control and update
-no* remove silex files needed only for editing 
 * add tests "if_exist" for all hooks (wp versions)
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
 

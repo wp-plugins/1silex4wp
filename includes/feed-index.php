@@ -40,6 +40,7 @@ function silex_add_feeds() {
   add_feed('silex_tags_feed', 'silex_create_tags_feed');
   add_feed('silex_pages_feed', 'silex_create_pages_feed');
   add_feed('silex_bookmarks_feed', 'silex_create_bookmarks_feed');
+  add_feed('silex_paged_feed', 'silex_create_paged_feed');
 
   // add rewrite rule action
   add_action('generate_rewrite_rules', 'silex_rewrite_rules');

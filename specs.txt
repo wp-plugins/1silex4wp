@@ -34,9 +34,9 @@ SXPress-FlashOS
 ?feed=silex_pages_feed
 ?feed=silex_bookmarks_feed
 ?feed=silex_posts_feed
+?feed=silex_paged_feed
 ?no_flash
 ?is_framed
-
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -114,12 +114,15 @@ Silex "WordPress" themes
 
 -------------------
 page types (only one at a time possible):
-	is_home
-	is_single
-	is_page
-	is_archive
-	is_search
-	is_404
+	home - recent posts
+		DataContainer.selection.paged
+		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataContainer.selection.paged>>))
+	single - single post
+		((<<DataContainer.post.post_content>>))
+	page - single page
+	archive - archives
+	search - search
+	404 - not found
 
 	
 --
@@ -153,7 +156,6 @@ single post
 > /?p=12
 
 single page
-> is_single()  ??
 > is_page() 
 > /?page_id=15
 

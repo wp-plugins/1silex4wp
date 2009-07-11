@@ -27,9 +27,9 @@
  * <category_parent>0</category_parent>
  */
 function silex_create_categories_feed($not_used){
-	$feed_name = "Categories list";
-	include(SILEX_FEED_THEME_DIR."/header.php");
-	$categories = get_categories("hide_empty=0");
+	$feed_name = 'Categories list';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
+	$categories = get_categories('hide_empty=0');
 	foreach ($categories as $cat) {	
 		// retrieve category data
 		$data_object = get_category($cat->cat_ID,OBJECT);
@@ -39,18 +39,18 @@ function silex_create_categories_feed($not_used){
 
 	<item>
 		<title><?php echo $data_object->name ?></title>
-		<link><?php echo get_category_feed_link($data_object->cat_ID,"rss2"); ?></link>
+		<link><?php echo get_category_feed_link($data_object->cat_ID,'rss2'); ?></link>
 <?php
 		foreach($data_object as $key => $val){
 			if(strpos($key,'password')===FALSE)
-				echo "		<".$key.">".$val."</".$key.">\n";
+				echo '		<'.$key.'><![CDATA['.$val.']]></'.$key.'>\n';
 		}
 ?>
 	</item>
 <?php
 		
 	}
-	include(SILEX_FEED_THEME_DIR."/footer.php");
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
 }
 
 /**
@@ -74,9 +74,9 @@ function silex_create_categories_feed($not_used){
  *
  */
 function silex_create_tags_feed($not_used){
-	$feed_name = "Tags list";
-	include(SILEX_FEED_THEME_DIR."/header.php");
-	$tags = get_tags("hide_empty=0");
+	$feed_name = 'Tags list';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
+	$tags = get_tags('hide_empty=0');
 	foreach ($tags as $tag) {	
 		// retrieve category data
 		$data_object = get_tag($tag,OBJECT);
@@ -90,14 +90,14 @@ function silex_create_tags_feed($not_used){
 <?php
 		foreach($data_object as $key => $val){
 			if(strpos($key,'password')===FALSE)
-				echo "		<".$key.">".$val."</".$key.">\n";
+				echo '		<'.$key.'><![CDATA['.$val.']]></'.$key.'>\n';
 		}
 ?>
 	</item>
 <?php
 		
 	}
-	include(SILEX_FEED_THEME_DIR."/footer.php");
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
 }
 /**
  * returns the rss feed listing of pages
@@ -137,9 +137,9 @@ function silex_create_tags_feed($not_used){
  * </item>
  */
 function silex_create_pages_feed($not_used){
-	$feed_name = "pages list";
-	include(SILEX_FEED_THEME_DIR."/header.php");
-	$pages = get_pages("hierarchical =0");
+	$feed_name = 'pages list';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
+	$pages = get_pages('hierarchical =0');
 	foreach ($pages as $page) {	
 		// retrieve category data
 		$data_object = get_page($page,OBJECT);
@@ -150,26 +150,26 @@ function silex_create_pages_feed($not_used){
 	<item>
 		<title><?php echo $data_object->post_title ?></title>
 		<link><?php echo get_page_link($data_object->ID); ?></link>
-		<description><?php echo $data_object->post_content; ?></description>
+		<description><![CDATA[<?php echo $data_object->post_content; ?>]]></description>
 <?php
 		foreach($data_object as $key => $val){
 			if(strpos($key,'password')===FALSE)
-				echo "		<".$key.">".$val."</".$key.">\n";
+				echo '		<'.$key.'><![CDATA['.$val.']]></'.$key.'>\n';
 		}
 ?>
 	</item>
 <?php
 		
 	}
-	include(SILEX_FEED_THEME_DIR."/footer.php");
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
 }
 /**
  * returns the rss feed listing of bookmark
  *
  */
 function silex_create_bookmarks_feed($not_used){
-	$feed_name = "bookmarks list";
-	include(SILEX_FEED_THEME_DIR."/header.php");
+	$feed_name = 'bookmarks list';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
 	$bookmarks = get_bookmarks();
 	foreach ($bookmarks as $bookmark) {	
 		// retrieve category data
@@ -181,26 +181,26 @@ function silex_create_bookmarks_feed($not_used){
 	<item>
 		<title><?php echo $data_object->link_name ?></title>
 		<link><?php echo $data_object->link_url; ?></link>
-		<description><?php echo $data_object->link_description; ?></description>
+		<description><![CDATA[<?php echo $data_object->link_description; ?>]]></description>
 <?php
 		foreach($data_object as $key => $val){
 			if(strpos($key,'password')===FALSE)
-				echo "		<".$key.">".$val."</".$key.">\n";
+				echo '		<'.$key.'><![CDATA['.$val.']]></'.$key.'>\n';
 		}
 ?>
 	</item>
 <?php
 		
 	}
-	include(SILEX_FEED_THEME_DIR."/footer.php");
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
 }
 /**
  * returns the rss feed listing of posts
  *
  */
 function silex_create_posts_feed($not_used){
-	$feed_name = "posts list";
-	include(SILEX_FEED_THEME_DIR."/header.php");
+	$feed_name = 'posts list';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
 	$posts = get_posts();
 //	foreach ($posts as $post) {	
 	while( have_posts()) : the_post();
@@ -211,11 +211,11 @@ function silex_create_posts_feed($not_used){
 ?>
 	<item>
 		<title><?php echo $data_object->post_title ?></title>
-		<description><?php echo $data_object->post_excerpt; ?></description>
+		<description><![CDATA[<?php echo $data_object->post_excerpt; ?>]]></description>
 <?php
 		foreach($data_object as $key => $val){
 			if(strpos($key,'password')===FALSE)
-				echo "		<".$key.">".$val."</".$key.">\n";
+				echo '		<'.$key.'><![CDATA['.$val.']]></'.$key.'>\n';
 		}
 ?>
 		<link><?php the_permalink_rss() ?></link>
@@ -224,7 +224,7 @@ function silex_create_posts_feed($not_used){
 		<dc:creator><?php the_author() ?></dc:creator>
 		<?php the_category_rss() ?>
 
-		<guid isPermaLink="false"><?php the_guid(); ?></guid>
+		<guid isPermaLink='false'><?php the_guid(); ?></guid>
 	<?php if ( strlen( $post->post_content ) > 0 ) : ?>
 		<content:encoded><![CDATA[<?php the_content() ?>]]></content:encoded>
 	<?php else : ?>
@@ -238,6 +238,36 @@ function silex_create_posts_feed($not_used){
 	<?php endwhile; ?>
 <?php
 		
-	include(SILEX_FEED_THEME_DIR."/footer.php");
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
 }
+/**
+ * returns the rss feed listing all pages of the paged posts
+ *
+ */
+function silex_create_paged_feed($not_used){
+	$root_url = get_option('home');
+	$feed_name = 'pages of paged posts';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
+	// compute number of pages
+	$number_of_posts_per_page = get_option('posts_per_page');
+	if ($number_of_posts_per_page>0){
+		$number_of_pages = get_total_number_of_posts() / $number_of_posts_per_page;
+	} else {
+		// error
+		$number_of_pages = 0;
+	}
+	for ($i=0; $i<$number_of_pages; $i++){
+?>
+	<item>
+		<title><?php echo $i+1; ?></title>
+		<description><![CDATA[Page <?php echo $i+1; ?>]]></description>
+		<link><?php echo $root_url; ?>?feed=silex_posts_feed&amp;paged=<?php echo $i+1; ?></link>
+<?php rss_enclosure(); ?>
+	<?php do_action('rss2_item'); ?>
+	</item>
+	<?php 
+	}		
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
+}
+
 ?>

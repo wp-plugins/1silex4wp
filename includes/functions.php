@@ -75,4 +75,15 @@ function register_silex_options(){
   register_setting( 'silex-option-group', 'override_wp_url_rewrite_rules' );
   register_setting( 'silex-option-group', 'use_flash_by_default' );
 }
+/**
+ * returns the total number of posts
+ */
+function get_total_number_of_posts(){
+  $num = 0;
+  $categories = get_categories(); 
+  foreach ($categories as $cat) {
+	$num += $cat->category_count;
+  }
+  return $num;
+}
 ?>
