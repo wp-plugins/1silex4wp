@@ -11,7 +11,7 @@
 										<object>
 											<property id="main">
 												<object>
-													<property id="Cmp_richtextlist_1246314272193">
+													<property id="Cmp_listui_1246314869053">
 														<object>
 															<property id="main">
 																<object>
@@ -32,10 +32,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>207</number>
+																		<number>386</number>
 																	</property>
 																	<property id="_x">
-																		<number>144</number>
+																		<number>75</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -53,67 +53,28 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="height">
-																		<number>458.45</number>
+																		<number>22.2</number>
 																	</property>
 																	<property id="width">
-																		<number>680.95</number>
+																		<number>39.95</number>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[RichTextListPosts]]></string>
-																	</property>
-																	<property id="minWidth">
-																		<number>0</number>
-																	</property>
-																	<property id="minHeight">
-																		<number>0</number>
+																		<string><![CDATA[ListUi.cmp.swf]]></string>
 																	</property>
 																	<property id="visible">
 																		<true/>
 																	</property>
-																	<property id="enabled">
-																		<true/>
+																	<property id="scrollStep">
+																		<number>1</number>
 																	</property>
-																	<property id="useVariableRowHeight">
-																		<true/>
-																	</property>
-																	<property id="multipleSelection">
+																	<property id="loopList">
 																		<false/>
 																	</property>
 																	<property id="isHorizontal">
 																		<false/>
 																	</property>
-																	<property id="itemsPerRow">
-																		<number>1</number>
-																	</property>
-																	<property id="rowHeight">
-																		<number>426.785</number>
-																	</property>
-																	<property id="easingDuration">
-																		<number>0.5</number>
-																	</property>
-																	<property id="cellRenderer">
-																		<string><![CDATA[RichTextCellRenderer]]></string>
-																	</property>
-																	<property id="cellMarginY">
-																		<number>10</number>
-																	</property>
-																	<property id="cellMarginX">
-																		<number>10</number>
-																	</property>
-																	<property id="wordWrap">
-																		<true/>
-																	</property>
-																	<property id="_useHandCursor">
-																		<false/>
-																	</property>
-																	<property id="html">
-																		<true/>
-																	</property>
-																	<property id="embedFonts">
-																		<false/>
-																	</property>
-																	<property id="autoSize">
-																		<string><![CDATA[center]]></string>
+																	<property id="listPath">
+																		<string><![CDATA[RichTextListPosts]]></string>
 																	</property>
 																</object>
 															</property>
@@ -246,7 +207,7 @@
 															</property>
 														</object>
 													</property>
-													<property id="Cmp_listui_1246314869053">
+													<property id="Cmp_richtextlist_1246314272193">
 														<object>
 															<property id="main">
 																<object>
@@ -267,10 +228,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>386</number>
+																		<number>206</number>
 																	</property>
 																	<property id="_x">
-																		<number>75</number>
+																		<number>142</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -288,28 +249,67 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="height">
-																		<number>22.2</number>
+																		<number>458.45</number>
 																	</property>
 																	<property id="width">
-																		<number>39.95</number>
+																		<number>519.95</number>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[ListUi.cmp.swf]]></string>
+																		<string><![CDATA[RichTextListPosts]]></string>
+																	</property>
+																	<property id="minWidth">
+																		<number>0</number>
+																	</property>
+																	<property id="minHeight">
+																		<number>0</number>
 																	</property>
 																	<property id="visible">
 																		<true/>
 																	</property>
-																	<property id="scrollStep">
-																		<number>1</number>
+																	<property id="enabled">
+																		<true/>
 																	</property>
-																	<property id="loopList">
+																	<property id="useVariableRowHeight">
+																		<true/>
+																	</property>
+																	<property id="multipleSelection">
 																		<false/>
 																	</property>
 																	<property id="isHorizontal">
 																		<false/>
 																	</property>
-																	<property id="listPath">
-																		<string><![CDATA[RichTextListPosts]]></string>
+																	<property id="itemsPerRow">
+																		<number>1</number>
+																	</property>
+																	<property id="rowHeight">
+																		<number>41</number>
+																	</property>
+																	<property id="easingDuration">
+																		<number>0.5</number>
+																	</property>
+																	<property id="cellRenderer">
+																		<string><![CDATA[RichTextCellRenderer]]></string>
+																	</property>
+																	<property id="cellMarginY">
+																		<number>10</number>
+																	</property>
+																	<property id="cellMarginX">
+																		<number>10</number>
+																	</property>
+																	<property id="wordWrap">
+																		<true/>
+																	</property>
+																	<property id="_useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="html">
+																		<true/>
+																	</property>
+																	<property id="embedFonts">
+																		<false/>
+																	</property>
+																	<property id="autoSize">
+																		<string><![CDATA[center]]></string>
 																	</property>
 																</object>
 															</property>

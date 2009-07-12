@@ -29,9 +29,9 @@ SXPress-FlashOS
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
+?feed=silex_pages_feed
 ?feed=silex_categories_feed
 ?feed=silex_tags_feed
-?feed=silex_pages_feed
 ?feed=silex_bookmarks_feed
 ?feed=silex_posts_feed
 ?feed=silex_paged_feed
@@ -107,23 +107,30 @@ Silex "WordPress" themes
 	
 - links
 	no-flash version
-	project page
-	silex
-	wp-admin
+	lists of pages, tags, categories
 	permalink of the current page
+	project page, silex, wordpress
+	wp-admin
 
--------------------
-page types (only one at a time possible):
+- page types (only one at a time possible):
 	home - recent posts
-		DataContainer.selection.paged
-		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataContainer.selection.paged>>))
+		((<<DataContainer.blog.home>>))?feed=silex_paged_feed
+		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))
 	single - single post
-		((<<DataContainer.post.post_content>>))
+		((<<DataContainer.post.ID>>))
 	page - single page
-	archive - archives
+		((<<DataContainer.post.ID>>))
+	archive - archives: Category, Tag, Author and Date (monthly, yearly, daily, NOT time-based for now)
+		((<<DataContainer.blog.home>>))?feed=silex_paged_feed((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>))
+		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))
+		
 	search - search
-	404 - not found
+		((<<DataContainer.blog.home>>))?feed=silex_paged_feed((&s=<<DataContainer.selection.s>>))
+		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))
 
+
+	404 - not found
+		
 	
 --
 sub types (several possible at the same time)
@@ -158,16 +165,37 @@ single post
 single page
 > is_page() 
 > /?page_id=15
+	p=27 - use the post ID to show that post
+	name=about-my-life - query for a particular post that has this Post Slug
+	page_id=7 - query for just Page ID 7
+	pagename=about - note that this is not the page's title, but the page's path
+	showposts=1 - use showposts=3 to show 3 posts. Use showposts=-1 to show all posts
+	'post__in' => array(5,12,2,14,7) - inclusion, lets you specify the post IDs to retrieve
+	'post__not_in' => array(6,2,8) - exclusion, lets you specify the post IDs NOT to retrieve
+	'post_type=page' - returns Pages; defaults to value of post; can be any, attachment, page, or post.
 
 tag list
 > /?tag=atag
 > is_tag() 
+		tag
+		tag__and
+		tag__in
+		tag_slug__and
+		tag_slug__in
+
 
 category list
 > /?cat=4
 > is_category() 
+		cat
+		category_name
+		category__and
+		category__in
+		category__not_in
 
 
+search
+> /?s=lorem
 > is_search()
 
 archives
@@ -176,26 +204,53 @@ archives
 
 
 author list
-> ??
+> /?author=0
 > is_author() 
+		author=3
+		author=-3 - exclude author id 3 posts
+		author_name=Harriet
 
 
-is_404() 
+404
+> /?p=99999999999999999999999999999999999
+> is_404() 
 
+ARCHIVES
 is_archive()  -> When any type of Archive page is being displayed. Category, Tag, Author and Date based pages are all types of Archives.
 
-is_date() 
-When any date-based archive page is being displayed (i.e. a monthly, yearly, daily or time-based archive).
-is_year() 
-When a yearly archive is being displayed.
-is_month() 
-When a monthly archive is being displayed.
-is_day() 
-When a daily archive is being displayed.
-is_time() 
+time 
+		hour= - hour (from 0 to 23)
+		minute= - minute (from 0 to 60)
+		second= - second (0 to 60)
+		day= - day of the month (from 1 to 31)
+		monthnum= - month number (from 1 to 12)
+		year= - 4 digit year (e.g. 2009)
+		w= - week of the year (from 0 to 53) and uses the MySQL WEEK command Mode=1.
 
+year
+> /?year=2009
+> is_year() 
+
+month 
+> /?m=july
+> /?monthnum=7
+> is_month() 
+
+day
+> /?day=12
+> is_day() 
+
+time * not used for now
+> is_time() 
+
+http://codex.wordpress.org/Template_Tags/query_posts
+> all the parameters of the query
 
 http://codex.wordpress.org/Conditional_Tags
+> all the is_*
+
+
+-----------------------------------------
 
 -<?php echo get_option('permalink_structure'); ?>- /%year%/%monthnum%/%postname%/
 -<?php echo get_option('category_base'); ?>-

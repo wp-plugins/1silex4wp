@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><object>
+	<property id="application" silexXmlVersion="2">
+		<object>
+			<property id="show">
+				<object>
+					<property id="contentContainer_mc">
+						<object>
+							<property id="content_mc">
+								<object>
+									<property id="container_mc">
+										<object>
+											<property id="main">
+												<object>
+													<property id="Cmp_label_button_1247349983312">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>209</number>
+																	</property>
+																	<property id="_x">
+																		<number>189</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<false/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<true/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[single-comment]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[label_button.cmp.swf]]></string>
+																	</property>
+																	<property id="height">
+																		<number>28</number>
+																	</property>
+																	<property id="width">
+																		<number>147.95</number>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">Comments ( 7 )</FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="imageUrl">
+																		<string><![CDATA[media/]]></string>
+																	</property>
+																	<property id="delay">
+																		<number>0</number>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="clickable">
+																		<true/>
+																	</property>
+																	<property id="easingDuration">
+																		<number>3</number>
+																	</property>
+																	<property id="followMouse">
+																		<false/>
+																	</property>
+																	<property id="wordWrap">
+																		<false/>
+																	</property>
+																	<property id="autoSize">
+																		<true/>
+																	</property>
+																	<property id="buttonLabelPress">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>Comments ( ((&lt;&lt;DataContainer.post.comment_count&gt;&gt;)) )</B></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="buttonLabelOver">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><U>Comments ( ((&lt;&lt;DataContainer.post.comment_count&gt;&gt;)) )</U></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="buttonLabelSelect">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>Comments ( ((&lt;&lt;DataContainer.post.comment_count&gt;&gt;)) )</B></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="buttonLabelNormal">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">Comments ( ((&lt;&lt;DataContainer.post.comment_count&gt;&gt;)) )</FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="centeredHoriz">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Cmp_label_button_1247349969906">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="actions">
+																		<array>
+																		</array>
+																	</property>
+																	<property id="tabIndex">
+																		<number>1</number>
+																	</property>
+																	<property id="tabEnabled">
+																		<false/>
+																	</property>
+																	<property id="visibleOutOfAdmin">
+																		<true/>
+																	</property>
+																	<property id="rotation">
+																		<number>0</number>
+																	</property>
+																	<property id="_y">
+																		<number>207</number>
+																	</property>
+																	<property id="_x">
+																		<number>105</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																	<property id="iconIsDefault">
+																		<true/>
+																	</property>
+																	<property id="iconIsIcon">
+																		<true/>
+																	</property>
+																	<property id="iconLayoutName">
+																		<string><![CDATA[minimal.swf]]></string>
+																	</property>
+																	<property id="iconPageName">
+																		<string><![CDATA[single-post]]></string>
+																	</property>
+																	<property id="playerName">
+																		<string><![CDATA[label_button.cmp.swf]]></string>
+																	</property>
+																	<property id="height">
+																		<number>28</number>
+																	</property>
+																	<property id="width">
+																		<number>78.1</number>
+																	</property>
+																	<property id="label">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">Post</FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="imageUrl">
+																		<string><![CDATA[media/]]></string>
+																	</property>
+																	<property id="delay">
+																		<number>0</number>
+																	</property>
+																	<property id="useHandCursor">
+																		<false/>
+																	</property>
+																	<property id="clickable">
+																		<true/>
+																	</property>
+																	<property id="easingDuration">
+																		<number>3</number>
+																	</property>
+																	<property id="followMouse">
+																		<false/>
+																	</property>
+																	<property id="wordWrap">
+																		<false/>
+																	</property>
+																	<property id="autoSize">
+																		<true/>
+																	</property>
+																	<property id="buttonLabelPress">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>Post</B></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="buttonLabelOver">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><U>Post</U></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="buttonLabelSelect">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>Post</B></FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="buttonLabelNormal">
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0">Post</FONT></P></TEXTFORMAT>]]></string>
+																	</property>
+																	<property id="centeredHoriz">
+																		<true/>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="Text_new_media_1247349854390">
+														<object>
+															<property id="main">
+																<object>
+																	<property id="_y">
+																		<number>309</number>
+																	</property>
+																	<property id="_x">
+																		<number>204</number>
+																	</property>
+																	<property id="_alpha">
+																		<number>100</number>
+																	</property>
+																</object>
+															</property>
+														</object>
+													</property>
+													<property id="players">
+														<array>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[label_button.cmp.swf]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Cmp_label_button_1247349983312]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Component]]></string>
+																	</property>
+																	<property id="mediaUrl">
+																		<string><![CDATA[media/components/buttons/label_button.cmp.swf]]></string>
+																	</property>
+																</object>
+															</property>
+															<property>
+																<object>
+																	<property id="label">
+																		<string><![CDATA[label_button.cmp.swf]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Cmp_label_button_1247349969906]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Component]]></string>
+																	</property>
+																	<property id="mediaUrl">
+																		<string><![CDATA[media/components/buttons/label_button.cmp.swf]]></string>
+																	</property>
+																</object>
+															</property>
+														</array>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+				</object>
+			</property>
+		</object>
+	</property>
+</object>

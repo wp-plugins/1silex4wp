@@ -64,7 +64,13 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do ==
-* selector to retrieve data of a single post
+=== Dev ===
+* x selector to retrieve data of a single post
+* x pages list on home page
+* x 1st draft of the silex template prototype 
+* missing FlashVars (((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>)) + DataContainer.selection.s + DataContainer.selection.paged)
+* archive list feed
+* NO, done by cSilex::setUrlHash override: on html page load, retrieve data from url and pass it through FlashVars (call setUrlHash with the proper URL)
 * override cSilex::changeSection
 	store the displayed section
 	GetVariable => data about the post, page or section which is displayed
@@ -79,19 +85,26 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * override 	cSilex::getIdFromHash and cSilex::setUrlHash
 	wp getOption gives the template
 	id_site is allways the chosen template
--* Liens reecrits avec appel js
+* Liens reecrits avec appel js
 * Reecriture url initiale (juste url base) et deeplink initial
+* produce a prototype template
 ?* make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
 ?* remove silex files needed only for editing 
-* templates silex
-x	use the content:encoded in a frame and the comments rss feed for the comments
-x	a frame to add a comment?
-
+* paged comments feed and paged comments in "single" and "page" pages
+* implement all the parameters of the query: http://codex.wordpress.org/Template_Tags/query_posts 
+* all language constants passed in FlashVars (404 text, link names, ...)
+* produce several silex templates
+* x	use the content:encoded in a frame and the comments rss feed for the comments
+* x	a frame to add a comment?
+* comments in wrong order
 * add no-flash page param to silex.js
 * detect when flash_theme or framed_theme is missing
 * add a version control and update
 * add tests "if_exist" for all hooks (wp versions)
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
-
+=== Tests ===
+* different url rewrite schemes
+* on portable devices
+* on a browser without flash or / nor javascript
 * security tests
-	* blog_public option
+* 	private blog

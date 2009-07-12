@@ -11,7 +11,7 @@
 										<object>
 											<property id="main">
 												<object>
-													<property id="Cmp_rssconnector_1247269413437">
+													<property id="Cmp_rssconnector_1246314287412">
 														<object>
 															<property id="main">
 																<object>
@@ -59,7 +59,7 @@
 																		<string><![CDATA[none]]></string>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[RssConnectorComments]]></string>
+																		<string><![CDATA[RssConnector]]></string>
 																	</property>
 																	<property id="visible">
 																		<true/>
@@ -71,7 +71,7 @@
 															</property>
 														</object>
 													</property>
-													<property id="Cmp_listui_1247270332078">
+													<property id="Cmp_listui_1246314869053">
 														<object>
 															<property id="main">
 																<object>
@@ -92,10 +92,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>363</number>
+																		<number>686</number>
 																	</property>
 																	<property id="_x">
-																		<number>789</number>
+																		<number>363</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -116,7 +116,7 @@
 																		<number>22.2</number>
 																	</property>
 																	<property id="width">
-																		<number>201.95</number>
+																		<number>39.95</number>
 																	</property>
 																	<property id="playerName">
 																		<string><![CDATA[ListUi.cmp.swf]]></string>
@@ -131,21 +131,35 @@
 																		<false/>
 																	</property>
 																	<property id="isHorizontal">
-																		<false/>
+																		<true/>
 																	</property>
 																	<property id="listPath">
-																		<string><![CDATA[RichTextListComments]]></string>
+																		<string><![CDATA[RichTextList]]></string>
 																	</property>
 																</object>
 															</property>
 														</object>
 													</property>
-													<property id="Cmp_dataselector_1247269397390">
+													<property id="Cmp_dataselector_1246314282146">
 														<object>
 															<property id="main">
 																<object>
 																	<property id="actions">
 																		<array>
+																			<property>
+																				<object>
+																					<property id="modifier">
+																						<string><![CDATA[onResult]]></string>
+																					</property>
+																					<property id="functionName">
+																						<string><![CDATA[selectedIndex=0]]></string>
+																					</property>
+																					<property id="parameters">
+																						<array>
+																						</array>
+																					</property>
+																				</object>
+																			</property>
 																		</array>
 																	</property>
 																	<property id="tabIndex">
@@ -161,10 +175,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>200</number>
+																		<number>729</number>
 																	</property>
 																	<property id="_x">
-																		<number>200</number>
+																		<number>382</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -173,25 +187,28 @@
 																		<false/>
 																	</property>
 																	<property id="iconIsIcon">
-																		<false/>
+																		<true/>
 																	</property>
 																	<property id="iconLayoutName">
 																		<string><![CDATA[minimal.swf]]></string>
 																	</property>
+																	<property id="iconDeeplinkName">
+																		<string><![CDATA[<<title>>]]></string>
+																	</property>
 																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
+																		<string><![CDATA[home-list]]></string>
 																	</property>
 																	<property id="height">
-																		<number>21</number>
+																		<number>19.5</number>
 																	</property>
 																	<property id="width">
-																		<string><![CDATA[none]]></string>
+																		<number>29.95</number>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[DataSelector.cmp.swf]]></string>
+																		<string><![CDATA[DataSelectorPages]]></string>
 																	</property>
 																	<property id="resultContainerPath">
-																		<string><![CDATA[]]></string>
+																		<string><![CDATA[DataContainer.post]]></string>
 																	</property>
 																	<property id="orderBy">
 																		<array>
@@ -226,13 +243,13 @@
 																		<string><![CDATA[1]]></string>
 																	</property>
 																	<property id="cellFormat">
-																		<string><![CDATA[<b><<title>></b><br><<content:encoded>>]]></string>
+																		<string><![CDATA[<b><<title>></b>((<<content:encoded>>))]]></string>
 																	</property>
 																	<property id="visible">
 																		<true/>
 																	</property>
 																	<property id="listBoxPath">
-																		<string><![CDATA[RichTextListComments]]></string>
+																		<string><![CDATA[RichTextListPages]]></string>
 																	</property>
 																	<property id="getIndividualRecordsOnClick">
 																		<true/>
@@ -241,16 +258,16 @@
 																		<true/>
 																	</property>
 																	<property id="formName">
-																		<string><![CDATA[((<<DataContainer.blog.home>>))?feed=rss2&p=((<<DataContainer.post.ID>>))]]></string>
+																		<string><![CDATA[((<<DataContainer.blog.home>>))?feed=silex_paged_feed((&s=<<DataContainer.selection.s>>))]]></string>
 																	</property>
 																	<property id="connectorPath">
-																		<string><![CDATA[RssConnectorComments]]></string>
+																		<string><![CDATA[RssConnector]]></string>
 																	</property>
 																</object>
 															</property>
 														</object>
 													</property>
-													<property id="Cmp_richtextlist_1247269336343">
+													<property id="Cmp_richtextlist_1246314272193">
 														<object>
 															<property id="main">
 																<object>
@@ -271,10 +288,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>209</number>
+																		<number>670</number>
 																	</property>
 																	<property id="_x">
-																		<number>839</number>
+																		<number>337</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -292,13 +309,13 @@
 																		<string><![CDATA[new page name]]></string>
 																	</property>
 																	<property id="height">
-																		<number>498.45</number>
+																		<number>36.45</number>
 																	</property>
 																	<property id="width">
-																		<number>201.95</number>
+																		<number>152.95</number>
 																	</property>
 																	<property id="playerName">
-																		<string><![CDATA[RichTextListComments]]></string>
+																		<string><![CDATA[RichTextListPages]]></string>
 																	</property>
 																	<property id="minWidth">
 																		<number>0</number>
@@ -319,13 +336,13 @@
 																		<false/>
 																	</property>
 																	<property id="isHorizontal">
-																		<false/>
+																		<true/>
 																	</property>
 																	<property id="itemsPerRow">
 																		<number>1</number>
 																	</property>
 																	<property id="rowHeight">
-																		<number>83.5</number>
+																		<number>39</number>
 																	</property>
 																	<property id="easingDuration">
 																		<number>0.5</number>
@@ -358,7 +375,7 @@
 															</property>
 														</object>
 													</property>
-													<property id="Text_new_media_1247270480687">
+													<property id="Text_new_media_1246478212171">
 														<object>
 															<property id="main">
 																<object>
@@ -379,10 +396,10 @@
 																		<number>0</number>
 																	</property>
 																	<property id="_y">
-																		<number>141</number>
+																		<number>716</number>
 																	</property>
 																	<property id="_x">
-																		<number>104</number>
+																		<number>90</number>
 																	</property>
 																	<property id="_alpha">
 																		<number>100</number>
@@ -445,76 +462,16 @@
 																		<false/>
 																	</property>
 																	<property id="height">
-																		<number>56.5</number>
+																		<number>64.5</number>
 																	</property>
 																	<property id="width">
-																		<number>708.05</number>
+																		<number>762.9</number>
 																	</property>
 																	<property id="htmlText">
-																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="_sans" SIZE="20" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;DataContainer.post.post_title&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																		<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="_sans" SIZE="12" COLOR="#666666" LETTERSPACING="0" KERNING="0">[[openUrl:((&lt;&lt;DataContainer.blog.home&gt;&gt;))?feed=silex_paged_feed|((&lt;&lt;DataContainer.blog.home&gt;&gt;))?feed=silex_paged_feed]]</FONT></P></TEXTFORMAT>]]></string>
 																	</property>
 																	<property id="html">
 																		<true/>
-																	</property>
-																</object>
-															</property>
-														</object>
-													</property>
-													<property id="AsFrame_asframe_1247261605250">
-														<object>
-															<property id="main">
-																<object>
-																	<property id="actions">
-																		<array>
-																		</array>
-																	</property>
-																	<property id="backgroundVisible">
-																		<false/>
-																	</property>
-																	<property id="htmlText">
-																		<string><![CDATA[((<<DataContainer.post.post_content>>))]]></string>
-																	</property>
-																	<property id="tabIndex">
-																		<number>1</number>
-																	</property>
-																	<property id="tabEnabled">
-																		<false/>
-																	</property>
-																	<property id="visibleOutOfAdmin">
-																		<true/>
-																	</property>
-																	<property id="rotation">
-																		<number>0</number>
-																	</property>
-																	<property id="_y">
-																		<number>238</number>
-																	</property>
-																	<property id="_x">
-																		<number>102</number>
-																	</property>
-																	<property id="_alpha">
-																		<number>100</number>
-																	</property>
-																	<property id="iconIsDefault">
-																		<false/>
-																	</property>
-																	<property id="iconIsIcon">
-																		<false/>
-																	</property>
-																	<property id="iconLayoutName">
-																		<string><![CDATA[minimal.swf]]></string>
-																	</property>
-																	<property id="iconPageName">
-																		<string><![CDATA[new page name]]></string>
-																	</property>
-																	<property id="height">
-																		<number>465.45</number>
-																	</property>
-																	<property id="width">
-																		<number>717.05</number>
-																	</property>
-																	<property id="playerName">
-																		<string><![CDATA[asframe]]></string>
 																	</property>
 																</object>
 															</property>
@@ -524,21 +481,21 @@
 														<array>
 															<property>
 																<object>
+																	<property id="label">
+																		<string><![CDATA[Text]]></string>
+																	</property>
+																	<property id="_name">
+																		<string><![CDATA[Text_new_media_1246478212171]]></string>
+																	</property>
+																	<property id="type">
+																		<string><![CDATA[Text]]></string>
+																	</property>
 																	<property id="contextAccepted">
 																		<array>
 																			<property>
 																				<string><![CDATA[*]]></string>
 																			</property>
 																		</array>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[Text]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[Text_new_media_1247270480687]]></string>
-																	</property>
-																	<property id="label">
-																		<string><![CDATA[Text]]></string>
 																	</property>
 																</object>
 															</property>
@@ -558,7 +515,7 @@
 																		<string><![CDATA[Component]]></string>
 																	</property>
 																	<property id="_name">
-																		<string><![CDATA[Cmp_listui_1247270332078]]></string>
+																		<string><![CDATA[Cmp_listui_1246314869053]]></string>
 																	</property>
 																	<property id="label">
 																		<string><![CDATA[ListUi.cmp.swf]]></string>
@@ -568,10 +525,10 @@
 															<property>
 																<object>
 																	<property id="label">
-																		<string><![CDATA[RssConnectorComments]]></string>
+																		<string><![CDATA[RssConnector]]></string>
 																	</property>
 																	<property id="_name">
-																		<string><![CDATA[Cmp_rssconnector_1247269413437]]></string>
+																		<string><![CDATA[Cmp_rssconnector_1246314287412]]></string>
 																	</property>
 																	<property id="type">
 																		<string><![CDATA[Component]]></string>
@@ -591,10 +548,10 @@
 															<property>
 																<object>
 																	<property id="label">
-																		<string><![CDATA[DataSelector.cmp.swf]]></string>
+																		<string><![CDATA[DataSelectorPages]]></string>
 																	</property>
 																	<property id="_name">
-																		<string><![CDATA[Cmp_dataselector_1247269397390]]></string>
+																		<string><![CDATA[Cmp_dataselector_1246314282146]]></string>
 																	</property>
 																	<property id="type">
 																		<string><![CDATA[Component]]></string>
@@ -614,36 +571,16 @@
 															<property>
 																<object>
 																	<property id="label">
-																		<string><![CDATA[RichTextListComments]]></string>
+																		<string><![CDATA[RichTextListPages]]></string>
 																	</property>
 																	<property id="_name">
-																		<string><![CDATA[Cmp_richtextlist_1247269336343]]></string>
+																		<string><![CDATA[Cmp_richtextlist_1246314272193]]></string>
 																	</property>
 																	<property id="type">
 																		<string><![CDATA[Component]]></string>
 																	</property>
 																	<property id="mediaUrl">
 																		<string><![CDATA[media/wp-default/oof/RichTextList.cmp.swf]]></string>
-																	</property>
-																	<property id="contextAccepted">
-																		<array>
-																			<property>
-																				<string><![CDATA[*]]></string>
-																			</property>
-																		</array>
-																	</property>
-																</object>
-															</property>
-															<property>
-																<object>
-																	<property id="label">
-																		<string><![CDATA[asframe]]></string>
-																	</property>
-																	<property id="_name">
-																		<string><![CDATA[AsFrame_asframe_1247261605250]]></string>
-																	</property>
-																	<property id="type">
-																		<string><![CDATA[AsFrame]]></string>
 																	</property>
 																	<property id="contextAccepted">
 																		<array>
