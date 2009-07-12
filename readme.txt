@@ -63,8 +63,7 @@ Requirements
 
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
-== To Do ==
-=== Dev ===
+== To Do - v1.0 alpha ==
 * x selector to retrieve data of a single post
 * x pages list on home page
 * x 1st draft of the silex template prototype 
@@ -85,15 +84,29 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * override 	cSilex::getIdFromHash and cSilex::setUrlHash
 	wp getOption gives the template
 	id_site is allways the chosen template
-* Liens reecrits avec appel js
+
 * Reecriture url initiale (juste url base) et deeplink initial
-* produce a prototype template
-?* make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
-?* remove silex files needed only for editing 
+* search zone
+* ? Liens reecrits avec appel js
+* produce a prototype template 
+=> Release  v1 in alpha
+
+== To do - Tests ==
+* different url rewrite schemes
+* on portable devices
+* on a browser without flash or / nor javascript
+* security tests
+* 	private blog
+
+== To Do - v1.0 beta ==
+* ? make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
+* ? remove silex files needed only for editing 
 * paged comments feed and paged comments in "single" and "page" pages
 * implement all the parameters of the query: http://codex.wordpress.org/Template_Tags/query_posts 
 * all language constants passed in FlashVars (404 text, link names, ...)
-* produce several silex templates
+* produce 1 silex template
+=> Release  v1 in beta
+
 * x	use the content:encoded in a frame and the comments rss feed for the comments
 * x	a frame to add a comment?
 * comments in wrong order
@@ -101,10 +114,9 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * detect when flash_theme or framed_theme is missing
 * add a version control and update
 * add tests "if_exist" for all hooks (wp versions)
+* produce several silex templates
+=> Release  v1
+
+== To Do - v1.1 ==
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
-=== Tests ===
-* different url rewrite schemes
-* on portable devices
-* on a browser without flash or / nor javascript
-* security tests
-* 	private blog
+
