@@ -26,20 +26,20 @@ require_once 'Zend/Log.php';
 require_once "Zend/Log/Writer/Stream.php";
 require_once "rootdir.php";
 
-DEFINE(DEFAULT_LOG_SECTION, "default");
-DEFINE(LOG_LEVEL,"logLevel");
-DEFINE(DEBUG, Zend_Log::DEBUG);
-DEFINE(INFO, Zend_Log::INFO);
-DEFINE(NOTICE, Zend_Log::NOTICE);
-DEFINE(WARNING, Zend_Log::WARN);
-DEFINE(ERR, Zend_Log::ERR);
-DEFINE(CRIT, Zend_Log::CRIT);
-DEFINE(ALERT, Zend_Log::ALERT);
-DEFINE(EMERG, Zend_Log::EMERG);
-//zend logging does not offer completely disablnig the logger. We need to be able to do so because simply instanciating a Zend_Log_Writer_Stream
+define("DEFAULT_LOG_SECTION", "default");
+define("LOG_LEVEL","logLevel");
+define("DEBUG", Zend_Log::DEBUG);
+define("INFO", Zend_Log::INFO);
+define("NOTICE", Zend_Log::NOTICE);
+define("WARNING", Zend_Log::WARN);
+define("ERR", Zend_Log::ERR);
+define("CRIT", Zend_Log::CRIT);
+define("ALERT", Zend_Log::ALERT);
+define("EMERG", Zend_Log::EMERG);
+//zend logging does not offer completely disabling the logger. We need to be able to do so because simply instanciating a Zend_Log_Writer_Stream
 //creates a file, and this can cause silex to fail on some hosts(sourceforge personal page like http://arielsom.users.sourceforge.net/ for example)
-//so if we find "OFF", the logger is not instanciated
-DEFINE(DISABLED, -1);
+//so if we find "DISABLED", the logger is not instanciated
+define("DISABLED", -1);
 
 class logger{
     var $name = null;
@@ -59,7 +59,7 @@ class logger{
         
     function getLogLevel($loggerName){
         $logConfig = parse_ini_file(ROOTPATH . "/conf/log.ini", true);
-        if($logConfig[$loggerName]){
+        if(isset($logConfig[$loggerName])){
             $conf = $logConfig[$loggerName];    
         }else{
             $conf = $logConfig[DEFAULT_LOG_SECTION];    

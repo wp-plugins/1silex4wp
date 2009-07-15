@@ -24,8 +24,14 @@ if (version_compare(PHP_VERSION,'5','<')){
 	exit(0);
 }
 */
+// **
+// includes
+require_once(dirname(__FILE__).'/rootdir.php');
+set_include_path(get_include_path() . PATH_SEPARATOR . ROOTPATH);
+set_include_path(get_include_path() . PATH_SEPARATOR . ROOTPATH."cgi/library/");
+
 //check if installer ran. We should use the password_manager class with isAuthenticationFileAvailable, but since this is the main page keep it light
-if(!file_exists("./conf/pass.php")){
+if(!file_exists(ROOTPATH."conf/pass.php")){
 	?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -38,20 +44,15 @@ if(!file_exists("./conf/pass.php")){
 	exit(0);
 }
 
-// **
-// includes
-set_include_path(get_include_path() . PATH_SEPARATOR . "./");
-set_include_path(get_include_path() . PATH_SEPARATOR . "./cgi/library/");
-require_once('rootdir.php');
-include_once 'cgi/includes/server_config.php';
-include_once 'cgi/includes/site_editor.php';
-include_once 'cgi/includes/server_content.php';
-require_once("cgi/includes/logger.php");
-require_once("cgi/includes/file_system_tools.php");
-require_once("cgi/includes/site_editor.php");
+include_once ROOTPATH.'cgi/includes/server_config.php';
+include_once ROOTPATH.'cgi/includes/site_editor.php';
+include_once ROOTPATH.'cgi/includes/server_content.php';
+require_once ROOTPATH."cgi/includes/logger.php";
+require_once ROOTPATH."cgi/includes/file_system_tools.php";
+require_once ROOTPATH."cgi/includes/site_editor.php";
 
 $serverConfig = new server_config(); 
-//$serverContent = new server_content();
+$serverContent = new server_content();
 $siteEditor = new site_editor();
 $fst = new file_system_tools();
 $logger = new logger("main silex index");
@@ -60,9 +61,9 @@ $logger = new logger("main silex index");
 // inputs
 // PASS POST AND GET DATA TO FLASH and JS
 $js_str='';
-$str='';
-while( list($k, $v) = each($_GET) ){$str.="fo.addVariable('".$k."', '".$v."');"; $js_str.="$".$k." = '".$v."'; ";}
-while( list($k, $v) = each($_POST) ){$str.="fo.addVariable('".$k."', '".$v."');"; $js_str.="$".$k." = '".$v."'; ";}
+$fv_js_object='';
+while( list($k, $v) = each($_GET) ){$fv_js_object.=($fv_js_object==''?'':',').$k." : '".$v."'"; $js_str.="$".$k." = '".$v."'; ";}
+while( list($k, $v) = each($_POST) ){$fv_js_object.=($fv_js_object==''?'':',').$k." : '".$v."'"; $js_str.="$".$k." = '".$v."'; ";}
 //echo "........................".$js_str;
 //echo "<br>........................".$str;
 
@@ -131,9 +132,24 @@ $htmlKeywords="<h4>Website keywords</h4><p><br>".($seoDataHomePage["description"
 
 // add a link to the home page
 $htmlLinks="<h1>navigation</h1><h4><a href='".$id_site."/".$websiteConfig["CONFIG_START_SECTION"]."'>Home page: ".($seoDataHomePage["title"])."</a></h4>";
+
+function call_hooks($hook_name){
+	echo "call_hooks $hook_name\n\n";
+	if (isset($silex_hooks_array)){
+		foreach($silex_hooks_array as $hook_obj){
+			echo $hook_obj['hook_name']."\n";
+			echo $hook_obj['params']."\n";
+//			hook_function($hook_obj['params']);
+		}
+	}
+}
+
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html style="height:100%;margin:0px;padding:0px;">
 	<head>
+		<?php 
+			call_hooks('index-head')
+		?>
 		<meta http-equiv="cache-control" content="must-revalidate, pre-check=0, post-check=0, max-age=0">
 		<meta http-equiv="Last-Modified" content="<?php echo gmdate('D, d M Y H:i:s').' GMT'; ?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -160,47 +176,55 @@ $htmlLinks="<h1>navigation</h1><h4><a href='".$id_site."/".$websiteConfig["CONFI
                         "type"=>"application/x-shockwave-flash",
                         "bgColor" => $websiteConfig["bgColor"],
                         "pluginspage"=>"http://www.adobe.com/products/flashplayer/",
-                        "codebase" => "http://www.adobe.com/products/flashplayer/",
-                        "FlashVars" => ""
-                    );
-
-                    $flashVars = Array(
-                        "ENABLE_DEEPLINKING" => "false",
-                        "DEFAULT_WEBSITE" => $serverConfig->silex_server_ini["DEFAULT_WEBSITE"],
-                        "id_site" => "$id_site",
-                        "php_website_config_file" => $serverConfig->silex_server_ini["CONTENT_FOLDER"].$id_site."/".$serverConfig->silex_server_ini["WEBSITE_CONF_FILE"],
-                        "config_files_list" => $serverConfig->silex_server_ini["CONTENT_FOLDER"].$id_site."/".$serverConfig->silex_server_ini["WEBSITE_CONF_FILE"] . "," . $serverConfig->silex_server_ini["SILEX_CLIENT_CONF_FILES_LIST"],
-                        "flashPlayerVersion" => isset($websiteConfig["flashPlayerVersion"]) ? $websiteConfig["flashPlayerVersion"] : "7",
-                        "CONFIG_START_SECTION" => isset($websiteConfig["CONFIG_START_SECTION"]) ? $websiteConfig["CONFIG_START_SECTION"] : "start",
-                        "SILEX_ADMIN_AVAILABLE_LANGUAGES" => ""/*$serverContent->getLanguagesList()*/,
-                        "SILEX_ADMIN_DEFAULT_LANGUAGE" => $serverConfig->silex_server_ini["SILEX_ADMIN_DEFAULT_LANGUAGE"],
-                        "htmlTitle" => "$websiteTitle",
-                        "preload_files_list" => $websiteConfig["layoutFolderPath"].$websiteConfig["initialLayoutFile"].",fp".$websiteConfig["flashPlayerVersion"]."/".$websiteConfig["layerSkinUrl"],
-                        "forceScaleMode" => "showAll",
+                        //"codebase" => "http://www.adobe.com/products/flashplayer/",
                         "scale" => "noscale",
                         "swLiveConnect" => "true",
                         "AllowScriptAccess" => "always",
                         "quality" => "best",
                         "wmode" => "transparent",
+                        "FlashVars" => ""
+                    );
+
+                    $flashVars = Array(
+                        "ENABLE_DEEPLINKING" => "false", // will be overriden by the js parameter of silex.js::SilexJsStart
+                        "DEFAULT_WEBSITE" => $serverConfig->silex_server_ini["DEFAULT_WEBSITE"],
+                        "id_site" => $id_site,
+                        "php_website_config_file" => $serverConfig->silex_server_ini["CONTENT_FOLDER"].$id_site."/".$serverConfig->silex_server_ini["WEBSITE_CONF_FILE"],
+                        "config_files_list" => $serverConfig->silex_server_ini["CONTENT_FOLDER"].$id_site."/".$serverConfig->silex_server_ini["WEBSITE_CONF_FILE"] . "," . $serverConfig->silex_server_ini["SILEX_CLIENT_CONF_FILES_LIST"],
+                        "flashPlayerVersion" => isset($websiteConfig["flashPlayerVersion"]) ? $websiteConfig["flashPlayerVersion"] : "7",
+                        "CONFIG_START_SECTION" => isset($websiteConfig["CONFIG_START_SECTION"]) ? $websiteConfig["CONFIG_START_SECTION"] : "start",
+                        "SILEX_ADMIN_AVAILABLE_LANGUAGES" => $serverContent->getLanguagesList(),
+                        "SILEX_ADMIN_DEFAULT_LANGUAGE" => $serverConfig->silex_server_ini["SILEX_ADMIN_DEFAULT_LANGUAGE"],
+                        "htmlTitle" => "$websiteTitle",
+                        "preload_files_list" => $websiteConfig["layoutFolderPath"].$websiteConfig["initialLayoutFile"].",fp".$websiteConfig["flashPlayerVersion"]."/".$websiteConfig["layerSkinUrl"],
+                        "forceScaleMode" => "showAll",
                         "silex_result_str" => "_no_value_",
                         "silex_exec_str" => "_no_value_"
                     );
 					if (isset($websiteConfig["PRELOAD_FILES_LIST"]))
 						$flashVars["preload_files_list"] .= ",".$websiteConfig["PRELOAD_FILES_LIST"];
 
-                    $fV_String="";
+                    $fV=0;
+					//$fv_js_object="";
                     foreach( $flashVars as $key => $var ){
                         $param['FlashVars'] .= $key . "=" . $var;
-                        $param['FlashVars'] .= sizeof( $fV_String ) > 0 ? "&" : "";
+                        $param['FlashVars'] .= sizeof( $fV++ ) > 0 ? "&" : "";
+						if ($fv_js_object != '') $fv_js_object .= ', ';
+						$fv_js_object .= $key . ':"' . $var . '"';
                     }
 
                 echo '<object id="silex"  classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%"  height="100%" standby="Loading... Please wait.">';
 
+					$param_js_object="";
+					$Param_String = "";
                     foreach( $param as $key => $var ){
                         if($key != "src" && $key != "pluginspage")
                             echo "\n                <param name=\"$key\" value=\"$var\">";
                         if($key != "movie" && $key != "codebase")
                             $Param_String .= " " . $key . "=\"$var\"";
+							
+						if ($param_js_object != '') $param_js_object .= ', ';
+						$param_js_object .= $key . ':"' . $var . '"';
                     }
 
 
@@ -233,7 +257,7 @@ $htmlLinks="<h1>navigation</h1><h4><a href='".$id_site."/".$websiteConfig["CONFI
 			$SILEX_CLIENT_CONF_FILES_LIST=$php_website_conf_file + "," + "<?php echo $serverConfig->silex_server_ini["SILEX_CLIENT_CONF_FILES_LIST"]; ?>";
 			$flashPlayerVersion="<?php if(isset($websiteConfig["flashPlayerVersion"])) echo $websiteConfig["flashPlayerVersion"]; else echo "7"; ?>";
 			$CONFIG_START_SECTION="<?php if(isset($websiteConfig["CONFIG_START_SECTION"])) echo $websiteConfig["CONFIG_START_SECTION"]; else echo "start"; ?>";
-			$SILEX_ADMIN_AVAILABLE_LANGUAGES="<?php echo "";//$serverContent->getLanguagesList(); ?>";
+			$SILEX_ADMIN_AVAILABLE_LANGUAGES="<?php //echo $serverContent->getLanguagesList(); ?>";
 			$SILEX_ADMIN_DEFAULT_LANGUAGE="<?php echo $serverConfig->silex_server_ini["SILEX_ADMIN_DEFAULT_LANGUAGE"]; ?>";
 			$htmlTitle="<?php echo $websiteTitle; ?>";
 			//$preload_files_list="";
@@ -241,9 +265,6 @@ $htmlLinks="<h1>navigation</h1><h4><a href='".$id_site."/".$websiteConfig["CONFI
 			if (isset($websiteConfig["PRELOAD_FILES_LIST"]))
 				echo ",".$websiteConfig["PRELOAD_FILES_LIST"];?>";
 			$bgColor="#<?php echo $websiteConfig["bgColor"]; ?>";
-
-			// pass post and get data to flash
-			$php_str="<?php echo $str; ?>";
 
 			// pass post and get data to js
 			eval("<?php echo $js_str; ?>");
@@ -260,9 +281,13 @@ $htmlLinks="<h1>navigation</h1><h4><a href='".$id_site."/".$websiteConfig["CONFI
                 $htmlTitle,
                 $preload_files_list,
                 $bgColor,
-                $php_str,
+                "", // additional flash vars
                 $php_id_site,
-                "");
+                "",
+                "", // rootUrl
+				{<?php echo $fv_js_object ?>},
+				{<?php echo $param_js_object ?>}
+				);
 		</script>
 	</body>
 </html>

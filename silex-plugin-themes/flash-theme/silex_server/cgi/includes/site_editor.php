@@ -6,8 +6,8 @@
 	require_once("file_system_tools.php");
 	require_once("silex_search.php");
 	
-	define(ACTION_DUPLICATE, "duplicate");
-	define(ACTION_RENAME, "rename");
+	define("ACTION_DUPLICATE", "duplicate");
+	define("ACTION_RENAME", "rename");
 	
 	class site_editor{
 		var $logger = null;

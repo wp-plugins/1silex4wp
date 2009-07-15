@@ -211,7 +211,7 @@
 		function checkRights($filepath,$usertype,$action){
 			$serverConfig = new server_config();
 			// debug trace
-			if ($this->logger) $this->logger->debug("checkRights($filepath,$usertype,$action) ".$this->silex_server_ini["user_read_ok"]." - ".count(explode(",",$this->silex_server_ini["user_read_ok"])));
+			if ($this->logger) $this->logger->debug("checkRights($filepath,$usertype,$action) ");
 			
 			// get arrays of folders per role
 			//$this->logger->debug("checkRights ".print_r($this->admin_write_ok,true));

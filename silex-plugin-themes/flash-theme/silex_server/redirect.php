@@ -144,6 +144,9 @@ if (!$seoData){
 	// links of this page
 	$htmlLinks.="<H4>Links of this page (".($seoData["title"]).")</H4>".($seoData["links"]);
 }
+	$scriptUrl=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+	$lastSlashPos=strrpos($scriptUrl,$id_site.'/'.$deeplink);
+	$urlBase="http://".substr($scriptUrl,0,$lastSlashPos);
 
 /**/
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -163,12 +166,17 @@ if (!$seoData){
 		      <?php
 
 		            $param = Array(
-                        "movie" => "./loader.swf?flashId=silex",
-                        "src" => "./loader.swf?flashId=silex",
+                        "movie" => $relativePath."loader.swf?flashId=silex",
+                        "src" => $relativePath."loader.swf?flashId=silex",
                         "type"=>"application/x-shockwave-flash",
                         "bgColor" => $websiteConfig["bgColor"],
                         "pluginspage"=>"http://www.adobe.com/products/flashplayer/",
                         "codebase" => "http://www.adobe.com/products/flashplayer/",
+                        "scale" => "noscale",
+                        "swLiveConnect" => "true",
+                        "AllowScriptAccess" => "always",
+                        "quality" => "best",
+                        "wmode" => "transparent",
                         "FlashVars" => ""
                     );
 
@@ -185,13 +193,9 @@ if (!$seoData){
                         "htmlTitle" => "$websiteTitle",
                         "preload_files_list" => $websiteConfig["layoutFolderPath"].$websiteConfig["initialLayoutFile"].",fp".$websiteConfig["flashPlayerVersion"]."/".$websiteConfig["layerSkinUrl"],
                         "forceScaleMode" => "showAll",
-                        "scale" => "noscale",
-                        "swLiveConnect" => "true",
-                        "AllowScriptAccess" => "always",
-                        "quality" => "best",
-                        "wmode" => "transparent",
                         "silex_result_str" => "_no_value_",
-                        "silex_exec_str" => "_no_value_"
+                        "silex_exec_str" => "_no_value_",
+						"rootUrl" => $urlBase
                     );
 					if (isset($websiteConfig["PRELOAD_FILES_LIST"]))
 						$flashVars["preload_files_list"] .= ",".$websiteConfig["PRELOAD_FILES_LIST"];
@@ -219,7 +223,7 @@ if (!$seoData){
                 </embed>
 
                 <noembed>
-                <iframe frameborder="0" height="100%" width="100%" src="./no-flash.html">Your browser doesnt support Frames. Update your browser to watch this page.</iframe>
+                <iframe frameborder="0" height="100%" width="100%" src="<?php echo $relativePath; ?>no-flash.html">Your browser doesnt support Frames. Update your browser to watch this page.</iframe>
                 <?php echo "".$htmlLinks."<p><br>website keywords <br></p>".$websiteKeywords."<p><br>page keywords <br></p>".$htmlKeywords."<p><br></p>"; ?>
                 </noembed>
 

@@ -21,7 +21,7 @@ require_once("rootdir.php");
 require_once(ROOTPATH . 'cgi/includes/Config/Container.php');
 require_once("logger.php");
 
-define(GLOBALS_TYPE_STORAGE, "SILEX_CONFIG_TYPES");
+define("GLOBALS_TYPE_STORAGE", "SILEX_CONFIG_TYPES");
 
 $GLOBALS[GLOBALS_TYPE_STORAGE] = 
         array(
