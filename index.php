@@ -40,11 +40,17 @@ if (version_compare(PHP_VERSION, '5.0', '<'))
 }
 else
 {
-	require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
-	require_once(SILEX_INCLUDE_DIR.'/feed-index.php');
-	require_once(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
-	require_once(SILEX_INCLUDE_DIR.'/install-index.php');
-	require_once(SILEX_INCLUDE_DIR.'/admin-pages.php');
-	require_once(SILEX_INCLUDE_DIR.'/rewrite-links.php');
+	// check if Silex themes are properly installed (after activation)
+	if (!is_dir(WP_CONTENT_DIR.'/themes/'.SILEX_THEMES_DIR_NAME.'/') && $_GET['activate'] != true){
+		silex_error('file-error','Silex themes not found');
+	}
+	else{
+		require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
+		require_once(SILEX_INCLUDE_DIR.'/feed-index.php');
+		require_once(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
+		require_once(SILEX_INCLUDE_DIR.'/install-index.php');
+		require_once(SILEX_INCLUDE_DIR.'/admin-pages.php');
+		require_once(SILEX_INCLUDE_DIR.'/rewrite-links.php');
+	}
 }
 ?>

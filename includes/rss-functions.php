@@ -269,5 +269,46 @@ function silex_create_paged_feed($not_used){
 	}		
 	include(SILEX_FEED_THEME_DIR.'/footer.php');
 }
+/**
+ * returns the rss feed listing all archives
+ * TO DO
+ */
+function silex_create_archives_feed($not_used){
+	$feed_name = 'archives list';
+	include(SILEX_FEED_THEME_DIR.'/header.php');
+	$archives = get_archives();
+	foreach ($archives as $item) {	
+//		<!-- <pubDate></pubDate>
+//		<dc:creator></dc:creator> -->
+?>
+	<item>
+		<title><?php echo $item->post_title ?></title>
+		<description><![CDATA[<?php echo $item->post_excerpt; ?>]]></description>
+<?php
+		foreach($item as $key => $val){
+			if(strpos($key,'password')===FALSE)
+				echo '		<'.$key.'><![CDATA['.$val.']]></'.$key.'>\n';
+		}
+?>
+		<link><?php the_permalink_rss() ?></link>
+		<comments><?php comments_link(); ?></comments>
+		<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
+		<dc:creator><?php the_author() ?></dc:creator>
+		<?php the_category_rss() ?>
 
+		<guid isPermaLink='false'><?php the_guid(); ?></guid>
+	<?php if ( strlen( $post->post_content ) > 0 ) : ?>
+		<content:encoded><![CDATA[<?php the_content() ?>]]></content:encoded>
+	<?php else : ?>
+		<content:encoded><![CDATA[<?php the_excerpt_rss() ?>]]></content:encoded>
+	<?php endif; ?>
+		<wfw:commentRss><?php echo get_post_comments_feed_link(); ?></wfw:commentRss>
+		<slash:comments><?php echo get_comments_number(); ?></slash:comments>
+<?php rss_enclosure(); ?>
+	<?php do_action('rss2_item'); ?>
+	</item>
+<?php
+	}
+	include(SILEX_FEED_THEME_DIR.'/footer.php');
+}
 ?>

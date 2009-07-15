@@ -87,6 +87,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 
 * Reecriture url initiale (juste url base) et deeplink initial
 * search zone
+* voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone
 * ? Liens reecrits avec appel js
 * produce a prototype template 
 => Release  v1 in alpha

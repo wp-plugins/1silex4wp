@@ -35,9 +35,11 @@ SXPress-FlashOS
 ?feed=silex_bookmarks_feed
 ?feed=silex_posts_feed
 ?feed=silex_paged_feed
+//to do - feed=silex_archives_feed
 ?no_flash
 ?is_framed
 
+((<<DataContainer.blog.home>>))?feed=
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
 Plugin core (index.php)
