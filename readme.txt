@@ -68,25 +68,16 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * x pages list on home page
 * x 1st draft of the silex template prototype 
 * missing FlashVars (((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>)) + DataContainer.selection.s + DataContainer.selection.paged)
-* archive list feed
-* NO, done by cSilex::setUrlHash override: on html page load, retrieve data from url and pass it through FlashVars (call setUrlHash with the proper URL)
-* override cSilex::changeSection
-	store the displayed section
-	GetVariable => data about the post, page or section which is displayed
-	wp getOption => URL rewrite rule of WP
-	setUrlHash in fucntion of these data
+* x NO, done by cSilex::setUrlHash override: on html page load, retrieve data from url and pass it through FlashVars (call setUrlHash with the proper URL)
 	
-* override cSilex::urlHashChanged
-	take data from php websiteConfig: URL rewrite rule of the Silex website
-	SetVariable of the section data (id and or title of the page/post)
-	call silex open command to the right section
-	
-* override 	cSilex::getIdFromHash and cSilex::setUrlHash
+* x override 	cSilex::getIdFromHash and cSilex::setUrlHash
 	wp getOption gives the template
 	id_site is allways the chosen template
 
 * Reecriture url initiale (juste url base) et deeplink initial
+* list of pages, categories, tags and bookmarks in flashvars
 * search zone
+* archive list feed
 * voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone
 * ? Liens reecrits avec appel js
 * produce a prototype template 
@@ -98,6 +89,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * on a browser without flash or / nor javascript
 * security tests
 * 	private blog
+* 	user data exposed through rss feeds
 
 == To Do - v1.0 beta ==
 * ? make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
@@ -120,4 +112,14 @@ I am looking for people who could do video tutorials and templates. Feel free to
 
 == To Do - v1.1 ==
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
+* better deeplinks - override cSilex::changeSection
+	store the displayed section
+	GetVariable => data about the post, page or section which is displayed
+	wp getOption => URL rewrite rule of WP
+	setUrlHash in fucntion of these data
+	
+* better deeplinks - override cSilex::urlHashChanged
+	take data from php websiteConfig: URL rewrite rule of the Silex website
+	SetVariable of the section data (id and or title of the page/post)
+	call silex open command to the right section
 

@@ -84,6 +84,7 @@ else
 
 // **
 // retrieve website config data
+global $websiteConfig; 
 $websiteConfig = $siteEditor->getWebsiteConfig($id_site);
 
 // redirect to 404 website
@@ -134,12 +135,13 @@ $htmlKeywords="<h4>Website keywords</h4><p><br>".($seoDataHomePage["description"
 $htmlLinks="<h1>navigation</h1><h4><a href='".$id_site."/".$websiteConfig["CONFIG_START_SECTION"]."'>Home page: ".($seoDataHomePage["title"])."</a></h4>";
 
 function call_hooks($hook_name){
-	echo "call_hooks $hook_name\n\n";
+	global $silex_hooks_array;
+	
 	if (isset($silex_hooks_array)){
 		foreach($silex_hooks_array as $hook_obj){
-			echo $hook_obj['hook_name']."\n";
-			echo $hook_obj['params']."\n";
-//			hook_function($hook_obj['params']);
+			if($hook_name === $hook_obj['hook_name']){
+				$hook_obj['hook_function']($hook_obj['params']);
+			}
 		}
 	}
 }
@@ -148,7 +150,7 @@ function call_hooks($hook_name){
 <html style="height:100%;margin:0px;padding:0px;">
 	<head>
 		<?php 
-			call_hooks('index-head')
+			call_hooks('index-head');
 		?>
 		<meta http-equiv="cache-control" content="must-revalidate, pre-check=0, post-check=0, max-age=0">
 		<meta http-equiv="Last-Modified" content="<?php echo gmdate('D, d M Y H:i:s').' GMT'; ?>">
@@ -157,19 +159,30 @@ function call_hooks($hook_name){
 		<?php echo $favicon; ?>
 		<title><?php echo $websiteTitle; ?></title>
 
-		<script type="text/javascript" src="<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>jsframe.min.js"></script>
-		<script type="text/javascript" src="<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>swfobject.min.js"></script>
-		<script type="text/javascript" src="<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>deeplink.min.js"></script>
-		<script type="text/javascript" src="<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>wmodepatch.min.js"></script>
+		<script type="text/javascript">
+			var $rootUrl;
+			if(!$rootUrl) $rootUrl='';
+			// pass post and get data to js
+			eval("<?php echo $js_str; ?>");
+
+			function includeSilexScript($fileName,$file_path){
+				if (!$file_path) $file_path = '';
+				$file_path += '<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>'+$fileName;
+				document.write('<script type="text/javascript" src="'+$file_path+'">'+'</scr'+'ipt>');
+			}
+			includeSilexScript("jquery.min.js",$rootUrl);
+			includeSilexScript("jsframe.min.js",$rootUrl);
+			includeSilexScript("swfobject.min.js",$rootUrl);
+			includeSilexScript("deeplink.min.js",$rootUrl);
+			includeSilexScript("wmodepatch.min.js",$rootUrl);
+			includeSilexScript("silex.min.js",$rootUrl);
+		</script>
 	</head>
 	<body style="padding:0px;height:100%; margin-top:0; margin-left:0; margin-bottom:0; margin-right:0;" onload="setTimeout(function(){initWModePatch('silex');}, 500 );">
 		<div style="position: absolute; z-index: 1000;" id="frameContainer"></div>
 		<div id="flashcontent" align="center" style="position: absolute; z-index: 0; width: 100%; height: 100%;">
 		      <noscript>
-
-		      <?php
-
+				<?php 
 		            $param = Array(
                         "movie" => "./loader.swf?flashId=silex",
                         "src" => "./loader.swf?flashId=silex",
@@ -232,11 +245,15 @@ function call_hooks($hook_name){
                 <embed height="100%" width="100%"<?php echo $Param_String;?>>
                 </embed>
                 <noembed>
+				<?php
+					call_hooks('noembed');
+				?>
                 <iframe frameborder="0" height="100%" width="100%" src="./no-flash.html">Your browser doesnt support Frames. Update your browser to watch this page.</iframe>
 				<a href="http://silex-ria.org">powered by silex</a>
 				<br><a href="http://silexlabs.com">released by the Silex team</a>
                 <?php echo "".$htmlLinks."<p><br>website keywords <br></p>".$websiteKeywords."<p><br>page keywords <br></p>".$htmlKeywords."<p><br></p>"; ?>
-                </noembed>
+				
+		  </noembed>
 
           </object>
 		</noscript>
@@ -247,8 +264,8 @@ function call_hooks($hook_name){
 		<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 		<?php } ?>
 		<div id="stats"></div>
-		<script type="text/javascript" src="<?php echo $serverConfig->silex_server_ini["JAVASCRIPT_FOLDER"]; ?>silex.min.js"></script>
 		<script type="text/javascript">
+			$additional_flashvars = "";
 			$enableDeeplinking = "<?php if(isset($websiteConfig["ENABLE_DEEPLINKING"])) echo $websiteConfig["ENABLE_DEEPLINKING"]; else echo "true"; ?>";
 			$DEFAULT_WEBSITE="<?php echo $serverConfig->silex_server_ini["DEFAULT_WEBSITE"]; ?>";
 			$php_id_site="<?php echo $id_site; ?>";
@@ -266,9 +283,11 @@ function call_hooks($hook_name){
 				echo ",".$websiteConfig["PRELOAD_FILES_LIST"];?>";
 			$bgColor="#<?php echo $websiteConfig["bgColor"]; ?>";
 
-			// pass post and get data to js
-			eval("<?php echo $js_str; ?>");
-
+		</script>
+			<?php
+				call_hooks('script');
+			?>
+		<script type="text/javascript">
 			// silexJsObj is used for deep link and tracking
 			silexJsObj=SilexJsStart(
                 $flashPlayerVersion,
@@ -281,10 +300,10 @@ function call_hooks($hook_name){
                 $htmlTitle,
                 $preload_files_list,
                 $bgColor,
-                "", // additional flash vars
-                $php_id_site,
                 "",
-                "", // rootUrl
+                $php_id_site,
+                $additional_flashvars, // additional flash vars
+                $rootUrl, // rootUrl
 				{<?php echo $fv_js_object ?>},
 				{<?php echo $param_js_object ?>}
 				);
