@@ -35,7 +35,7 @@ if (version_compare(PHP_VERSION, '5.0', '<'))
 {
 	if ($_GET['activate'] == true)
 	{
-		silex_error('Error: Silex requires PHP 5.0 or newer and you are running '.PHP_VERSION);;
+		silex_error('php-error','Error: Silex requires PHP 5.0 or newer and you are running '.PHP_VERSION);;
 	}
 }
 else

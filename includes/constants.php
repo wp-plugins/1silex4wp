@@ -56,6 +56,9 @@ if ( ! defined( 'SILEX_PLUGIN_DIR' ) ){
 	$pluginName = substr(__FILE__,$start,$len);
 
 	define( 'SILEX_PLUGIN_NAME', $pluginName);
+	// for use in flash theme
+	add_option('silex_plugin_name');
+	update_option('silex_plugin_name',$pluginName);
 }
 // directories
 if ( ! defined( 'SILEX_PLUGIN_DIR' ) )

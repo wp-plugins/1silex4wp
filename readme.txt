@@ -75,10 +75,13 @@ I am looking for people who could do video tutorials and templates. Feel free to
 	id_site is allways the chosen template
 
 * Reecriture url initiale (juste url base) et deeplink initial
+* silex installer / or let silex go in php4 + pass.php file
 * list of pages, categories, tags and bookmarks in flashvars
 * search zone
 * archive list feed
 * voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone
+  + prevent from over use disk space
+* ? make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
 * ? Liens reecrits avec appel js
 * produce a prototype template 
 => Release  v1 in alpha
@@ -92,7 +95,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * 	user data exposed through rss feeds
 
 == To Do - v1.0 beta ==
-* ? make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
+* make the "post comment" work (refresh the comments list?)
 * ? remove silex files needed only for editing 
 * paged comments feed and paged comments in "single" and "page" pages
 * implement all the parameters of the query: http://codex.wordpress.org/Template_Tags/query_posts 
