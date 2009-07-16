@@ -11,6 +11,8 @@ Convert your WordPress blog into a Flash application
 
 *Still in a conception phase - Work in progress, v0.1 is comming in July - For now, look at [the screenshots of the prototypes](http://wordpress.org/extend/plugins/1silex4wp/screenshots/ "screenshots")*
 
+*Nothing to download yet*
+
 **Substitute your worpress theme by a Flash template**
 
 * visible only by Flash enabled browsers - *search engines or phones will see your blog normally*
