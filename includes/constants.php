@@ -48,10 +48,16 @@ if ( ! defined( 'WP_CONTENT_DIR' ) )
 if ( ! defined( 'WP_PLUGIN_DIR' ) )
       define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 
-	  
+// compute plugin name
+if ( ! defined( 'SILEX_PLUGIN_DIR' ) ){
+	$full_path = str_replace('\\','/',__FILE__);
+	$start=strlen(WP_PLUGIN_DIR) + 1;
+	$len=strrpos($full_path,basename(__FILE__)) - $start - strlen('includes') - 2;
+	$pluginName = substr(__FILE__,$start,$len);
+
+	define( 'SILEX_PLUGIN_NAME', $pluginName);
+}
 // directories
-if ( ! defined( 'SILEX_PLUGIN_DIR' ) )
-	define( 'SILEX_PLUGIN_NAME', '1silex4wp' );
 if ( ! defined( 'SILEX_PLUGIN_DIR' ) )
 	define( 'SILEX_PLUGIN_DIR', WP_PLUGIN_DIR.'/'.SILEX_PLUGIN_NAME );
 if ( ! defined( 'SILEX_INCLUDE_DIR' ) )

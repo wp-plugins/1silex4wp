@@ -29,7 +29,7 @@ Version: 0.1
 Author URI: http://silex-ria.org/lex
 */
 
-require_once('includes/constants.php');
+require_once(dirname(__FILE__).'/includes/constants.php');
 require_once(SILEX_INCLUDE_DIR.'/functions.php');
 if (version_compare(PHP_VERSION, '5.0', '<'))
 {

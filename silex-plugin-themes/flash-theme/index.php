@@ -20,7 +20,7 @@
  * @author Lexa Yo
  * @version 0.1
  */
-include (ABSPATH.'wp-content/plugins/1silex4wp/includes/constants.php');
+require_once(dirname(__FILE__).'/includes/constants.php');
 set_include_path(get_include_path() . PATH_SEPARATOR . "./SILEX_SERVER_DIR");
 
 //define( 'ROOT_URL' , SILEX_SERVER_URL . '/');
