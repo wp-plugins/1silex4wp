@@ -1,8 +1,8 @@
 === 1silex4wp ===
 Contributors: lexa
 Tags: Flash, ActionScript, theme, template, front office, front end
-Requires at least: 2.0.2
-Tested up to: 0.0
+Requires at least: 2.8.1
+Tested up to: 2.8.1
 Stable tag: 1.0alpha1
 
 Convert your WordPress blog into a Flash application
@@ -78,7 +78,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * x use validate_current_theme to check if silex themes are ok
 * missing FlashVars (((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>)) + DataContainer.selection.s + DataContainer.selection.paged)
 * Reecriture url initiale (juste url base) et deeplink initial
-* silex installer / or let silex go in php4 + pass.php file
+* silex installer / or let silex go with php4 + pass.php file
 * list of pages, categories, tags and bookmarks in flashvars
 * search zone
 * archive list feed
@@ -91,8 +91,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * on portable devices
 * on a browser without flash or / nor javascript
 * security tests
-* 	private blog
-* 	user data exposed through rss feeds
+	* user data exposed through rss feeds
 
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)
@@ -104,6 +103,12 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * produce 1 silex template
 => Release  v1 in beta
 
+== To do - Tests ==
+* compatibility with other plugins
+	* MobilePress
+	* private blog
+* compatibility with the themes
+== To Do - v1.0 ==
 * x	use the content:encoded in a frame and the comments rss feed for the comments
 * x	a frame to add a comment?
 * comments in wrong order
@@ -113,6 +118,10 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * add tests "if_exist" for all hooks (wp versions)
 * produce several silex templates
 => Release  v1
+
+== To do - Tests ==
+* compatibility with WordPress versions
+	* did not work on 2.6.3
 
 == To Do - v1.1 ==
 * add more info in Flashvars : http://codex.wordpress.org/Function_Reference
