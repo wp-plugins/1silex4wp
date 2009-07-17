@@ -3,7 +3,7 @@ Contributors: lexa
 Tags: Flash, ActionScript, theme, template, front office, front end
 Requires at least: 2.0.2
 Tested up to: 0.0
-Stable tag: 0.0
+Stable tag: 1.0alpha1
 
 Convert your WordPress blog into a Flash application
 
@@ -44,7 +44,7 @@ Requirements
 
 == Changelog ==
 
-= 0.1 =
+= 1.0 =
 * Plugin core: 
 	* installation
 	* settings
