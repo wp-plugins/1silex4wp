@@ -24,15 +24,16 @@
  *
  */
 function silex_activation_hook(){
-	$path = SILEX_PLUGIN_DIR.'/'.SILEX_THEMES_DIR_NAME.'/';
-	$newPath = WP_CONTENT_DIR.'/themes/'.SILEX_THEMES_DIR_NAME.'/';
+/*
+	$path = SILEX_PLUGIN_DIR.'/'.SILEX_THEME_DIR_NAME.'/';
+	$newPath = WP_CONTENT_DIR.'/themes/'.SILEX_THEME_DIR_NAME.'/';
 	
 	// copy the themes into the theme directory
 	try{
 		$error = false;
 		if (is_dir($newPath)===true){
 			// rename as "bkp"
-			$bkp_name = WP_CONTENT_DIR.'/themes/'.SILEX_THEMES_DIR_NAME.'_backup_'.date('Y-m-d_H-i-s');
+			$bkp_name = WP_CONTENT_DIR.'/themes/'.SILEX_THEME_DIR_NAME.'_backup_'.date('Y-m-d_H-i-s');
 			if (!rename($newPath,$bkp_name)){
 				$error = true;
 			}
@@ -53,7 +54,7 @@ function silex_activation_hook(){
 		if (!$message) $message = "Could not duplicate Silex themes directory";
 		silex_error('file-error',$message);
 	}
-	// add options
+*/	// add options
 	add_silex_options();
 }
 

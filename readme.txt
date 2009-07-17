@@ -69,21 +69,19 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * x selector to retrieve data of a single post
 * x pages list on home page
 * x 1st draft of the silex template prototype 
-* missing FlashVars (((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>)) + DataContainer.selection.s + DataContainer.selection.paged)
 * x NO, done by cSilex::setUrlHash override: on html page load, retrieve data from url and pass it through FlashVars (call setUrlHash with the proper URL)
 	
 * x override 	cSilex::getIdFromHash and cSilex::setUrlHash
 	wp getOption gives the template
 	id_site is allways the chosen template
-
+* x voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone + prevent from over use disk space
+* x use validate_current_theme to check if silex themes are ok
+* missing FlashVars (((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>)) + DataContainer.selection.s + DataContainer.selection.paged)
 * Reecriture url initiale (juste url base) et deeplink initial
 * silex installer / or let silex go in php4 + pass.php file
 * list of pages, categories, tags and bookmarks in flashvars
 * search zone
 * archive list feed
-* voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone
-  + prevent from over use disk space
-* ? make the plugin link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
 * ? Liens reecrits avec appel js
 * produce a prototype template 
 => Release  v1 in alpha
@@ -99,6 +97,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)
 * ? remove silex files needed only for editing 
+* ? add an option to link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
 * paged comments feed and paged comments in "single" and "page" pages
 * implement all the parameters of the query: http://codex.wordpress.org/Template_Tags/query_posts 
 * all language constants passed in FlashVars (404 text, link names, ...)
