@@ -153,7 +153,7 @@ function script_hook(){
 		 */
 		function openSilexPage($hashValue)
 		{
-			console.log('openSilexPage '+$hashValue);
+			//console.log('openSilexPage '+$hashValue);
 			// update the section data in silex
 			setFlashVarsForSilexPage($hashValue);
 			// open the page in Silex
@@ -166,7 +166,7 @@ function script_hook(){
 			$silex_object_tmp = document.getElementById('silex');
 			if ($silex_object_tmp)
 				$silex_object_tmp.SetVariable('silex_exec_str','DataContainer.'+$data_container_section+'.'+$var_name+'='+$value);
-			console.log('passFlashVar DataContainer.'+$data_container_section+'.'+$var_name+'='+$value);
+			//console.log('passFlashVar DataContainer.'+$data_container_section+'.'+$var_name+'='+$value);
 		}
 		
 		/**
