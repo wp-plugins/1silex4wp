@@ -77,6 +77,7 @@ function register_silex_options(){
 }
 /**
  * returns the total number of posts
+ * not used for now
  */
 function get_total_number_of_posts(){
   $num = 0;

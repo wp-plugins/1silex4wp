@@ -32,16 +32,9 @@ set_include_path(get_include_path() . PATH_SEPARATOR . "./SILEX_SERVER_DIR");
  */
 function head_hook(){
 ?>
+<!-- head_hook -->
 <script type="text/javascript">
 		$rootUrl = "<?php echo SILEX_SERVER_URL.'/'; ?>";
-		// build FlashVars
-		<?php include_once SILEX_INCLUDE_DIR.'/build_flashvars.php'; 
-			$flashVars['rootUrl']=SILEX_SERVER_URL.'/';
-		?>
-		$flashVars = "<?php echo $flashVars; ?>";
-		$DEFAULT_WEBSITE="<?php echo get_option('selected_template')?>";
-// to do :
-//		$htmlTitle
 </script>
 
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
@@ -49,6 +42,9 @@ function head_hook(){
 <?php 
 	wp_get_archives('type=monthly&format=link');
 	wp_head();
+?>
+<!-- end head_hook -->
+<?php 
 	return true;
 }
 ?>
@@ -59,6 +55,7 @@ function head_hook(){
  */
 function noembed_hook(){
 ?>
+<!-- noembed_hook -->
 <h1><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 <!-- end header -->
 <?php 
@@ -90,6 +87,7 @@ comments_template("./comments.php") ; ?>
 <?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
+<!-- end noembed_hook -->
 <?php 
 	return true;
 }
@@ -103,25 +101,35 @@ comments_template("./comments.php") ; ?>
  */
 function script_hook(){
 ?>
+<!-- script_hook -->
 <script type="text/javascript">
 		//trace("script_hook "+openSilexPage);
-		$postDeeplink = "single/p=%/";
-		$pageDeeplink = "page/p=%/"; // "page/page_id=";
-		function openPost($postID){
+		<?php global $websiteConfig; ?>
+
+		// retrieve template data from conf file
+/*		$homeDeeplink = "<?php echo urldecode($websiteConfig["homeDeeplink"]);?>";
+		$singleDeeplink = "<?php echo urldecode($websiteConfig["singleDeeplink"]);?>";
+		$pageDeeplink = "<?php echo urldecode($websiteConfig["pageDeeplink"]);?>";
+		$archiveDeeplink = "<?php echo urldecode($websiteConfig["archiveDeeplink"]);?>";
+		$searchDeeplink = "<?php echo urldecode($websiteConfig["searchDeeplink"]);?>";
+		$error404Deeplink = "<?php echo urldecode($websiteConfig["error404Deeplink"]);?>";
+*/
+		
+/*		function openPost($postID){
 			document.getElementById('silex').SetVariable('silex_exec_str','DataContainer.post.ID='+$postID);
-			openSilexPage("<?php global $websiteConfig; echo $websiteConfig["CONFIG_START_SECTION"]; ?>/"+$postDeeplink+$postID);
-		}
+			openSilexPage("<?php echo $websiteConfig["CONFIG_START_SECTION"]; ?>/"+$singleDeeplink+$postID);
+		}*/
 		/**
 		 * retrieve the id from a deep link pattern
 		 */
-		function getParamFromDeeplinkPattern($hashValue,$deeplinkPattern){
+/*		function getParamFromDeeplinkPattern($hashValue,$deeplinkPattern){
 			// return value
 			$id = -1;
 			
 			$_array = $deeplinkPattern.split("%");
 			
 			// check that the before part is there
-			$patternWithIdSite = "<?php global $websiteConfig; echo $websiteConfig["CONFIG_START_SECTION"]; ?>/"+$_array[0];
+			$patternWithIdSite = "<?php echo $websiteConfig["CONFIG_START_SECTION"]; ?>/"+$_array[0];
 			trace("-> pattern = "+$patternWithIdSite+" , hashValue = "+$hashValue+" , index = " + $hashValue.indexOf($patternWithIdSite));
 			//trace($patternWithIdSite,$hashValue.indexOf($patternWithIdSite));
 			if ($hashValue.indexOf($patternWithIdSite) === 0){
@@ -145,48 +153,117 @@ function script_hook(){
 		 */
 		function openSilexPage($hashValue)
 		{
+			console.log('openSilexPage '+$hashValue);
 			// update the section data in silex
 			setFlashVarsForSilexPage($hashValue);
 			// open the page in Silex
 			document.getElementById('silex').SetVariable('silex_exec_str','open:'+$hashValue);
-			return true;
 		}
 		/**
-		 * set the post or page id / the search or archive params
+		 * pass a given variable to silex DataContainer
 		 */
-		function setFlashVarsForSilexPage($hashValue)
-		{
-			trace("setFlashVarsForSilexPage - open "+$hashValue);
-			// set the id of the single post or page in DataContainer.post.ID
-			// post
-			$id = getParamFromDeeplinkPattern($hashValue,$postDeeplink);
-			if ($id==-1){
-				// page
-				$id = getParamFromDeeplinkPattern($hashValue,$pageDeeplink);
-			}
-			if ($id>-1){
-				trace("setFlashVarsForSilexPage - SetVariable('silex_exec_str','DataContainer.post.ID='"+$id+")");
-				// set the id of the single post or page in DataContainer.post.ID
-				$silex_object_tmp = document.getElementById('silex');
-				if ($silex_object_tmp) $silex_object_tmp.SetVariable('silex_exec_str','DataContainer.post.ID='+$id);
-			}
-			return $id;
+		function passFlashVar($data_container_section,$var_name,$value){
+			$silex_object_tmp = document.getElementById('silex');
+			if ($silex_object_tmp)
+				$silex_object_tmp.SetVariable('silex_exec_str','DataContainer.'+$data_container_section+'.'+$var_name+'='+$value);
+			console.log('passFlashVar DataContainer.'+$data_container_section+'.'+$var_name+'='+$value);
 		}
-		$id = setFlashVarsForSilexPage(getUrlHash());
-		$additional_flashvars += "&post_ID="+$id+"&";
-		trace("script hool over - "+$id+" flashvars = "+$additional_flashvars);
+		
+		/**
+		 * set the post or page id / the search or archive params
+		 * pass all variable from deeplink to flashvars
+		 * variables in the deeplink are with this format: /varname=value/ OR &varname=value&
+		 */
+		function setFlashVarsForSilexPage($hashValue,$additional_flashvars_string){
+			//console.log("setFlashVarsForSilexPage "+$hashValue);
+			//$additional_flashvars = '';
+			
+			// replace "/" by "&" in order to handle /varname=value/ and &varname=value&
+			$hashValueWithAmperstand = $hashValue.replace(new RegExp("/", "g"),"&");
+			
+			// adds additionnal variable (optionnal, used for 1st init)
+			if ($additional_flashvars_string != undefined)
+				$hashValueWithAmperstand += $additional_flashvars_string;
+			// split and extract key/value pairs
+			var $vars_array = $hashValueWithAmperstand.split("&");
+			for ($i = 0; $i < $vars_array.length; $i++)
+			{
+				//console.log("setFlashVarsForSilexPage Start loop");
+				var $varsPair_array = $vars_array[$i].split("=");
+				if ($varsPair_array[0]!=undefined && $varsPair_array[1]!=undefined){
+					switch($varsPair_array[0]){
+						case "p":
+						case "page":
+							//$additional_flashvars += "post_ID="+$varsPair_array[1]+"&";
+							passFlashVar("post","ID",$varsPair_array[1]);
+							//console.log("setFlashVarsForSilexPage "+$additional_flashvars);
+							break;
+						default:
+							//$additional_flashvars += $varsPair_array[0]+"="+$varsPair_array[1]+"&";
+							passFlashVar('selection','cat','');
+							passFlashVar('selection','tag','');
+							passFlashVar('selection',$varsPair_array[0],$varsPair_array[1]);
+							//console.log("setFlashVarsForSilexPage "+$additional_flashvars);
+					}
+				}
+			}
+			//return $additional_flashvars;
+		}
+		function initFlashVars(){
+			// flash vars from url
+			//$additional_flashvars = setFlashVarsForSilexPage(getUrlHash());
+			
+			// build FlashVars from wordpress data
+			<?php 
+				$flashvars_string='';
+				include_once SILEX_INCLUDE_DIR.'/build_flashvars.php'; 
+			?>
+			$additional_flashvars = "<?php echo $flashvars_string; ?>";
+			
+			$DEFAULT_WEBSITE="<?php echo get_option('selected_template')?>";
+			// to do :
+			//		$htmlTitle
+
+		}
+		/**
+		 * callback for silex template initialisation
+		 * action on DataContainer: onLoad javascript:silex_data_container_ready(); 
+		 */
+		function silex_data_container_ready(){
+			silexJsObj.firebug=true;
+			//console.log("silex_data_container_ready");
+			// add FlashVars from wordpress data -> set the DataContainer
+			setFlashVarsForSilexPage(getUrlHash(), "<?php echo $flashvars_string; ?>");
+		}
+		initFlashVars();
+</script>
+<!-- end script_hook -->
+<?php
+	return true;
+}
+?>
+<!-- index_body_end_hook -->
+<?php
+/**
+ * Silex hook for the script tag
+ */
+function index_body_end_hook(){
+?>
+<script type="text/javascript">
+	silexJsObj.firebug=true;
 </script>
 <?php
 	return true;
 }
 ?>
-
+<!-- end index_body_end_hook -->
 <?php
 global $silex_hooks_array;
 if (!isset($silex_hooks_array)) $silex_hooks_array = Array();
 $silex_hooks_array[] = Array('hook_name' => 'index-head', 'hook_function' => head_hook, 'params' => Array());
-$silex_hooks_array[] = Array('hook_name' => 'noembed', 'hook_function' => noembed_hook, 'params' => Array());
-$silex_hooks_array[] = Array('hook_name' => 'script', 'hook_function' => script_hook, 'params' => Array());
+$silex_hooks_array[] = Array('hook_name' => 'index-noembed', 'hook_function' => noembed_hook, 'params' => Array());
+$silex_hooks_array[] = Array('hook_name' => 'index-script', 'hook_function' => script_hook, 'params' => Array());
+$silex_hooks_array[] = Array('hook_name' => 'index-body-end', 'hook_function' => index_body_end_hook, 'params' => Array());
 
 include (SILEX_SERVER_DIR.'/index.php');
 ?>

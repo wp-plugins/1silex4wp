@@ -115,23 +115,20 @@ Silex "WordPress" themes
 	wp-admin
 
 - page types (only one at a time possible):
-	home - recent posts
+*	home - recent posts
 		((<<DataContainer.blog.home>>))?feed=silex_paged_feed
 		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))
-	single - single post
+*	single - single post
 		((<<DataContainer.post.ID>>))
-	page - single page
-		((<<DataContainer.post.ID>>))
-	archive - archives: Category, Tag, Author and Date (monthly, yearly, daily, NOT time-based for now)
-		((<<DataContainer.blog.home>>))?feed=silex_paged_feed((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>))
-		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))
+*	page - single page (same as single post page)
+	
+*	archive - archives: Category, Tag, Author and Date (monthly, yearly, daily, NOT time-based for now)
+		((<<DataContainer.blog.home>>))?feed=silex_paged_feed((&s=<<DataContainer.selection.s>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>))
+		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))((&paged=<<DataContainer.selection.paged>>))((&s=<<DataContainer.selection.s>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>))
 		
-	search - search
-		((<<DataContainer.blog.home>>))?feed=silex_paged_feed((&s=<<DataContainer.selection.s>>))
-		((<<DataContainer.blog.home>>))?feed=silex_posts_feed((&paged=<<DataSelectorPages.selectedItem.title>>))
+*	search - search = (same as archive page)
 
-
-	404 - not found
+*	error404 - not found
 		
 	
 --

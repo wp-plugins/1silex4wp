@@ -246,7 +246,7 @@ function call_hooks($hook_name){
                 </embed>
                 <noembed>
 				<?php
-					call_hooks('noembed');
+					call_hooks('index-noembed');
 				?>
                 <iframe frameborder="0" height="100%" width="100%" src="./no-flash.html">Your browser doesnt support Frames. Update your browser to watch this page.</iframe>
 				<a href="http://silex-ria.org">powered by silex</a>
@@ -285,7 +285,7 @@ function call_hooks($hook_name){
 
 		</script>
 			<?php
-				call_hooks('script');
+				call_hooks('index-script');
 			?>
 		<script type="text/javascript">
 			// silexJsObj is used for deep link and tracking
@@ -308,5 +308,8 @@ function call_hooks($hook_name){
 				{<?php echo $param_js_object ?>}
 				);
 		</script>
+			<?php
+				call_hooks('index-body-end');
+			?>
 	</body>
 </html>

@@ -76,13 +76,15 @@ I am looking for people who could do video tutorials and templates. Feel free to
 	id_site is allways the chosen template
 * x voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone + prevent from over use disk space
 * x use validate_current_theme to check if silex themes are ok
-* missing FlashVars (((&paged=<<DataContainer.selection.paged>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>)) + DataContainer.selection.s + DataContainer.selection.paged)
+* x missing FlashVars 
+* x list of pages, categories, tags and bookmarks in flashvars
 * Reecriture url initiale (juste url base) et deeplink initial
 * silex installer / or let silex go with php4 + pass.php file
-* list of pages, categories, tags and bookmarks in flashvars
 * search zone
 * archive list feed
 * ? Liens reecrits avec appel js
+* links to no_flash version in flash version AND vise versa
+* no_flash propagation in cookie
 * produce a prototype template 
 => Release  v1 in alpha
 
