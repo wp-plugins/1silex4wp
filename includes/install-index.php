@@ -54,7 +54,7 @@ function silex_activation_hook(){
 		if (!$message) $message = "Could not duplicate Silex themes directory";
 		silex_error('file-error',$message);
 	}
-*/	// add options
+*/	// add options (function in includes/functions.php)
 	add_silex_options();
 }
 

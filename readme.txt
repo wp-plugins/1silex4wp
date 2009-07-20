@@ -79,7 +79,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * x missing FlashVars (for archives)
 * x list of pages, categories, tags and bookmarks in flashvars
 * x search zone
-* Reecriture url initiale (juste url base) et deeplink initial
+* x Reecriture url initiale (juste url base) et deeplink initial
 * silex installer / or let silex go with php4 + pass.php file
 * archive list feed
 * ? Liens reecrits avec appel js

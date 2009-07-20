@@ -61,17 +61,17 @@ function silex_duplicate($folder,$newFolder){
 }
 function add_silex_options(){
 	// add options
-	add_option("selected_template", 'wp-default', '', 'yes');
+	add_option("silex_selected_template", 'wp-default', '', 'yes');
 	add_option("override_wp_url_rewrite_rules", '0', '', 'yes');
 	add_option("use_flash_by_default", '1', '', 'yes');
 }
 function update_silex_options(){
-	update_option('selected_template', (string)$_POST["selected_template"]);
+	update_option('silex_selected_template', (string)$_POST["silex_selected_template"]);
 	update_option('override_wp_url_rewrite_rules', (boolean)$_POST["override_wp_url_rewrite_rules"]);
 	update_option('use_flash_by_default', (boolean)$_POST["use_flash_by_default"]);
 }
 function register_silex_options(){
-  register_setting( 'silex-option-group', 'selected_template' );
+  register_setting( 'silex-option-group', 'silex_selected_template' );
   register_setting( 'silex-option-group', 'override_wp_url_rewrite_rules' );
   register_setting( 'silex-option-group', 'use_flash_by_default' );
 }

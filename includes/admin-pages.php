@@ -21,7 +21,7 @@
  * @version 0.1
  */
 function silex_options() {
-	if (isset($_POST["selected_template"])){
+	if (isset($_POST["silex_selected_template"])){
 		update_silex_options();
 		silex_success('Configuration Updated!');
 	}
@@ -40,7 +40,7 @@ function silex_options() {
 		<table class="form-table">
 			<tr valign="top">
 			<th scope="row">Selected Silex Template</th>
-				<td><input type="text" name="selected_template" value="<?php echo get_option('selected_template'); ?>" /></td>
+				<td><input type="text" name="silex_selected_template" value="<?php echo get_option('silex_selected_template'); ?>" /></td>
 			</tr>
 			<th scope="row">Override WordPress URL rewrite rule</th>
 				<td><input type="checkbox" name="override_wp_url_rewrite_rules" <?php echo get_option('override_wp_url_rewrite_rules')==1?'checked="checked"':''; ?> /></td>
@@ -50,7 +50,7 @@ function silex_options() {
 			</tr>
 		</table>
 		<input type="hidden" name="action" value="update" />
-		<input type="hidden" name="page_options" value="selected_template,override_wp_url_rewrite_rules,use_flash_by_default" />
+		<input type="hidden" name="page_options" value="silex_selected_template ,override_wp_url_rewrite_rules,use_flash_by_default" />
 		<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 		</p>

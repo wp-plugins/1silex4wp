@@ -23,7 +23,7 @@
 require_once(ABSPATH."wp-content/plugins/".get_option('silex_plugin_name').'/includes/constants.php');
 set_include_path(get_include_path() . PATH_SEPARATOR . "./SILEX_SERVER_DIR");
 
-//define( 'ROOT_URL' , SILEX_SERVER_URL . '/');
+define( 'ROOTURL' , SILEX_SERVER_URL . '/');
 
 ?>
 <?php
@@ -47,9 +47,7 @@ function head_hook(){
 <?php 
 	return true;
 }
-?>
-
-<?php
+?><?php
 /**
  * Silex hook for noscript tag
  */
@@ -91,11 +89,7 @@ comments_template("./comments.php") ; ?>
 <?php 
 	return true;
 }
-?>
-
-
-
-<?php
+?><?php
 /**
  * Silex hook for the script tag
  */
@@ -104,7 +98,16 @@ function script_hook(){
 <!-- script_hook -->
 <script type="text/javascript">
 		//trace("script_hook "+openSilexPage);
-		<?php global $websiteConfig; ?>
+		// redirection
+		<?php 
+			global $websiteConfig; 
+			
+			$redirect_url = get_redirect_url(urldecode($websiteConfig['homeDeeplink']),urldecode($websiteConfig['singleDeeplink']),urldecode($websiteConfig['pageDeeplink']),urldecode($websiteConfig['archiveDeeplink']),urldecode($websiteConfig['searchDeeplink']),urldecode($websiteConfig['error404Deeplink']));
+			
+			if(isset($redirect_url) && $redirect_url != '')
+				echo 'window.location="'.$redirect_url.'";';
+
+		?>
 
 		// retrieve template data from conf file
 /*		$homeDeeplink = "<?php echo urldecode($websiteConfig["homeDeeplink"]);?>";
@@ -114,7 +117,7 @@ function script_hook(){
 		$searchDeeplink = "<?php echo urldecode($websiteConfig["searchDeeplink"]);?>";
 		$error404Deeplink = "<?php echo urldecode($websiteConfig["error404Deeplink"]);?>";
 */
-		
+		 
 /*		function openPost($postID){
 			document.getElementById('silex').SetVariable('silex_exec_str','DataContainer.post.ID='+$postID);
 			openSilexPage("<?php echo $websiteConfig["CONFIG_START_SECTION"]; ?>/"+$singleDeeplink+$postID);
@@ -148,6 +151,8 @@ function script_hook(){
 			}
 			return $id;
 		}
+		*/
+		// deeplink functions
 		/**
 		 * override silex hash change callback to set the post or page id / the search or archive params
 		 */
@@ -220,7 +225,7 @@ function script_hook(){
 			?>
 			$additional_flashvars = "<?php echo $flashvars_string; ?>";
 			
-			$DEFAULT_WEBSITE="<?php echo get_option('selected_template')?>";
+			$DEFAULT_WEBSITE="<?php echo get_option('silex_selected_template')?>";
 			// to do :
 			//		$htmlTitle
 

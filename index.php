@@ -45,7 +45,9 @@ else
 		silex_error('file-error','Silex themes not found');
 	}
 	else{
-*/		require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
+*/
+		require_once(SILEX_INCLUDE_DIR.'/redirect-functions.php');
+		require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
 		require_once(SILEX_INCLUDE_DIR.'/feed-index.php');
 		require_once(SILEX_INCLUDE_DIR.'/theme-switcher-index.php');
 		require_once(SILEX_INCLUDE_DIR.'/install-index.php');

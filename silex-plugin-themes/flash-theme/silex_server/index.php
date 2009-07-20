@@ -184,8 +184,8 @@ function call_hooks($hook_name){
 		      <noscript>
 				<?php 
 		            $param = Array(
-                        "movie" => "./loader.swf?flashId=silex",
-                        "src" => "./loader.swf?flashId=silex",
+                        "movie" => ROOTURL."loader.swf?flashId=silex",
+                        "src" => ROOTURL."loader.swf?flashId=silex",
                         "type"=>"application/x-shockwave-flash",
                         "bgColor" => $websiteConfig["bgColor"],
                         "pluginspage"=>"http://www.adobe.com/products/flashplayer/",
