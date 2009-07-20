@@ -28,27 +28,24 @@ function get_redirect_url($homeDeeplink,$singleDeeplink,$pageDeeplink,$archiveDe
 	
 	if (isset($query_string) && $query_string != ''){
 		global $websiteConfig;
+		global $paged;
 		$redirect_url = get_option( 'siteurl' ).'/#'.get_option('silex_selected_template').'/'.$websiteConfig['CONFIG_START_SECTION'].'/';
 		if(is_home()){
-			$redirect_url = get_option( 'siteurl' );
+			$redirect_url .= str_replace('%',$paged,$homeDeeplink);
 		}
 		else if(is_single()){
-			$redirect_url .= $singleDeeplink;
 			global $post;
-			$redirect_url = str_replace('%',$post->ID,$redirect_url);
+			$redirect_url .= str_replace('%',$post->ID,$singleDeeplink);
 		}
 		else if(is_page()){
 			global $page;
-			$redirect_url .= $pageDeeplink;
-			$redirect_url = str_replace('%',$page->ID,$redirect_url);
+			$redirect_url .= str_replace('%',$page->ID,$pageDeeplink);
 		}
 		else if(is_search()){
-			$redirect_url .= $searchDeeplink;
-			$redirect_url = str_replace('%',$query_string,$redirect_url);
+			$redirect_url .= str_replace('%',$query_string,$searchDeeplink);
 		}
 		else if(is_archive()){
-			$redirect_url .= $archiveDeeplink;
-			$redirect_url = str_replace('%',$query_string,$redirect_url);
+			$redirect_url .= str_replace('%',$query_string,$archiveDeeplink);
 			// is_tag() is_category() is_year() is_month() is_day() is_time() 
 		}
 		else if(is_404()){
