@@ -15,6 +15,21 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+
+/**
+ * add a link to the flash version in the footer 
+ */
+function add_flash_link(){
+	global $query_string;
+//	$query_string = add_query_arg('no_flash',null,$query_string);
+	$query_string = remove_query_arg('no_flash',$query_string);
+	$query_string = add_query_arg('flash','1',$query_string);
+	
+	echo '<a href="?'.$query_string.'">Flash Version of this website</a>';
+}
+if (get_option('silex_add_link_to_flash_version')==true)
+	add_action('wp_footer','add_flash_link');
+
 /**
  * @package 1silex4wp
  * @author Lexa Yo

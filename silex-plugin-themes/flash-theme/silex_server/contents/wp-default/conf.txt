@@ -31,5 +31,5 @@ homeDeeplink=home%2Fpaged%3D%25%2F&
 singleDeeplink=single%2Fp%3D%25%2F&
 pageDeeplink=page%2Fp%3D%25&
 archiveDeeplink=archive%2F%25&
-searchDeeplink=search%2Fs%3D%25%2F&
+searchDeeplink=search%2F%25%2F&
 error404Deeplink=404&

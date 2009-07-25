@@ -20,16 +20,31 @@
  * @author Lexa Yo
  * @version 0.1
  */
+session_start();
+// init session variables
+if (!isset( $_SESSION['session_variables_initialized']) && !isset( $_GET['no_flash']) && !isset( $_GET['flash']))
+	if (get_option('use_flash_by_default')==1)
+		unset ($_SESSION['no_flash']);
+	else
+		$_SESSION['no_flash'] = true;
+// init done once only
+$_SESSION['session_variables_initialized'] = true;
+// update no_flash flag
+if (isset( $_GET['no_flash'] ))
+	$_SESSION['no_flash'] = true;
+if (isset( $_GET['flash'] ))
+	unset ($_SESSION['no_flash']);
 /**
  * determine the name of the theme to display
  * the user theme, the flash_theme or the framed_theme
  */
 function silex_get_theme(){
 	global $wp_query;
-	if (isset( $_GET['is_framed'] )){
+	
+	if (isset( $_GET['is_framed']) ){
 		return SILEX_FRAMED_THEME_NAME;
 	}
-	else if (!isset( $_GET['no_flash'] )){
+	else if (!isset( $_SESSION['no_flash'])){
 		return SILEX_FLASH_THEME_NAME;
 	}
 	return '';

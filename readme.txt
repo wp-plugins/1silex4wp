@@ -80,11 +80,11 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * x list of pages, categories, tags and bookmarks in flashvars
 * x search zone
 * x Reecriture url initiale (juste url base) et deeplink initial
+* ? Liens reecrits avec appel js
+x* links to no_flash version in flash version AND vise versa
+x* no_flash propagation in cookie
 * silex installer / or let silex go with php4 + pass.php file
 * archive list feed
-* ? Liens reecrits avec appel js
-* links to no_flash version in flash version AND vise versa
-* no_flash propagation in cookie
 * produce a prototype template 
 => Release  v1 in alpha
 

@@ -38,15 +38,21 @@ function silex_options() {
 	<form method="post" action="">
 		<?php wp_nonce_field('update-options'); ?>
 		<table class="form-table">
-			<tr valign="top">
+			<tr valign="center">
 			<th scope="row">Selected Silex Template</th>
 				<td><input type="text" name="silex_selected_template" value="<?php echo get_option('silex_selected_template'); ?>" /></td>
 			</tr>
+			<tr valign="center">
 			<th scope="row">Override WordPress URL rewrite rule</th>
 				<td><input type="checkbox" name="override_wp_url_rewrite_rules" <?php echo get_option('override_wp_url_rewrite_rules')==1?'checked="checked"':''; ?> /></td>
 			</tr>
+			<tr valign="center">
 			<th scope="row">Use Flash template by default</th>
 				<td><input type="checkbox" name="use_flash_by_default" <?php echo get_option('use_flash_by_default')==1?'checked="checked"':''; ?>" /></td>
+			</tr>
+			<tr valign="center">
+			<th scope="row">Add a link to Flash version at the bottom of the HTML version</th>
+				<td><input type="checkbox" name="silex_add_link_to_flash_version" <?php echo get_option('silex_add_link_to_flash_version')==1?'checked="checked"':''; ?>" /></td>
 			</tr>
 		</table>
 		<input type="hidden" name="action" value="update" />

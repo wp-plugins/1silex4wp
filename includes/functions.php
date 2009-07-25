@@ -34,7 +34,9 @@ function silex_error($error_code,$error_message){
 function silex_success($message){
 	echo '<div class="updated fade success" style="font-weight:bold;color:green;"><p>'.$message.'</p></div>';
 }
-// do the copy
+/** 
+ * do the copy of silex themes into theme dir
+ *//*
 function silex_duplicate($folder,$newFolder){
 //	echo "silex_duplicate($folder,$newFolder)<br>";
 	mkdir($newFolder);
@@ -58,22 +60,25 @@ function silex_duplicate($folder,$newFolder){
 		}
 	}
 	return TRUE;
-}
+}*/
 function add_silex_options(){
 	// add options
 	add_option("silex_selected_template", 'wp-default', '', 'yes');
 	add_option("override_wp_url_rewrite_rules", '0', '', 'yes');
 	add_option("use_flash_by_default", '1', '', 'yes');
+	add_option("silex_add_link_to_flash_version", '1', '', 'yes');
 }
 function update_silex_options(){
 	update_option('silex_selected_template', (string)$_POST["silex_selected_template"]);
 	update_option('override_wp_url_rewrite_rules', (boolean)$_POST["override_wp_url_rewrite_rules"]);
 	update_option('use_flash_by_default', (boolean)$_POST["use_flash_by_default"]);
+	update_option('silex_add_link_to_flash_version', (boolean)$_POST["silex_add_link_to_flash_version"]);
 }
 function register_silex_options(){
   register_setting( 'silex-option-group', 'silex_selected_template' );
   register_setting( 'silex-option-group', 'override_wp_url_rewrite_rules' );
   register_setting( 'silex-option-group', 'use_flash_by_default' );
+  register_setting( 'silex-option-group', 'silex_add_link_to_flash_version' );
 }
 /**
  * returns the total number of posts
