@@ -83,7 +83,6 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * ? Liens reecrits avec appel js
 x* links to no_flash version in flash version AND vise versa
 x* no_flash propagation in cookie
-* silex installer / or let silex go with php4 + pass.php file
 * archive list feed
 * produce a prototype template 
 => Release  v1 in alpha
@@ -113,6 +112,7 @@ x* no_flash propagation in cookie
 == To Do - v1.0 ==
 * x	use the content:encoded in a frame and the comments rss feed for the comments
 * x	a frame to add a comment?
+* silex installer / or let silex go with php4 + pass.php file
 * comments in wrong order
 * add no-flash page param to silex.js
 * detect when flash_theme or framed_theme is missing
