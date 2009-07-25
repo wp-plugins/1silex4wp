@@ -21,6 +21,11 @@
  * @version 0.1
  */
 session_start();
+if (isset( $_GET['lexcookie'] )){
+	unset($_SESSION['session_variables_initialized']);
+	//echo 'Session reinitialized<br>';
+	silex_error('debug','Session reinitialized');
+}
 // init session variables
 if (!isset( $_SESSION['session_variables_initialized']) && !isset( $_GET['no_flash']) && !isset( $_GET['flash']))
 	if (get_option('use_flash_by_default')==1)

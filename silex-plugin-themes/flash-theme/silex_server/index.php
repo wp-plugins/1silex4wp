@@ -37,7 +37,7 @@ if(!file_exists(ROOTPATH."conf/pass.php")){
 <html>
 <head>
 <title>Silex</title>
-<meta http-equiv="REFRESH" content="0;url=./install"></HEAD>
+<meta http-equiv="REFRESH" content="0;url=<?php echo ROOTURL; ?>install"></HEAD>
 </HTML>
 	
 	<?php
@@ -265,6 +265,7 @@ function call_hooks($hook_name){
 		<?php } ?>
 		<div id="stats"></div>
 		<script type="text/javascript">
+			$php_str = '';
 			$additional_flashvars = "";
 			$enableDeeplinking = "<?php if(isset($websiteConfig["ENABLE_DEEPLINKING"])) echo $websiteConfig["ENABLE_DEEPLINKING"]; else echo "true"; ?>";
 			$DEFAULT_WEBSITE="<?php echo $serverConfig->silex_server_ini["DEFAULT_WEBSITE"]; ?>";
@@ -300,7 +301,7 @@ function call_hooks($hook_name){
                 $htmlTitle,
                 $preload_files_list,
                 $bgColor,
-                "",
+                $php_str,
                 $php_id_site,
                 $additional_flashvars, // additional flash vars
                 $rootUrl, // rootUrl

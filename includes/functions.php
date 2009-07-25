@@ -64,22 +64,27 @@ function silex_duplicate($folder,$newFolder){
 function add_silex_options(){
 	// add options
 	add_option("silex_selected_template", 'wp-default', '', 'yes');
-	add_option("override_wp_url_rewrite_rules", '0', '', 'yes');
-	add_option("use_flash_by_default", '1', '', 'yes');
+	//add_option("override_wp_url_rewrite_rules", '0', '', 'yes');
+	add_option("use_flash_by_default", '0', '', 'yes');
 	add_option("silex_add_link_to_flash_version", '1', '', 'yes');
 }
 function update_silex_options(){
 	update_option('silex_selected_template', (string)$_POST["silex_selected_template"]);
-	update_option('override_wp_url_rewrite_rules', (boolean)$_POST["override_wp_url_rewrite_rules"]);
+	//update_option('override_wp_url_rewrite_rules', (boolean)$_POST["override_wp_url_rewrite_rules"]);
 	update_option('use_flash_by_default', (boolean)$_POST["use_flash_by_default"]);
 	update_option('silex_add_link_to_flash_version', (boolean)$_POST["silex_add_link_to_flash_version"]);
 }
 function register_silex_options(){
   register_setting( 'silex-option-group', 'silex_selected_template' );
-  register_setting( 'silex-option-group', 'override_wp_url_rewrite_rules' );
+  //register_setting( 'silex-option-group', 'override_wp_url_rewrite_rules' );
   register_setting( 'silex-option-group', 'use_flash_by_default' );
   register_setting( 'silex-option-group', 'silex_add_link_to_flash_version' );
 }
+/* code for override_wp_url_rewrite_rules option
+			<tr valign="center">
+			<th scope="row">Override WordPress URL rewrite rule</th>
+				<td><input type="checkbox" name="override_wp_url_rewrite_rules" <?php echo get_option('override_wp_url_rewrite_rules')==1?'checked="checked"':''; ?> /></td>
+			</tr>*/
 /**
  * returns the total number of posts
  * not used for now
@@ -91,5 +96,23 @@ function get_total_number_of_posts(){
 	$num += $cat->category_count;
   }
   return $num;
+}
+/**
+ * retrieve a link to the current page, eventually forcing value of no_flash/flash
+ * $force_flash_version can be true (force flash), false (force no_flash), nulll (do not force, keep going with current value)
+ */
+function silex_get_link_to_this_page($force_flash_version){
+	global $query_string;
+	$return_string = $query_string;
+	
+	if ($force_flash_version === true){
+		$return_string = remove_query_arg('no_flash',$return_string);
+		$return_string = add_query_arg('flash','1',$return_string);
+	}
+	else if (force_flash_version === false){
+		$return_string = remove_query_arg('flash',$return_string);
+		$return_string = add_query_arg('no_flash','1',$return_string);
+	}
+	return $return_string;
 }
 ?>

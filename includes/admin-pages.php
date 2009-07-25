@@ -25,29 +25,24 @@ function silex_options() {
 		update_silex_options();
 		silex_success('Configuration Updated!');
 	}
+/* code for override_wp_url_rewrite_rules option
+			<tr valign="center">
+			<th scope="row">Override WordPress URL rewrite rule</th>
+				<td><input type="checkbox" name="override_wp_url_rewrite_rules" <?php echo get_option('override_wp_url_rewrite_rules')==1?'checked="checked"':''; ?> /></td>
+			</tr>*/
 ?>
 <div class="wrap">
 	<h2>Settings of Silex plugin</h2>
-	<h3>Useful links</h3>
-	<ul>
-		<li type="circle">create your own templates</li>
-		<li type="circle">ddd</li>
-	</ul>
-	<br />
 	<h3>Settings</h3>
 	<form method="post" action="">
 		<?php wp_nonce_field('update-options'); ?>
 		<table class="form-table">
 			<tr valign="center">
-			<th scope="row">Selected Silex Template</th>
+			<th scope="row">Selected Silex Theme</th>
 				<td><input type="text" name="silex_selected_template" value="<?php echo get_option('silex_selected_template'); ?>" /></td>
 			</tr>
 			<tr valign="center">
-			<th scope="row">Override WordPress URL rewrite rule</th>
-				<td><input type="checkbox" name="override_wp_url_rewrite_rules" <?php echo get_option('override_wp_url_rewrite_rules')==1?'checked="checked"':''; ?> /></td>
-			</tr>
-			<tr valign="center">
-			<th scope="row">Use Flash template by default</th>
+			<th scope="row">Use Flash version by default</th>
 				<td><input type="checkbox" name="use_flash_by_default" <?php echo get_option('use_flash_by_default')==1?'checked="checked"':''; ?>" /></td>
 			</tr>
 			<tr valign="center">
@@ -61,6 +56,36 @@ function silex_options() {
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 		</p>
 	</form>
+	<br />
+	<h3>Useful links</h3>
+	<ul>
+		<li type="circle">This <a href="http://wordpress.org/extend/plugins/1silex4wp/">plugin page at WordPress.org</a></li>
+		<li type="circle">Create your own templates with <a href="http://silex-ria.org/">Silex</a></li>
+		<ol>
+			<li type="circle"><a href="http://en.wikipedia.org/wiki/Silex_Flash_CMS">Silex at wikipedia</a></li>
+			<li type="circle"><a href="http://silex-ria.org/help/">Silex online help</a> (<a href="http://silex-ria.org/help/">Aide en Francais</a>)</li>
+			<li type="circle"><a href="http://silex-ria.org/intro">Silex video demo</a></li>
+			<li type="circle"><a href="http://hoyau.info/demos/silex_server/manager-demo/start">Silex online demo</a></li>
+			<li type="circle"><a href="http://silex-ria.org/open.source.flash.cms/silex/telecharger" title="Download Silex">Download Silex</a></li> 
+			<li type="circle"><a href="http://silex.hoyau.info/forum_en/" title="Silex forum in English" >Silex forum in English</a></li> 
+			<li type="circle"><a href="http://silex.hoyau.info/forum/" title="Silex forum in French" >Silex forum in French / Forum en francais</a></li> 
+			<li type="circle"><a href="https://silex.svn.sourceforge.net/svnroot/silex/trunk" title="Silex source code" >Silex source code</a></li> 
+			<li type="circle"><a href="http://sourceforge.net/mail/?group_id=192954" title="Silex mailing lists" >Silex mailing lists</a></li> 
+			<li type="circle"><a href="http://www.gnu.org/licenses/gpl.html" title="Silex GPL license" >Silex GPL license</a></li> 
+		</ol>
+	</ul>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<small>
+	___________________________________________
+	<br />Plugin author: <a href="http://silex-ria.org/lex">Alexandre Hoyau</a>
+	<br />Powered by <a href="http://silex-ria.org/">Silex</a>
+	<br />Special thanks to <a href="http://silexlabs.com/">the Silex team</a>
+	</small>
 </div>
 <?php
 }

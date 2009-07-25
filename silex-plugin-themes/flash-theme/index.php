@@ -108,6 +108,7 @@ function script_hook(){
 				echo 'window.location="'.$redirect_url.'";';
 
 		?>
+		$php_str += "$no_flash_page=\"<?php echo silex_get_link_to_this_page(false); ?>\"";
 
 		// retrieve template data from conf file
 /*		$homeDeeplink = "<?php echo urldecode($websiteConfig["homeDeeplink"]);?>";

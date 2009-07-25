@@ -91,7 +91,7 @@ Admin pannel
 	link to the manager if it is installed OR message "Install Silex WYSIWYG"
 - plugin parameters
 	selected template (drop down list)
-	override WordPress URL rewrite rule (check box) / only if URL rewrite is activated
+	?override WordPress URL rewrite rule (check box) / only if URL rewrite is activated
 	flash by default / html by default
 
 - plugin installer
