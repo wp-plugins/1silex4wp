@@ -1,7 +1,7 @@
 ﻿htmlTitle=&
 htmlIcon=media/silex.ico&
 htmlKeywords=silex,flash,cms&
-flashPlayerVersion=8&
+flashPlayerVersion=18&
 scaleMode=noScale&
 bgColor=E7E7E7&
 mainRssFeed=&
