@@ -9,10 +9,6 @@ Convert your WordPress blog into a Flash application
 
 == Description ==
 
-*Still in a conception phase - Work in progress, v0.1 is comming in July - For now, look at [the screenshots of the prototypes](http://wordpress.org/extend/plugins/1silex4wp/screenshots/ "screenshots")*
-
-*Currently in alpha version. First tests can be seen here: http://hoyau.info/tests/wordpress3/*
-
 **Substitute your worpress theme by a Flash template**
 
 * visible only by Flash enabled browsers - *search engines or phones will see your blog normally*
@@ -22,11 +18,19 @@ Convert your WordPress blog into a Flash application
 * choose one of the *included Flash templates*
 * create your own dynamic Flash templates with *Silex WYSIWYG*
 
-This plug-in is SEO friendly and makes use of [Silex the #1 opensource Flash CMS](http://silex-ria.org/ "Silex project website"), to build dynamic Flash templates without the Flash IDE. These templates can display your blog data, the posts, pages and comments. And you will be able to modify the appearance in [Silex WYSIWYG](http://www.youtube.com/watch?v=rzFqfuiLQ4k&hl=fr "Silex WYSIWYG video demo").
+**Notes**
+
+* Currently in alpha version - Work is in progress, v1.0beta1 is comming in July *
+* For now, look at [the screenshots of the prototypes](http://wordpress.org/extend/plugins/1silex4wp/screenshots/ "screenshots")
+* [Work in progress can be seen here](http://hoyau.info/demo/1silex4wp/ "Work in progress can be seen here")
+
+**Description**
+
+1silex4wp is SEO friendly and makes use of [Silex the #1 opensource Flash CMS](http://silex-ria.org/ "Silex project website"), to build dynamic Flash templates without the Flash IDE. These templates can display your blog data, the posts, pages and comments. And you will be able to modify the appearance in [Silex WYSIWYG](http://www.youtube.com/watch?v=rzFqfuiLQ4k&hl=fr "Silex WYSIWYG video demo").
 
 [Sha](http://silex-ria.org/sha "Sha cv") has allready done [a website with Silex driven by WordPress](http://flashcms.fr/ "flashcms, a Silex-WP site (in French)"). And [here is a video of an other test I did](http://www.screentoaster.com/watch/stUkxdQ0VLR15cR19dU1le "Silex Wordpress video")). These prototypes are not SEO friendly and a classical WordPress blog could not be converted easily. 
 
-Now I want this plugin to make Silex a Flash equivalent of a WordPress blog.
+Now I want 1silex4wp to let Silex themes be Flash equivalents of WordPress themes.
  
 == Installation ==
 
