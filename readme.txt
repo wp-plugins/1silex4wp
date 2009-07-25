@@ -81,8 +81,8 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * x search zone
 * x Reecriture url initiale (juste url base) et deeplink initial
 * ? Liens reecrits avec appel js
-x* links to no_flash version in flash version AND vise versa
-x* no_flash propagation in cookie
+* x links to no_flash version in flash version AND vise versa
+* x no_flash propagation in cookie
 * archive list feed
 * produce a prototype template 
 => Release  v1 in alpha
