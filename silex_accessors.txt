@@ -7,6 +7,7 @@ onLoad DataContainer.blog.charset=<<_root.charset>>
 onLoad DataContainer.blog.comments_atom_url=<<_root.comments_atom_url>>
 onLoad DataContainer.blog.comments_rss2_url=<<_root.comments_rss2_url>>
 onLoad DataContainer.blog.description=<<_root.description>>
+
 onLoad DataContainer.blog.home=<<_root.home>>
 onLoad DataContainer.blog.html_type=<<_root.html_type>>
 onLoad DataContainer.blog.language=<<_root.language>>
