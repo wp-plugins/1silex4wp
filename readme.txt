@@ -91,6 +91,8 @@ I am looking for people who could do video tutorials and templates. Feel free to
 *     cat and s tags
 *     refresh after comment submited
 *     $no_flash_page / no-flash.html
+*		feed catégories
+*		content:encoded s'affiche mal avec le customfeed
 
 * archive list feed
 * produce a prototype template 

@@ -3,12 +3,19 @@
 Feeds
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-?feed=silex_pages_feed
-?feed=silex_categories_feed
-?feed=silex_tags_feed
-?feed=silex_bookmarks_feed
-?feed=silex_posts_feed
-?feed=silex_paged_feed
+?feed=silex_pages_feed : liste des pages wp
+?feed=silex_categories_feed : liste des catégories
+?feed=silex_tags_feed : liste des archives
+?feed=silex_bookmarks_feed : liste des liens
+
+?feed=silex_posts_feed * liste des posts (1 page, soit 10 posts)
+((&paged=<<DataContainer.selection.paged>>))
+((&s=<<DataContainer.selection.s>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>))
+
+?feed=silex_paged_feed * liste du nombre de page
+((&s=<<DataContainer.selection.s>>))((&cat=<<DataContainer.selection.cat>>))((&tag=<<DataContainer.selection.tag>>))((&author=<<DataContainer.selection.author>>))((&m=<<DataContainer.selection.m>>))((&year=<<DataContainer.selection.year>>))((&day=<<DataContainer.selection.day>>))
+
+
 //to do - feed=silex_archives_feed
 ?no_flash
 ?is_framed

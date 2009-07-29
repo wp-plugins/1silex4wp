@@ -1,12 +1,12 @@
 htmlTitle=&
 htmlIcon=media/silex.ico&
 htmlKeywords=silex,flash,cms&
-flashPlayerVersion=18&
+flashPlayerVersion=8&
 scaleMode=noScale&
 bgColor=E7E7E7&
 mainRssFeed=&
-layoutStageWidth=900&
-layoutStageHeight=720&
+layoutStageWidth=970&
+layoutStageHeight=600&
 layoutFolderPath=layouts/&
 initialLayoutFile=minimal.swf&
 layerSkinUrl=ui/layer_skin_light.swf&
@@ -27,7 +27,6 @@ ALLOW_LOGIN=true&
 mouse=true&
 PRELOAD_FILES_LIST=&
 ENABLE_DEEPLINKING=true&
-
 homeDeeplink=home%2Fpaged%3D%25%2F&
 singleDeeplink=single%2Fp%3D%25%2F&
 pageDeeplink=page%2Fp%3D%25&
