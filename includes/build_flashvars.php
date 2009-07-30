@@ -32,7 +32,7 @@ $tags = get_tags();
 $tmp_string = '';
 foreach ($tags as $tag){
 	$page_to_open = $websiteConfig['CONFIG_START_SECTION'].'/'.urldecode($websiteConfig["archiveDeeplink"]);
-	$page_to_open .= 'tag='.$tag->slug;
+	$page_to_open = str_replace('%','tag='.$tag->slug,$page_to_open);
 	$tmp_string.='<a href="javascript:openSilexPage(\''.$page_to_open.'\')">'.$tag->name.'</a><br>';
 }
 $flashvars_string.='tags='.urlencode($tmp_string).'&';
