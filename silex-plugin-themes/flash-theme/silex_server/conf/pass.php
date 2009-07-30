@@ -1,3 +1,3 @@
 <?php
-//$authentication['LOGINS']['a'] = 'a';
+$authentication['LOGINS']['a'] = 'a';
 ?>
