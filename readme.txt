@@ -11,7 +11,7 @@ Convert your WordPress blog into a Flash application
 
 **Substitute your worpress theme by a Flash template**
 
-* visible only by Flash enabled browsers - *search engines or phones will see your blog normally*
+* visible only by Flash enabled browsers - *search engines or portable phones will see your blog theme*
 * keeps the *posts and comments* of your WP blog unchanged. The database is not modified at all. Keeps comments related functionnalities.
 * keeps *the structure of your WP blog*: posts, categories, tags, pages, archives, start page...
 * use WP URL rewrite and adds a *deep linking system*
@@ -70,30 +70,7 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do - v1.0 alpha ==
-* x selector to retrieve data of a single post
-* x pages list on home page
-* x 1st draft of the silex template prototype 
-* x NO, done by cSilex::setUrlHash override: on html page load, retrieve data from url and pass it through FlashVars (call setUrlHash with the proper URL)
-	
-* x override 	cSilex::getIdFromHash and cSilex::setUrlHash
-	wp getOption gives the template
-	id_site is allways the chosen template
-* x voir le plugin theme switch pour éviter la duplication du répertoire theme + choix theme iphone + prevent from over use disk space
-* x use validate_current_theme to check if silex themes are ok
-* x missing FlashVars (for archives)
-* x list of pages, categories, tags and bookmarks in flashvars
-* x search zone
-* x Reecriture url initiale (juste url base) et deeplink initial
-* ? Liens reecrits avec appel js
-* x links to no_flash version in flash version AND vise versa
-* x no_flash propagation in cookie
-* bugs
-*     cat and s tags
-*     refresh after comment submited
-*     $no_flash_page / no-flash.html
-*		feed catégories
-*		content:encoded s'affiche mal avec le customfeed
-
+* list of templates instead of text field
 * archive list feed
 * produce a prototype template 
 => Release  v1 in alpha
@@ -104,6 +81,14 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * on a browser without flash or / nor javascript
 * security tests
 	* user data exposed through rss feeds
+
+== bugs ==
+*     cat and s tags
+*     refresh after comment submited
+*     $no_flash_page / no-flash.html
+*		feed catégories
+*		content:encoded s'affiche mal avec le customfeed
+*	_root.display_name is set even when not logged in
 
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)

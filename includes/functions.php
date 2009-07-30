@@ -109,7 +109,7 @@ function silex_get_link_to_this_page($force_flash_version){
 		$return_string = remove_query_arg('no_flash',$return_string);
 		$return_string = add_query_arg('flash','1',$return_string);
 	}
-	else if (force_flash_version === false){
+	else if ($force_flash_version === false){
 		$return_string = remove_query_arg('flash',$return_string);
 		$return_string = add_query_arg('no_flash','1',$return_string);
 	}

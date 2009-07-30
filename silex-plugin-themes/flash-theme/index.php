@@ -104,11 +104,29 @@ function script_hook(){
 			
 			$redirect_url = get_redirect_url(urldecode($websiteConfig['homeDeeplink']),urldecode($websiteConfig['singleDeeplink']),urldecode($websiteConfig['pageDeeplink']),urldecode($websiteConfig['archiveDeeplink']),urldecode($websiteConfig['searchDeeplink']),urldecode($websiteConfig['error404Deeplink']));
 			
-			if(isset($redirect_url) && $redirect_url != '')
+			if(isset($redirect_url) && $redirect_url != ''){
+				// permalink for "no flash plugin" case - used after js redirection to page with deeplink
+				silex_set_no_flash_permalink();
+				//echo 'alert("set session '.$_SESSION['no_flash_permalink'].'");';
 				echo 'window.location="'.$redirect_url.'";';
-
-		?>
-		$php_str = "$no_flash_page='<?php echo bloginfo('url').'/?'.silex_get_link_to_this_page(false); ?>'";
+			}
+			else{
+				// permailink in get for "no flash plugin" case
+				if (silex_isset_no_flash_permalink()){
+					//echo 'alert("has session '.$_SESSION['no_flash_permalink'].'");';
+					$no_flash_permalink = silex_get_no_flash_permalink();
+					silex_reset_no_flash_permalink();
+				?>
+				$no_flash_page='<?php echo bloginfo('url').'/?'.$no_flash_permalink; ?>';
+				<?php 
+				} 
+				else{
+					?>
+					$no_flash_page='<?php echo bloginfo('url').'/?'.silex_get_link_to_this_page(false); ?>';
+					<?php 
+				}
+			}
+			?>
 
 		// retrieve template data from conf file
 /*		$homeDeeplink = "<?php echo urldecode($websiteConfig["homeDeeplink"]);?>";

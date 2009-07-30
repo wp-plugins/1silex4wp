@@ -42,6 +42,5 @@ function silex_category_link($linkUrl,$categoryId) {
 if(is_framed()){
 	add_filter('the_permalink', 'silex_post_link',10,1);
 	add_filter('category_link', 'silex_category_link',10,2);
-	echo "-----------------------------------".$post->ID;
 }
 ?>

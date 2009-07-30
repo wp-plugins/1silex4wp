@@ -283,6 +283,7 @@ function call_hooks($hook_name){
 			if (isset($websiteConfig["PRELOAD_FILES_LIST"]))
 				echo ",".$websiteConfig["PRELOAD_FILES_LIST"];?>";
 			$bgColor="#<?php echo $websiteConfig["bgColor"]; ?>";
+			$no_flash_page=$rootUrl+"no-flash.html";
 
 		</script>
 			<?php
@@ -306,7 +307,8 @@ function call_hooks($hook_name){
                 $additional_flashvars, // additional flash vars
                 $rootUrl, // rootUrl
 				{<?php echo $fv_js_object ?>},
-				{<?php echo $param_js_object ?>}
+				{<?php echo $param_js_object ?>},
+				$no_flash_page
 				);
 		</script>
 			<?php

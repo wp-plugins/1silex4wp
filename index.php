@@ -47,6 +47,7 @@ else
 	}
 	else{
 */
+		require_once(SILEX_INCLUDE_DIR.'/sessions.php');
 		require_once(SILEX_INCLUDE_DIR.'/redirect-functions.php');
 		require_once(SILEX_INCLUDE_DIR.'/rss-functions.php');
 		require_once(SILEX_INCLUDE_DIR.'/feed-index.php');

@@ -23,7 +23,7 @@ $categories = get_categories('hide_empty=0');
 $tmp_string = '';
 foreach ($categories as $cat){
 	$page_to_open = $websiteConfig['CONFIG_START_SECTION'].'/'.urldecode($websiteConfig["archiveDeeplink"]);
-	$page_to_open .= 'cat='.$cat->cat_ID;
+	$page_to_open = str_replace('%','cat='.$cat->cat_ID.'&tag=',$page_to_open);
 	$tmp_string.='<a href="javascript:openSilexPage(\''.$page_to_open.'\')">'.$cat->cat_name.'</a><br>';
 }
 $flashvars_string.='categories='.urlencode($tmp_string).'&';
@@ -64,13 +64,16 @@ $flashvars_string.='version='.urlencode(get_bloginfo('version')).'&';
 $flashvars_string.='wpurl='.urlencode(get_bloginfo('wpurl')).'&';
 
 // USER INFO - see http://codex.wordpress.org/Function_Reference/wp_get_current_user
-get_currentuserinfo();
-$flashvars_string.='user_login='.urlencode($userdata->user_login).'&';
-$flashvars_string.='user_level='.urlencode($userdata->user_level).'&';
-$flashvars_string.='user_ID='.urlencode($userdata->user_ID).'&';
-$flashvars_string.='user_email='.urlencode($userdata->user_url).'&';
-$flashvars_string.='user_pass_md5='.urlencode($userdata->user_pass_md5).'&';
-$flashvars_string.='display_name='.urlencode($userdata->display_name).'&';
+if(is_user_logged_in()){
+	global $current_user;
+	get_currentuserinfo();
+	$flashvars_string.='user_login='.urlencode($current_user->user_login).'&';
+	$flashvars_string.='user_level='.urlencode($current_user->user_level).'&';
+//	$flashvars_string.='user_ID='.urlencode($current_user->user_ID).'&';
+	$flashvars_string.='user_email='.urlencode($current_user->user_url).'&';
+//	$flashvars_string.='user_pass_md5='.urlencode($current_user->user_pass_md5).'&';
+	$flashvars_string.='display_name='.urlencode($current_user->display_name).'&';
+}
 /*
 // AUTHOR INFO - see http://codex.wordpress.org/Function_Reference/get_the_author
 $author = get_the_author();
