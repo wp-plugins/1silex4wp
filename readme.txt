@@ -89,8 +89,10 @@ I am looking for people who could do video tutorials and templates. Feel free to
 *		feed catégories
 *		content:encoded s'affiche mal avec le customfeed (pas de couleur, ni images..)
 *	_root.display_name is set even when not logged in
-*	la frame des commentaires (déconnection et raffraichissement)
-*	ordre d'affichage des commentaires (plus récent en haut, au lieu de + vieux en haut)
+*	la frame des commentaires 
+			la frame affiche "déconnexion" et que si tu cliques tu arrives sur l'interface d'admin
+			et il manque le raffraichissement
+*	ordre d'affichage des commentaires. pour le moment les commentaires les plus récents sont en haut, au lieu de + vieux en haut
 
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)
