@@ -87,8 +87,10 @@ I am looking for people who could do video tutorials and templates. Feel free to
 *     refresh after comment submited
 *     $no_flash_page / no-flash.html
 *		feed catégories
-*		content:encoded s'affiche mal avec le customfeed
+*		content:encoded s'affiche mal avec le customfeed (pas de couleur, ni images..)
 *	_root.display_name is set even when not logged in
+*	la frame des commentaires (déconnection et raffraichissement)
+*	ordre d'affichage des commentaires (plus récent en haut, au lieu de + vieux en haut)
 
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)
