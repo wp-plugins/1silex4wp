@@ -30,6 +30,42 @@ function silex_options() {
 			<th scope="row">Override WordPress URL rewrite rule</th>
 				<td><input type="checkbox" name="override_wp_url_rewrite_rules" <?php echo get_option('override_wp_url_rewrite_rules')==1?'checked="checked"':''; ?> /></td>
 			</tr>*/
+			
+require_once(ABSPATH.'wp-admin/includes/class-wp-filesystem-base.php');
+require_once(ABSPATH.'wp-admin/includes/class-wp-filesystem-direct.php');
+function get_silex_themes_list(){
+
+	$wp_filesystem = new WP_Filesystem_Direct('');
+	$path = SILEX_SERVER_DIR.'/contents/';
+	$result = Array();
+
+	$dirlist = $wp_filesystem->dirlist($path);
+	foreach ( (array) $dirlist as $filename => $fileinfo ) {
+		if ( 'd' == $fileinfo['type'] && $fileinfo['name']!='not.found') {
+			$result[] = $fileinfo['name'];
+		}
+	}
+	return $result;
+}
+function display_silex_themes_combo(){
+	$themes_list = get_silex_themes_list();
+	$current_selection = get_option('silex_selected_template');
+	
+	?>
+	<td>
+		<select name="silex_selected_template" STYLE="width:80%">
+		
+	<?php
+	foreach ($themes_list as $theme_name){
+	?>
+		<option value="<?php echo $theme_name; ?>" <?php if ($current_selection==$theme_name) echo 'SELECTED'; ?>><?php echo $theme_name; ?></option>
+	<?php
+	}
+	?>
+		</select>
+	</td>
+	<?php
+}
 ?>
 <div class="wrap">
 	<h2>Settings of Silex plugin</h2>
@@ -39,7 +75,7 @@ function silex_options() {
 		<table class="form-table">
 			<tr valign="center">
 			<th scope="row">Selected Silex Theme</th>
-				<td><input type="text" name="silex_selected_template" value="<?php echo get_option('silex_selected_template'); ?>" /></td>
+				<?php display_silex_themes_combo(); ?>
 			</tr>
 			<tr valign="center">
 			<th scope="row">Use Flash version by default</th>

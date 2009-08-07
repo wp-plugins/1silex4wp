@@ -49,6 +49,8 @@ Requirements
 
 == Changelog ==
 
+= 1.0.0alpha5 =
+* default2 template becomes default
 = 1.0 =
 * Plugin core: 
 	* installation
@@ -94,6 +96,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 			la frame affiche "déconnexion" et que si tu cliques tu arrives sur l'interface d'admin
 			et il manque le raffraichissement
 *	ordre d'affichage des commentaires. pour le moment les commentaires les plus récents sont en haut, au lieu de + vieux en haut
+*	when the desired template does not exist, the errore is "Warning: Cannot modify header information - headers already sent by (output started at D:\dev\1silex4wordpress\wordpress\wp-content\plugins\1silex4wp\silex-plugin-themes\flash-theme\index.php:269) in D:\dev\1silex4wordpress\wordpress\wp-content\plugins\1silex4wp\silex-plugin-themes\flash-theme\silex_server\index.php on line 99"
 
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)
