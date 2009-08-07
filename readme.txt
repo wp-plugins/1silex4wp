@@ -51,6 +51,7 @@ Requirements
 
 = 1.0.0alpha5 =
 * default2 template becomes default
+* combo box in admin page to list silex templates
 = 1.0 =
 * Plugin core: 
 	* installation
