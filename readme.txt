@@ -43,8 +43,9 @@ Requirements
 
 == Screenshots ==
 
-1. silex WYSIWYG used to make Flash templates without the Flash IDE
+1. Flash version of WordPress default theme
 2. One of the Silex templates for WordPress
+3. silex WYSIWYG used to make Flash templates without the Flash IDE
 
 == Changelog ==
 
