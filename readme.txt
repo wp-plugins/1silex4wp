@@ -22,7 +22,7 @@ Convert your WordPress blog into a Flash application
 
 * Currently in alpha version - Work is in progress, v1.0beta1 is comming in July *
 * For now, look at [the screenshots of the prototypes](http://wordpress.org/extend/plugins/1silex4wp/screenshots/ "screenshots")
-* [Work in progress can be seen here](http://hoyau.info/demo/1silex4wp/ "Work in progress can be seen here")
+* [Work in progress can be seen here](http://hoyau.info/demos/1silex4wp/ "Work in progress can be seen here")
 
 **Description**
 
