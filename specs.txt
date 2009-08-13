@@ -120,7 +120,7 @@ Silex "WordPress" themes
 	no-flash version
 	lists of pages, tags, categories
 	permalink of the current page
-	project page, silex, wordpress
+	project page, silex, wordpress, author of the silex theme
 	wp-admin
 
 		
