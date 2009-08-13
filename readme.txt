@@ -45,7 +45,7 @@ Requirements
 
 1. Flash version of WordPress default theme
 2. One of the Silex templates for WordPress
-3. silex WYSIWYG used to make Flash templates without the Flash IDE
+3. Silex WYSIWYG used to make Flash templates without the Flash IDE
 
 == Changelog ==
 
@@ -74,7 +74,8 @@ Requirements
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
 == To Do - v1.0 alpha ==
-* list of templates instead of text field
+* x list of templates instead of text field
+* update with Silex v1.5.1 Comet
 * archive list feed
 * produce a prototype template 
 => Release  v1 in alpha
@@ -87,6 +88,7 @@ I am looking for people who could do video tutorials and templates. Feel free to
 	* user data exposed through rss feeds
 
 == bugs ==
+= lex =
 *     cat and s tags
 *     refresh after comment submited
 *     $no_flash_page / no-flash.html
@@ -97,7 +99,11 @@ I am looking for people who could do video tutorials and templates. Feel free to
 			la frame affiche "déconnexion" et que si tu cliques tu arrives sur l'interface d'admin
 			et il manque le raffraichissement
 *	ordre d'affichage des commentaires. pour le moment les commentaires les plus récents sont en haut, au lieu de + vieux en haut
-*	when the desired template does not exist, the errore is "Warning: Cannot modify header information - headers already sent by (output started at D:\dev\1silex4wordpress\wordpress\wp-content\plugins\1silex4wp\silex-plugin-themes\flash-theme\index.php:269) in D:\dev\1silex4wordpress\wordpress\wp-content\plugins\1silex4wp\silex-plugin-themes\flash-theme\silex_server\index.php on line 99"
+
+= sha =
+*	il y a media\wp-default\oof\listUi.cmp.swf alors que le site cherche media\wp-default\oof\ListUi.cmp.swf
+*	sur la page d'accueil, le champs de text qui est changé au roll over a une valeur par défaut chelou (le contenu d'un post) alors que ca devrait être "Select a post in the above list"
+*	mettre les fla dans un repertoire "sources" au même niveau que trunk
 
 == To Do - v1.0 beta ==
 * make the "post comment" work (refresh the comments list?)
