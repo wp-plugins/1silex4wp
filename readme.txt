@@ -73,6 +73,7 @@ Requirements
 
 I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
+
 == To Do - v1.0 alpha ==
 * x list of templates instead of text field
 * update with Silex v1.5.1 Comet
@@ -80,12 +81,14 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * produce a prototype template 
 => Release  v1 in alpha
 
+
 == To do - Tests ==
 * different url rewrite schemes
 * on portable devices
 * on a browser without flash or / nor javascript
 * security tests
 	* user data exposed through rss feeds
+
 
 == bugs ==
 = lex =
@@ -99,10 +102,10 @@ I am looking for people who could do video tutorials and templates. Feel free to
 			la frame affiche "déconnexion" et que si tu cliques tu arrives sur l'interface d'admin
 			et il manque le raffraichissement
 *	ordre d'affichage des commentaires. pour le moment les commentaires les plus récents sont en haut, au lieu de + vieux en haut
+*   le menu de droite ne marche pas (exemple : quand on ouvre une catégorie, et que l'on en choisi une autre, le deepklink fonctionne mais ne charge pas la page
 
 = sha =
-*	il y a media\wp-default\oof\listUi.cmp.swf alors que le site cherche media\wp-default\oof\ListUi.cmp.swf
-*	sur la page d'accueil, le champs de text qui est changé au roll over a une valeur par défaut chelou (le contenu d'un post) alors que ca devrait être "Select a post in the above list"
+
 *	mettre les fla dans un repertoire "sources" au même niveau que trunk
 
 == To Do - v1.0 beta ==
@@ -114,6 +117,8 @@ I am looking for people who could do video tutorials and templates. Feel free to
 * all language constants passed in FlashVars (404 text, link names, ...)
 * produce 1 silex template
 => Release  v1 in beta
+
+
 
 == To do - Tests ==
 * compatibility with other plugins
