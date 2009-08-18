@@ -28,7 +28,10 @@ pas de sessions parce qu'on ne sait pas encopre si c supporté
 		
 		//sets the language to the default. uses the one pased in the GET if available, the navigator language if available, otherwise uses English
 		function useDefaultLanguage(){
-			$langCode = $_GET[LANGCODE_GET_PARAM];
+			$langCode = null;
+			if(isset($_GET[LANGCODE_GET_PARAM])){
+				$langCode = $_GET[LANGCODE_GET_PARAM];
+			}
 			if(!$langCode){
 				$langCode = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 			}
@@ -88,9 +91,11 @@ pas de sessions parce qu'on ne sait pas encopre si c supporté
 				$explodedLine = explode("=", $line);
 				
 				//get rid of the "&" at the end
-				$explodedLine[1] = substr($explodedLine[1], 0, strpos($explodedLine[1] ,"&"));
-				//echo $explodedLine[0] . "<br/>";
-				$this->localisedData[$explodedLine[0]] = $explodedLine[1];
+				if(isset($explodedLine[1])){
+					$explodedLine[1] = substr($explodedLine[1], 0, strpos($explodedLine[1] ,"&"));
+					//echo $explodedLine[0] . "<br/>";
+					$this->localisedData[$explodedLine[0]] = $explodedLine[1];
+				}
 			}
 			
 			//print_r($this->localisedData);

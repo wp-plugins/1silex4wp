@@ -85,7 +85,7 @@ class silex_config {
     function silex_config()
     {
 		//this->logger = new logger("silex_config");
-        $this->container =& new Config_Container('section', 'root');
+        $this->container = new Config_Container('section', 'root');
 		
     } // end constructor
 
@@ -175,7 +175,7 @@ class silex_config {
             if ($rootContainer->getName() === 'root' && $rootContainer->getType() === 'section') {
                 $this->container =& $rootContainer;
             } else {
-                $this->container =& new Config_Container('section', 'root');
+                $this->container = new Config_Container('section', 'root');
                 $this->container->addItem($rootContainer);
             }
             return true;

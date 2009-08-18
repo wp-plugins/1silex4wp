@@ -16,16 +16,16 @@
 			}
 			else{
 				if($giveUserFeedback){
-					echo "<b>" . $filename . "</b> " . $this->loc->getLocalised("TEST_RIGHTS_HAS_RIGHTS");
+					echo "<b>" . $filename . "</b> " . $this->loc->getLocalised("TEST_RIGHTS_HAS_NO_RIGHTS");
 				}
 				if (chmod ($filename, 0755)){
 					if($giveUserFeedback){
-						echo "<b>" . $filename . "</b> " . $this->loc->getLocalised("TEST_RIGHTS_HAS_RIGHTS") . "<br>";
+						echo "<b>" . $filename . "</b> " . $this->loc->getLocalised("TEST_RIGHTS_CHMOD_OK") . "<br>";
 					}
 				}
 				else{
 					if($giveUserFeedback){
-						echo "<b>" . $filename . "</b>" . $this->loc->getLocalised("TEST_RIGHTS_HAS_RIGHTS") . "<br>";
+						echo "<b>" . $filename . "</b>" . $this->loc->getLocalised("TEST_RIGHTS_CHMOD_NOK") . "<br>";
 					}
 					return false;
 				}
@@ -34,12 +34,18 @@
 		}
 		
 		function runTest(){
-			$res1 = $this->checkRights("../media", false);
-			$res2 = $this->checkRights("../contents", false);
-			$res3 = $this->checkRights("../cgi/scripts/upload.cgi", false);
-			$res4 = $this->checkRights("../logs/", false);		
+			$giveUserFeedback = false; //true;
+			$res1 = $this->checkRights("../media", $giveUserFeedback);
+			$res2 = $this->checkRights("../contents", $giveUserFeedback);
+			$res3 = $this->checkRights("../cgi/scripts/upload.cgi", $giveUserFeedback);
+			$res4 = $this->checkRights("../logs/", $giveUserFeedback);		
 			$this->result = $res1 && $res2 && $res3 && $res4;
 
+		}
+		
+		//test isn't fatal. User can run silex, but not edit sites
+		function isFatal(){
+			return false;
 		}
 		
 		function getHelp(){

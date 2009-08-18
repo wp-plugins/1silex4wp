@@ -213,10 +213,6 @@
 			// debug trace
 			if ($this->logger) $this->logger->debug("checkRights($filepath,$usertype,$action) ");
 			
-			// get arrays of folders per role
-			//$this->logger->debug("checkRights ".print_r($this->admin_write_ok,true));
-			
-			// check the rights
 			switch($action){
 				case self::READ_ACTION:
 					// if user is an admin
@@ -233,7 +229,7 @@
 					// for each path
 					foreach ($serverConfig->user_read_ok as $folderName){
 						$isInFolder = $this->isInFolder($filepath,$folderName);
-						//if ($this->logger) $this->logger->debug("checkRights isInFolder($filepath,$folderName) -> " . $isInFolder);
+						if ($this->logger) $this->logger->debug("checkRights isInFolder($filepath,$folderName) -> " . $isInFolder);
 						// if the file is below this path, return true
 						if ($isInFolder){
 							if ($this->logger) $this->logger->debug("checkRights return true");

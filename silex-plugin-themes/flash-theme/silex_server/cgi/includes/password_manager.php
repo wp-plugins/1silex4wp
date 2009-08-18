@@ -41,7 +41,7 @@ class password_manager
 	
 	//note: a config file can't be empty, at least with phparrays, so give original values
 	function createFile($originalLogin, $originalPassword){
-		$confContainer =& new Config_Container('section', self::SECTION_LOGINS);
+		$confContainer = new Config_Container('section', self::SECTION_LOGINS);
 		$confContainer->setDirective($originalLogin, $originalPassword);
 		// set this container as our root container child in Config
 		$config = new silex_config();

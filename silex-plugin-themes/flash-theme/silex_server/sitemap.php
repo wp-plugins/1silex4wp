@@ -22,13 +22,13 @@
 // includes
 set_include_path(get_include_path() . PATH_SEPARATOR . "./");
 require_once 'cgi/includes/silex_search.php';
-require_once("cgi/includes/logger.php");
-require_once("cgi/includes/server_config.php");
-require_once("cgi/includes/file_system_tools.php");
+require_once('cgi/includes/logger.php');
+require_once('cgi/includes/server_config.php');
+require_once('cgi/includes/file_system_tools.php');
 include_once 'cgi/includes/server_config.php';
-require_once("cgi/includes/site_editor.php");
+require_once('cgi/includes/site_editor.php');
 
-$logger = new logger("sitemap");
+$logger = new logger('sitemap');
 $fst = new file_system_tools();
 $siteEditor = new site_editor(); 
 $server_config = new server_config(); 
@@ -39,34 +39,36 @@ $silex_search_obj=new silex_search();
 
 // **
 // inputs
-if (isset($_GET["id_site"]))
-	$id_site=$_GET["id_site"];
+if (isset($_GET['id_site']))
+	$id_site=$_GET['id_site'];
 else
-	$id_site=$server_config->silex_server_ini["DEFAULT_WEBSITE"];
+	$id_site=$server_config->silex_server_ini['DEFAULT_WEBSITE'];
 
 // build website contentent folder
-$websiteContentFolder="./".$server_config->silex_server_ini["CONTENT_FOLDER"].$id_site."/";
+$websiteContentFolder='./'.$server_config->silex_server_ini['CONTENT_FOLDER'].$id_site.'/';
 // check rights
-if ($fst->checkRights($fst->sanitize($websiteContentFolder),constant("file_system_tools::USER_ROLE"),constant("file_system_tools::READ_ACTION"))){
+if ($fst->checkRights($fst->sanitize($websiteContentFolder),constant('file_system_tools::USER_ROLE'),constant('file_system_tools::READ_ACTION'))){
 
 	$allow_duplicate=false;
 
 
 	// compute url base
 	$scriptUrl=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-	$lastSlashPos=strrpos($scriptUrl,"sitemap.php");
-	$urlBase="http://".substr($scriptUrl,0,$lastSlashPos).$id_site."/";
-
+	$lastSlashPos=strrpos($scriptUrl,'sitemap.php');
+	if ($server_config->silex_server_ini['USE_URL_REWRITE'] == 'true')
+		$urlBase='http://'.substr($scriptUrl,0,$lastSlashPos).$id_site.'/';
+	else
+		$urlBase='http://'.substr($scriptUrl,0,$lastSlashPos).'?/'.$id_site.'/';
 
 	// **
 	// search
 	$websiteConfig = $siteEditor->getWebsiteConfig($id_site);
-	$query=$websiteConfig["CONFIG_START_SECTION"];
-	$res=$silex_search_obj->find($websiteContentFolder."/",$query);
+	$query=$websiteConfig['CONFIG_START_SECTION'];
+	$res=$silex_search_obj->find($websiteContentFolder.'/',$query);
 }
 else{
-	$logger->emerg("feed.php no rights to read $websiteContentFolder");
-	echo "feed.php no rights to read $websiteContentFolder";
+	$logger->emerg('feed.php no rights to read $websiteContentFolder');
+	echo 'feed.php no rights to read $websiteContentFolder';
 	exit(0);
 }
 
@@ -74,18 +76,18 @@ else{
 // echo rss
 //Wed, 12 Dec 2007 16:06:09 +0100
 header('Content-Type: text/xml; charset=UTF-8');
-$indexFolder=$server_config->silex_server_ini["CONTENT_FOLDER"].$id_site."/search_index/";
+$indexFolder=$server_config->silex_server_ini['CONTENT_FOLDER'].$id_site.'/search_index/';
 if (is_dir($indexFolder))
-	$pubDate=date ("r",filemtime($indexFolder));
+	$pubDate=date ('r',filemtime($indexFolder));
 else
-	$pubDate=date ("r");
+	$pubDate=date ('r');
 
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 		
 		// --------- from silex_search.php
 		// array to eliminate duplicated deeplinks
-		$res_str="";
+		$res_str='';
 		$foundDeeplinks=Array();				
 
 		if ($res){
@@ -101,27 +103,27 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 					$rssItem[$tag]=$hit->$tag;
 				}
 				$search==null;
-				if (isset($rssItem["deeplink"])){
-					$search=array_search($rssItem["deeplink"],$foundDeeplinks);
+				if (isset($rssItem['deeplink'])){
+					$search=array_search($rssItem['deeplink'],$foundDeeplinks);
 				}
 					
 				if ($search!==FALSE && $search!==NULL){
 					// deeplink allready seen
-					//$this->logger->debug("silex_search.php arrayToRssItems ".$rssItem["deeplink"]." allready seen ");
+					//$this->logger->debug('silex_search.php arrayToRssItems '.$rssItem['deeplink'].' allready seen ');
 				}
 				else{
 					// store the deeplink in $foundDeeplinks
-					//$this->logger->debug("silex_search.php arrayToRssItems ".$hit->deeplink." found ");
-					$foundDeeplinks[]=$rssItem["deeplink"];
+					//$this->logger->debug('silex_search.php arrayToRssItems '.$hit->deeplink.' found ');
+					$foundDeeplinks[]=$rssItem['deeplink'];
 
-					$res_str.="
-			<url>";
-					$res_str.="
-				<loc>".$urlBase.$rssItem["deeplink"]."</loc>";
-					//$res_str.="
-				//<lastmod>".$rssItem["pubDate"]."</lastmod>";
-					$res_str.="
-			</url>";
+					$res_str.='
+			<url>';
+					$res_str.='
+				<loc>'.$urlBase.$rssItem['deeplink'].'</loc>';
+					//$res_str.='
+				//<lastmod>'.$rssItem['pubDate'].'</lastmod>';
+					$res_str.='
+			</url>';
 				}
 			}
 		}

@@ -231,23 +231,19 @@
 			// sanitize
 			$id_site = str_replace(array('/', '\\'), "", htmlentities(strip_tags($id_site)));
 			$path = ROOTPATH . $this->server_config->silex_server_ini["CONTENT_FOLDER"].$id_site;
-			if ($this->logger) $this->logger->debug("data_exchange.php createWebsite create website ".$id_site);
+			if ($this->logger) $this->logger->debug("createWebsite ".$id_site);
 			if (is_dir($path))
 				return false;
 			else
 			{
 				// **
 				// website creation
-				// check existance
-				$initial_path=$path;
-				if (!$this->fst->sanitize($path)){
-					if ($this->logger) $this->logger->info("data_exchange.php writeWebsiteConfig mkdir(".$initial_path.")");
-					mkdir($initial_path);
-					$path=$this->fst->sanitize($initial_path);
+				if(!mkdir($path, 0755)){
+					throw new Exception("couldn't create folder at $path");
 				}
-				
+				if ($this->logger) $this->logger->info("createWebsite mkdir(".$path.")");
 				// check rights
-				if ($this->fst->checkRights($path,file_system_tools::ADMIN_ROLE,file_system_tools::WRITE_ACTION))
+				if ($this->fst->checkRights($this->fst->sanitize($path),file_system_tools::ADMIN_ROLE,file_system_tools::WRITE_ACTION))
 				{
 					$source = ROOTPATH . $this->server_config->silex_server_ini["CONF_FOLDER"].self::DEFAULT_WEBSITE_CONF_FILE;
 					$dest = $path . "/" . $this->server_config->silex_server_ini["WEBSITE_CONF_FILE"];
@@ -255,7 +251,7 @@
 				}
 				else
 				{
-					rmdir($initial_path);
+					rmdir($path);
 					return false;
 				}
 			}

@@ -208,6 +208,11 @@ function script_hook(){
 			// adds additionnal variable (optionnal, used for 1st init)
 			if ($additional_flashvars_string != undefined)
 				$hashValueWithAmperstand += $additional_flashvars_string;
+			// init archive and search vars
+			passFlashVar('selection','cat','');
+			passFlashVar('selection','tag','');
+			//passFlashVar('selection','s','');
+			
 			// split and extract key/value pairs
 			var $vars_array = $hashValueWithAmperstand.split("&");
 			for ($i = 0; $i < $vars_array.length; $i++)
@@ -224,8 +229,6 @@ function script_hook(){
 							break;
 						default:
 							//$additional_flashvars += $varsPair_array[0]+"="+$varsPair_array[1]+"&";
-							passFlashVar('selection','cat','');
-							passFlashVar('selection','tag','');
 							passFlashVar('selection',$varsPair_array[0],$varsPair_array[1]);
 							//console.log("setFlashVarsForSilexPage "+$additional_flashvars);
 					}

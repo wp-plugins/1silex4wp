@@ -98,7 +98,7 @@ body {
             <br />
 			<?php echo $loc->getLocalised("THATS_IT")?>
             <br />
-            <form action='../#manager'><input type='submit' value='<?php echo $loc->getLocalised("GOTO_MANAGER")?>'/></form><br />
+            <form action='../?/manager'><input type='submit' value='<?php echo $loc->getLocalised("GOTO_MANAGER")?>'/></form><br />
           </div></td>
         </tr>
       </table>

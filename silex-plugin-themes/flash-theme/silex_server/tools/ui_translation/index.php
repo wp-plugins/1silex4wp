@@ -47,7 +47,7 @@
             if( !class_exists( "Authenticate" ) && !$this->ERROR )
                 $this->ERROR = "Could load authentification class<br>Script aborted.";
             else
-                $auth = &new Authenticate OR FALSE;
+                $auth = new Authenticate OR FALSE;
             if( $auth )
                 return $auth->isAuthenticated();
             else
