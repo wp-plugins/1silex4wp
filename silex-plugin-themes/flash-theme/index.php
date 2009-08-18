@@ -207,30 +207,31 @@ function script_hook(){
 			
 			// adds additionnal variable (optionnal, used for 1st init)
 			if ($additional_flashvars_string != undefined)
-				$hashValueWithAmperstand += $additional_flashvars_string;
+				$hashValueWithAmperstand += "&"+$additional_flashvars_string;
 			// init archive and search vars
 			passFlashVar('selection','cat','');
 			passFlashVar('selection','tag','');
-			//passFlashVar('selection','s','');
+			passFlashVar('selection','s','');
+			/* TO DO ALL OTHER TAGS ? */
 			
 			// split and extract key/value pairs
 			var $vars_array = $hashValueWithAmperstand.split("&");
 			for ($i = 0; $i < $vars_array.length; $i++)
 			{
-				//console.log("setFlashVarsForSilexPage Start loop");
+				//console.log("setFlashVarsForSilexPage Start loop "+$vars_array[$i]);
 				var $varsPair_array = $vars_array[$i].split("=");
-				if ($varsPair_array[0]!=undefined && $varsPair_array[1]!=undefined){
+				if ($varsPair_array && $varsPair_array[0]!=undefined && $varsPair_array[1]!=undefined){
 					switch($varsPair_array[0]){
 						case "p":
 						case "page":
 							//$additional_flashvars += "post_ID="+$varsPair_array[1]+"&";
 							passFlashVar("post","ID",$varsPair_array[1]);
-							//console.log("setFlashVarsForSilexPage "+$additional_flashvars);
+							console.log("setFlashVarsForSilexPage post.ID,"+$varsPair_array[0]+","+$varsPair_array[1]);
 							break;
 						default:
 							//$additional_flashvars += $varsPair_array[0]+"="+$varsPair_array[1]+"&";
 							passFlashVar('selection',$varsPair_array[0],$varsPair_array[1]);
-							//console.log("setFlashVarsForSilexPage "+$additional_flashvars);
+							console.log("setFlashVarsForSilexPage "+$varsPair_array[0]+","+$varsPair_array[1]);
 					}
 				}
 			}

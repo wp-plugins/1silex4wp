@@ -1,15 +1,16 @@
 === 1silex4wp ===
 Contributors: lexa
-Tags: Flash, ActionScript, theme, template, front office, front end
+Donate link: http://projects.silexlabs.com/pluginwp/
+Tags: Flash, ActionScript, theme, template, front office, front end, flog
 Requires at least: 2.8.1
 Tested up to: 2.8.1
-Stable tag: 1.0alpha4
+Stable tag: 1.0alpha5
 
-Convert your WordPress blog into a Flash application
+Provide your visitors a Flash equivalent of your website / Convert your WordPress blog into a Flash application.
 
 == Description ==
 
-**Substitute your worpress theme by a Flash template**
+**Provide your visitors a Flash equivalent of your website / Convert your WordPress blog into a Flash application.**
 
 * visible only by Flash enabled browsers - *search engines or portable phones will see your blog theme*
 * keeps the *posts and comments* of your WP blog unchanged. The database is not modified at all. Keeps comments related functionnalities.
@@ -49,108 +50,12 @@ Requirements
 
 == Changelog ==
 
-= 1.0.0alpha5 =
-* default2 template becomes default
-* combo box in admin page to list silex templates
-= 1.0 =
-* Plugin core: 
-	* installation
-	* settings
-	* substitution of the themes
-	* auto-configured Silex server
-	* FlashVars
-	* url rewrite
-	* javascript communication between Silex and wordpress
-
-= 0.0 =
-* Still in a conception phase - Nothing to download yet
-* Specifications
-* Description and communication elements
-
-
+> [here is the change log](http://projects.silexlabs.com/pluginwp/category/change-log/ "here is the change log")
 
 == Help wanted ==
 
-I am looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
+We are looking for people who could do video tutorials and templates. Feel free to mail me (lex [at] silex-ria [dot] org)
 
+== bug report ==
 
-== To Do - v1.0 alpha ==
-* x list of templates instead of text field
-* update with Silex v1.5.1 Comet
-* archive list feed
-* produce a prototype template 
-=> Release  v1 in alpha
-
-
-== To do - Tests ==
-* different url rewrite schemes
-* on portable devices
-* on a browser without flash or / nor javascript
-* security tests
-	* user data exposed through rss feeds
-
-
-== bugs ==
-= lex =
-*     cat and s tags
-*     refresh after comment submited
-*     $no_flash_page / no-flash.html
-*		feed catégories
-*		content:encoded s'affiche mal avec le customfeed (pas de couleur, ni images..)
-*	_root.display_name is set even when not logged in
-*	la frame des commentaires 
-			la frame affiche "déconnexion" et que si tu cliques tu arrives sur l'interface d'admin
-			et il manque le raffraichissement
-*	ordre d'affichage des commentaires. pour le moment les commentaires les plus récents sont en haut, au lieu de + vieux en haut
-*   le menu de droite ne marche pas (exemple : quand on ouvre une catégorie, et que l'on en choisi une autre, le deepklink fonctionne mais ne charge pas la page
-
-= sha =
-
-*	mettre les fla dans un repertoire "sources" au même niveau que trunk
-
-== To Do - v1.0 beta ==
-* make the "post comment" work (refresh the comments list?)
-* ? remove silex files needed only for editing 
-* ? add an option to link to an online silex installation? <-> http://wordpress.org/extend/plugins/piwik-analytics/
-* paged comments feed and paged comments in "single" and "page" pages
-* implement all the parameters of the query: http://codex.wordpress.org/Template_Tags/query_posts 
-* all language constants passed in FlashVars (404 text, link names, ...)
-* produce 1 silex template
-=> Release  v1 in beta
-
-
-
-== To do - Tests ==
-* compatibility with other plugins
-	* MobilePress
-	* private blog
-* compatibility with the themes
-== To Do - v1.0 ==
-* x	use the content:encoded in a frame and the comments rss feed for the comments
-* x	a frame to add a comment?
-* silex installer / or let silex go with php4 + pass.php file
-* comments in wrong order
-* add no-flash page param to silex.js
-* detect when flash_theme or framed_theme is missing
-* add a version control and update
-* add tests "if_exist" for all hooks (wp versions)
-* produce several silex templates
-=> Release  v1
-
-== To do - Tests ==
-* compatibility with WordPress versions
-	* did not work on 2.6.3
-
-== To Do - v1.1 ==
-* add more info in Flashvars : http://codex.wordpress.org/Function_Reference
-* better deeplinks - override cSilex::changeSection
-	store the displayed section
-	GetVariable => data about the post, page or section which is displayed
-	wp getOption => URL rewrite rule of WP
-	setUrlHash in fucntion of these data
-	
-* better deeplinks - override cSilex::urlHashChanged
-	take data from php websiteConfig: URL rewrite rule of the Silex website
-	SetVariable of the section data (id and or title of the page/post)
-	call silex open command to the right section
-
+> [please report bugs here (leave a comment)](http://projects.silexlabs.com/pluginwp/category/bugs-reports/ "please report bugs here (leave a comment)")
