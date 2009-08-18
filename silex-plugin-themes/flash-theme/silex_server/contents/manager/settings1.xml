@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><object>
+	<property id="application" silexXmlVersion="2">
+		<object>
+			<property id="show">
+				<object>
+					<property id="contentContainer_mc">
+						<object>
+							<property id="content_mc">
+								<object>
+									<property id="container_mc">
+										<object>
+											<property id="main">
+												<object>
+													<property id="players">
+														<array>
+														</array>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+					<property id="volet">
+						<object>
+							<property id="contentContainer1_mc">
+								<object>
+									<property id="content_mc">
+										<object>
+											<property id="container_mc">
+												<object>
+													<property id="main">
+														<object>
+															<property id="Cmp_btn_delais_manager_1242467774225">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																					<property>
+																						<object>
+																							<property id="parameters">
+																								<array>
+																									<property>
+																										<string><![CDATA[//sourceforge.net/project/platformdownload.php?group_id=192954]]></string>
+																									</property>
+																								</array>
+																							</property>
+																							<property id="functionName">
+																								<string><![CDATA[http]]></string>
+																							</property>
+																							<property id="modifier">
+																								<string><![CDATA[onRelease]]></string>
+																							</property>
+																						</object>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>250</number>
+																			</property>
+																			<property id="_x">
+																				<number>650</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[btn download]]></string>
+																			</property>
+																			<property id="height">
+																				<number>240</number>
+																			</property>
+																			<property id="width">
+																				<number>960</number>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="40" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.settings:home:3&gt;&gt;))<FONT SIZE="50"></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="30" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.settings:home:4&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="imageUrl">
+																				<string><![CDATA[media/]]></string>
+																			</property>
+																			<property id="delay">
+																				<number>0</number>
+																			</property>
+																			<property id="useHandCursor">
+																				<false/>
+																			</property>
+																			<property id="clickable">
+																				<true/>
+																			</property>
+																			<property id="easingDuration">
+																				<number>3</number>
+																			</property>
+																			<property id="followMouse">
+																				<false/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="Cmp_btn_delais_manager_1242467776483">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																					<property>
+																						<object>
+																							<property id="modifier">
+																								<string><![CDATA[onRelease]]></string>
+																							</property>
+																							<property id="functionName">
+																								<string><![CDATA[open]]></string>
+																							</property>
+																							<property id="parameters">
+																								<array>
+																									<property>
+																										<string><![CDATA[start/menu/settings/loginpass/loginpass1]]></string>
+																									</property>
+																								</array>
+																							</property>
+																						</object>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>250</number>
+																			</property>
+																			<property id="_x">
+																				<number>350</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[btn login]]></string>
+																			</property>
+																			<property id="height">
+																				<number>240</number>
+																			</property>
+																			<property id="width">
+																				<number>960</number>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="50" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.settings:home:1&gt;&gt;))<FONT SIZE="35"></FONT></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="30" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.settings:home:2&gt;&gt;))<FONT SIZE="25"></FONT></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="imageUrl">
+																				<string><![CDATA[media/]]></string>
+																			</property>
+																			<property id="delay">
+																				<number>250</number>
+																			</property>
+																			<property id="useHandCursor">
+																				<false/>
+																			</property>
+																			<property id="clickable">
+																				<true/>
+																			</property>
+																			<property id="easingDuration">
+																				<number>3</number>
+																			</property>
+																			<property id="followMouse">
+																				<false/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="Text_new_media_1242468161876">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>150</number>
+																			</property>
+																			<property id="_x">
+																				<number>240</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[version]]></string>
+																			</property>
+																			<property id="wordWrap">
+																				<true/>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[dynamic]]></string>
+																			</property>
+																			<property id="password">
+																				<false/>
+																			</property>
+																			<property id="mouseWheelEnabled">
+																				<true/>
+																			</property>
+																			<property id="backgroundColor">
+																				<number>16777215</number>
+																			</property>
+																			<property id="background">
+																				<false/>
+																			</property>
+																			<property id="borderColor">
+																				<number>0</number>
+																			</property>
+																			<property id="border">
+																				<false/>
+																			</property>
+																			<property id="multiline">
+																				<true/>
+																			</property>
+																			<property id="selectable">
+																				<false/>
+																			</property>
+																			<property id="scrollBarWidth">
+																				<number>16</number>
+																			</property>
+																			<property id="scrollbar">
+																				<false/>
+																			</property>
+																			<property id="useCss">
+																				<false/>
+																			</property>
+																			<property id="embedFonts">
+																				<true/>
+																			</property>
+																			<property id="height">
+																				<number>53.1</number>
+																			</property>
+																			<property id="width">
+																				<number>708.6</number>
+																			</property>
+																			<property id="htmlText">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="Arial" SIZE="30" COLOR="#FF5900" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.text:home:title&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="html">
+																				<true/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="players">
+																<array>
+																	<property>
+																		<object>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Text_new_media_1242468161876]]></string>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[version]]></string>
+																			</property>
+																		</object>
+																	</property>
+																	<property>
+																		<object>
+																			<property id="label">
+																				<string><![CDATA[btn login]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Cmp_btn_delais_manager_1242467776483]]></string>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Component]]></string>
+																			</property>
+																			<property id="mediaUrl">
+																				<string><![CDATA[media/manager/components/btn_delais_manager.cmp.swf]]></string>
+																			</property>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																		</object>
+																	</property>
+																	<property>
+																		<object>
+																			<property id="label">
+																				<string><![CDATA[btn download]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Cmp_btn_delais_manager_1242467774225]]></string>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Component]]></string>
+																			</property>
+																			<property id="mediaUrl">
+																				<string><![CDATA[media/manager/components/btn_delais_manager.cmp.swf]]></string>
+																			</property>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																		</object>
+																	</property>
+																</array>
+															</property>
+														</object>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+				</object>
+			</property>
+		</object>
+	</property>
+</object>

@@ -20,8 +20,10 @@
  * add a link to the flash version in the footer 
  */
 function silex_add_flash_link(){
-	$url = silex_get_link_to_this_page(true); // true is for with_flash attribute
-	echo '<a href="?'.$url.'">Flash Version of this website</a>';
+	if (!is_framed()){
+		$url = silex_get_link_to_this_page(true); // true is for with_flash attribute
+		echo '<a href="?'.$url.'">Flash Version of this website</a>';
+	}
 }
 if (get_option('silex_add_link_to_flash_version')==true)
 	add_action('wp_footer','silex_add_flash_link');

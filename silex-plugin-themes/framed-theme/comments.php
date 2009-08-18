@@ -1,7 +1,5 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Classic_Theme
  */
 
 if ( post_password_required() ) : ?>

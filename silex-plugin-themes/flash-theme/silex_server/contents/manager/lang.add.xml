@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><object>
+	<property id="application" silexXmlVersion="2">
+		<object>
+			<property id="show">
+				<object>
+					<property id="volet">
+						<object>
+							<property id="contentContainer1_mc">
+								<object>
+									<property id="content_mc">
+										<object>
+											<property id="container_mc">
+												<object>
+													<property id="main">
+														<object>
+															<property id="Cmp_button_plus_gris_big_1243459139718">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																					<property>
+																						<object>
+																							<property id="modifier">
+																								<string><![CDATA[onRelease]]></string>
+																							</property>
+																							<property id="functionName">
+																								<string><![CDATA[open]]></string>
+																							</property>
+																							<property id="parameters">
+																								<array>
+																									<property>
+																										<string><![CDATA[start/menu/translation]]></string>
+																									</property>
+																								</array>
+																							</property>
+																						</object>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>277</number>
+																			</property>
+																			<property id="_x">
+																				<number>630</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[button_plus_gris_big.cmp.swf]]></string>
+																			</property>
+																			<property id="height">
+																				<number>36.1</number>
+																			</property>
+																			<property id="width">
+																				<number>178.8</number>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>Traduire l'interface</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="imageUrl">
+																				<string><![CDATA[media/]]></string>
+																			</property>
+																			<property id="delay">
+																				<number>0</number>
+																			</property>
+																			<property id="useHandCursor">
+																				<true/>
+																			</property>
+																			<property id="clickable">
+																				<true/>
+																			</property>
+																			<property id="easingDuration">
+																				<number>3</number>
+																			</property>
+																			<property id="followMouse">
+																				<false/>
+																			</property>
+																			<property id="buttonLabelPress">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:translate:tool&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="buttonLabelOver">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:translate:tool&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="buttonLabelSelect">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:translate:tool&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="buttonLabelNormal">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:translate:tool&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="centeredHoriz">
+																				<true/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="Cmp_button_plus_gris_big_1245757527844">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																					<property>
+																						<object>
+																							<property id="modifier">
+																								<string><![CDATA[onRelease]]></string>
+																							</property>
+																							<property id="functionName">
+																								<string><![CDATA[open]]></string>
+																							</property>
+																							<property id="parameters">
+																								<array>
+																									<property>
+																										<string><![CDATA[start/menu/download/d.langs]]></string>
+																									</property>
+																								</array>
+																							</property>
+																						</object>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>330</number>
+																			</property>
+																			<property id="_x">
+																				<number>630</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[button_plus_gris_big.cmp.swf]]></string>
+																			</property>
+																			<property id="height">
+																				<number>36.05</number>
+																			</property>
+																			<property id="width">
+																				<number>178.8</number>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>Télécharger</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="imageUrl">
+																				<string><![CDATA[media/]]></string>
+																			</property>
+																			<property id="delay">
+																				<number>0</number>
+																			</property>
+																			<property id="useHandCursor">
+																				<true/>
+																			</property>
+																			<property id="clickable">
+																				<true/>
+																			</property>
+																			<property id="easingDuration">
+																				<number>3</number>
+																			</property>
+																			<property id="followMouse">
+																				<false/>
+																			</property>
+																			<property id="buttonLabelPress">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:download&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="buttonLabelOver">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:download&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="buttonLabelSelect">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:download&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="buttonLabelNormal">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Arial" SIZE="17" COLOR="#000000" LETTERSPACING="0" KERNING="0"><B>((&lt;&lt;silex.paramsFile.btn:lang:download&gt;&gt;))</B></FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="centeredHoriz">
+																				<true/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="Text_new_media_1242744222206">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>176</number>
+																			</property>
+																			<property id="_x">
+																				<number>534</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																			<property id="wordWrap">
+																				<true/>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[dynamic]]></string>
+																			</property>
+																			<property id="password">
+																				<false/>
+																			</property>
+																			<property id="mouseWheelEnabled">
+																				<true/>
+																			</property>
+																			<property id="backgroundColor">
+																				<number>16777215</number>
+																			</property>
+																			<property id="background">
+																				<false/>
+																			</property>
+																			<property id="borderColor">
+																				<number>0</number>
+																			</property>
+																			<property id="border">
+																				<false/>
+																			</property>
+																			<property id="multiline">
+																				<true/>
+																			</property>
+																			<property id="selectable">
+																				<true/>
+																			</property>
+																			<property id="scrollBarWidth">
+																				<number>16</number>
+																			</property>
+																			<property id="scrollbar">
+																				<true/>
+																			</property>
+																			<property id="useCss">
+																				<false/>
+																			</property>
+																			<property id="embedFonts">
+																				<true/>
+																			</property>
+																			<property id="height">
+																				<number>100</number>
+																			</property>
+																			<property id="width">
+																				<number>370</number>
+																			</property>
+																			<property id="htmlText">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="JUSTIFY"><FONT FACE="arial" SIZE="17" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.texte:lang:translate&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="html">
+																				<true/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="Text_new_media_1242744016439">
+																<object>
+																	<property id="main">
+																		<object>
+																			<property id="actions">
+																				<array>
+																				</array>
+																			</property>
+																			<property id="tabIndex">
+																				<number>1</number>
+																			</property>
+																			<property id="tabEnabled">
+																				<false/>
+																			</property>
+																			<property id="visibleOutOfAdmin">
+																				<true/>
+																			</property>
+																			<property id="rotation">
+																				<number>0</number>
+																			</property>
+																			<property id="_y">
+																				<number>132</number>
+																			</property>
+																			<property id="_x">
+																				<number>478</number>
+																			</property>
+																			<property id="_alpha">
+																				<number>100</number>
+																			</property>
+																			<property id="iconIsDefault">
+																				<false/>
+																			</property>
+																			<property id="iconIsIcon">
+																				<false/>
+																			</property>
+																			<property id="iconLayoutName">
+																				<string><![CDATA[manager_volet.swf]]></string>
+																			</property>
+																			<property id="iconPageName">
+																				<string><![CDATA[new page name]]></string>
+																			</property>
+																			<property id="playerName">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																			<property id="wordWrap">
+																				<true/>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[dynamic]]></string>
+																			</property>
+																			<property id="password">
+																				<false/>
+																			</property>
+																			<property id="mouseWheelEnabled">
+																				<true/>
+																			</property>
+																			<property id="backgroundColor">
+																				<number>16777215</number>
+																			</property>
+																			<property id="background">
+																				<false/>
+																			</property>
+																			<property id="borderColor">
+																				<number>0</number>
+																			</property>
+																			<property id="border">
+																				<false/>
+																			</property>
+																			<property id="multiline">
+																				<true/>
+																			</property>
+																			<property id="selectable">
+																				<false/>
+																			</property>
+																			<property id="scrollBarWidth">
+																				<number>16</number>
+																			</property>
+																			<property id="scrollbar">
+																				<false/>
+																			</property>
+																			<property id="useCss">
+																				<false/>
+																			</property>
+																			<property id="embedFonts">
+																				<true/>
+																			</property>
+																			<property id="height">
+																				<number>65.5</number>
+																			</property>
+																			<property id="width">
+																				<number>471.1</number>
+																			</property>
+																			<property id="htmlText">
+																				<string><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="arial_bold" SIZE="17" COLOR="#AAAAAA" LETTERSPACING="0" KERNING="0">((&lt;&lt;silex.paramsFile.text:settings:lang:title:3&gt;&gt;))</FONT></P></TEXTFORMAT>]]></string>
+																			</property>
+																			<property id="html">
+																				<true/>
+																			</property>
+																		</object>
+																	</property>
+																</object>
+															</property>
+															<property id="players">
+																<array>
+																	<property>
+																		<object>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="mediaUrl">
+																				<string><![CDATA[media/manager/components/button_plus_gris_big.cmp.swf]]></string>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Component]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Cmp_button_plus_gris_big_1245757527844]]></string>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[button_plus_gris_big.cmp.swf]]></string>
+																			</property>
+																		</object>
+																	</property>
+																	<property>
+																		<object>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="mediaUrl">
+																				<string><![CDATA[media/manager/components/button_plus_gris_big.cmp.swf]]></string>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Component]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Cmp_button_plus_gris_big_1243459139718]]></string>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[button_plus_gris_big.cmp.swf]]></string>
+																			</property>
+																		</object>
+																	</property>
+																	<property>
+																		<object>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Text_new_media_1242744222206]]></string>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																		</object>
+																	</property>
+																	<property>
+																		<object>
+																			<property id="contextAccepted">
+																				<array>
+																					<property>
+																						<string><![CDATA[*]]></string>
+																					</property>
+																				</array>
+																			</property>
+																			<property id="type">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																			<property id="_name">
+																				<string><![CDATA[Text_new_media_1242744016439]]></string>
+																			</property>
+																			<property id="label">
+																				<string><![CDATA[Text]]></string>
+																			</property>
+																		</object>
+																	</property>
+																</array>
+															</property>
+														</object>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+					<property id="contentContainer_mc">
+						<object>
+							<property id="content_mc">
+								<object>
+									<property id="container_mc">
+										<object>
+											<property id="main">
+												<object>
+													<property id="players">
+														<array>
+														</array>
+													</property>
+												</object>
+											</property>
+										</object>
+									</property>
+								</object>
+							</property>
+						</object>
+					</property>
+				</object>
+			</property>
+		</object>
+	</property>
+</object>
