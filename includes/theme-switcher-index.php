@@ -63,8 +63,8 @@ function silex_get_stylesheet($stylesheet) {
 		// echo 'silex_get_stylesheet '.$stylesheet.' -> '.$theme.'<br>';
 		//$theme = 'wp-content/plugins/'.SILEX_PLUGIN_NAME.'/'.SILEX_THEME_DIR_NAME.'/'.$theme;
 		return $theme;
-		$theme = get_theme($theme);
-		return $theme['Stylesheet'];
+//		$theme = get_theme($theme);
+//		return $theme['Stylesheet'];
 	}
 	return $stylesheet;
 }

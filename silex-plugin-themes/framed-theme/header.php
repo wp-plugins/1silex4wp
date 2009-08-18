@@ -7,9 +7,7 @@
 
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<style type="text/css" media="screen">
-		@import url( <?php bloginfo('stylesheet_url'); ?> );
-	</style>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 </head>
 
 <body <?php body_class(); ?>>
