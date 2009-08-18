@@ -226,12 +226,12 @@ function script_hook(){
 						case "page":
 							//$additional_flashvars += "post_ID="+$varsPair_array[1]+"&";
 							passFlashVar("post","ID",$varsPair_array[1]);
-							console.log("setFlashVarsForSilexPage post.ID,"+$varsPair_array[0]+","+$varsPair_array[1]);
+							// console.log("setFlashVarsForSilexPage post.ID,"+$varsPair_array[0]+","+$varsPair_array[1]);
 							break;
 						default:
 							//$additional_flashvars += $varsPair_array[0]+"="+$varsPair_array[1]+"&";
 							passFlashVar('selection',$varsPair_array[0],$varsPair_array[1]);
-							console.log("setFlashVarsForSilexPage "+$varsPair_array[0]+","+$varsPair_array[1]);
+							// console.log("setFlashVarsForSilexPage "+$varsPair_array[0]+","+$varsPair_array[1]);
 					}
 				}
 			}

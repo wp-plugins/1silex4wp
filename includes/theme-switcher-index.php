@@ -91,7 +91,7 @@ function silex_get_theme_url($theme_url,$site_url_not_used)
 	$theme = silex_get_theme();
 	if (!empty($theme)) {
 		// echo 'silex_get_theme_url '.$theme_url.' -> '.SILEX_THEME_DIR.'<br>';
-		return SILEX_THEME_DIR;
+		return SILEX_THEME_URL;
 	}
 	return $theme_url;	
 }
