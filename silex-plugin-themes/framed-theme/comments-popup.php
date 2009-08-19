@@ -31,7 +31,8 @@ if ( post_password_required($commentstatus) ) {  // and it doesn't match the coo
 	echo(get_the_password_form());
 } else { ?>
 
-<?php if ($comments) { ?>
+<?php if (isset($_GET['show_comments'])){ 
+	if ($comments) { ?>
 <ol id="commentlist">
 <?php foreach ($comments as $comment) { ?>
 	<?php comment_text() ?>
@@ -42,14 +43,50 @@ if ( post_password_required($commentstatus) ) {  // and it doesn't match the coo
 </ol>
 <?php } else { // this is displayed if there are no comments so far ?>
 	<p><?php _e("No comments yet."); ?></p>
-<?php } ?>
-<?php
+<?php } 
+	} // end if (isset($_GET['show_comments']) ?>
+<?php if ( comments_open() ) { ?>
+<h2>Leave a comment</h2>
+<p>Line and paragraph breaks automatic, e-mail address never displayed, <acronym title="Hypertext Markup Language">HTML</acronym> allowed: <code><?php echo allowed_tags(); ?></code></p>
+
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<?php if ( $user_ID ) : ?>
+	<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+<?php else : ?>
+	<p>
+	  <input type="text" name="author" id="author" class="textarea" value="<?php echo esc_attr($comment_author); ?>" size="28" tabindex="1" />
+	   <label for="author">Name</label>
+	</p>
+
+	<p>
+	  <input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="28" tabindex="2" />
+	   <label for="email">E-mail</label>
+	</p>
+
+	<p>
+	  <input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="28" tabindex="3" />
+	   <label for="url"><abbr title="Universal Resource Locator">URL</abbr></label>
+	</p>
+<?php endif; ?>
+
+	<p>
+	  <label for="comment">Your Comment</label>
+	<br />
+	  <textarea name="comment" id="comment" cols="70" rows="4" tabindex="4"></textarea>
+	</p>
+
+	<p>
+      <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	  <input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER["REQUEST_URI"]); ?>" />
+	  <input name="submit" type="submit" tabindex="5" value="Say It!" />
+	</p>
+	<?php do_action('comment_form', $post->ID); ?>
+</form>
+<?php } else { // comments are closed ?>
+<p>Sorry, the comment form is closed at this time.</p>
+<?php }
 } // end password check
 ?>
-<!--
-
-<div><strong><a href="javascript:window.close()"><?php _e("Close this window."); ?></a></strong></div>
--->
 <?php // if you delete this the sky will fall on your head
 endwhile; //endwhile have_posts()
 else: //have_posts()
