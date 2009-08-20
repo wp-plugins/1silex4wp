@@ -1,7 +1,6 @@
 <?php
 /**
- * @package WordPress
- * @subpackage flash_theme
+ * NOT USED IN SILEX TEMPLATE?
  */
 
 // Do not delete these lines

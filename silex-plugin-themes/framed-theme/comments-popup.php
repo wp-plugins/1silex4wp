@@ -14,6 +14,7 @@
 
 </head>
 <body id="commentspopup">
+
 <?php
 /* Don't remove these lines. */
 add_filter('comment_text', 'popuplinks');
@@ -49,7 +50,7 @@ if ( post_password_required($commentstatus) ) {  // and it doesn't match the coo
 <h2>Leave a comment</h2>
 <p>Line and paragraph breaks automatic, e-mail address never displayed, <acronym title="Hypertext Markup Language">HTML</acronym> allowed: <code><?php echo allowed_tags(); ?></code></p>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" >
 <?php if ( $user_ID ) : ?>
 	<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 <?php else : ?>
@@ -99,6 +100,7 @@ document.onkeypress = function esc(e) {
 	if(typeof(e) == "undefined") { e=event; }
 	if (e.keyCode == 27) { self.close(); }
 }
+parent.silex_refresh_event();
 </script>
 </body>
 </html>

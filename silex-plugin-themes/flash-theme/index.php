@@ -173,6 +173,16 @@ function script_hook(){
 		*/
 		// deeplink functions
 		/**
+		 * refresh
+		 * called after submitting a post for example
+		 * do as if the refresh_btn was clicked (part of the API) / do nothing if there is no refresh_btn on the scene
+		 */
+		function silex_refresh_event()
+		{
+			// do as if the refresh_btn was clicked (part of the API) / do nothing if there is no refresh_btn on the scene
+			document.getElementById('silex').SetVariable('silex_exec_str','refresh_btn._onRelease');
+		}
+		/**
 		 * override silex hash change callback to set the post or page id / the search or archive params
 		 */
 		function openSilexPage($hashValue)
