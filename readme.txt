@@ -4,7 +4,7 @@ Donate link: http://projects.silexlabs.com/pluginwp/
 Tags: Flash, ActionScript, theme, template, front office, front end, flog
 Requires at least: 2.8.1
 Tested up to: 2.8.1
-Stable tag: 1.0alpha5
+Stable tag: 1.0alpha6
 
 Provide your visitors a Flash equivalent of your website / Convert your WordPress blog into a Flash application.
 
