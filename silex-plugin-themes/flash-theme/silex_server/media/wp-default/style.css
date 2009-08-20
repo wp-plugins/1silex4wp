@@ -6,6 +6,7 @@ Version: 1.6
 Author: Michael Heilemann
 Author URI: http://binarybonsai.com/
 Tags: blue, custom header, fixed width, two columns, widgets
+Text Domain: kubrick
 
 	Kubrick v1.5
 	 http://binarybonsai.com/kubrick/
@@ -24,19 +25,19 @@ Tags: blue, custom header, fixed width, two columns, widgets
 body {
 	font-size: 62.5%; /* Resets 1em to 10px */
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	background: transparent;
+	background: #d5d6d7 url('images/kubrickbgcolor.jpg');
 	color: #333;
-	text-align: justify;
+	text-align: center;
 	}
 
 #page {
-	background-color: transparent;
+	background-color: white;
 	border: 1px solid #959596;
 	text-align: left;
 	}
 
 #header {
-	background: none;
+	background: #73a0c5 url('images/kubrickheader.jpg') no-repeat bottom center;
 	}
 
 #headerimg 	{
