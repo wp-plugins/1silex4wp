@@ -31,7 +31,6 @@ require_once("silex_config.php");
 require_once("server_config.php");
 require_once("password_manager.php");
 require_once("file_system_tools.php");
-require_once("consts.php");
 
 require_once("rootdir.php");
 require_once("logger.php");
@@ -192,13 +191,7 @@ class data_exchange
 	function _authenticate($user, $pass){
 		$p = new password_manager;
 		$this->logger->debug(" _authenticate($user, $pass)");
-		if($p->authenticate($user, $pass)){
-			$this->logger->debug("_authenticate authentication success");
-			return AUTH_ROLE_USER;
-		}else{
-			$this->logger->info("_authenticate authentication failed $user, $pass");
-			return false;
-		}
+		return $p->authenticate($user, $pass);
 	}
 
 	// ******************************************************

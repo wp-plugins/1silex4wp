@@ -9,6 +9,7 @@ require_once 'Zend/Debug.php';
 //Config
 require_once("silex_config.php");
 require_once("rootdir.php");
+require_once("consts.php");
 	
 
 class password_manager
@@ -82,6 +83,24 @@ class password_manager
 	/**
 	* checks if login info is valid, returns true or false
 	*/
+
+//creates some serious problems when logging out, not ready to do this yet. 
+/*	
+	function mergeRole($role){
+		if(isset($_SESSION['amfphp_roles'])){
+			$currentRoles = $_SESSION['amfphp_roles'];
+			$this->logger->debug("current roles : $currentRoles");
+			if(strpos($currentRoles, $role) === false){
+				return $currentRoles . "," . $role;
+			}else{
+				return $currentRole;
+			}
+		}else{	
+			return $role;
+		}
+	
+	}
+	*/
 	function authenticate($login, $password){
 		$this->logger->debug("authenticate($login, $password)");
 		if(!$login || ($login == "")){
@@ -95,11 +114,14 @@ class password_manager
 		//$this->logger->debug("confContainer / " . print_r($confContainer->toArray(), true));
 		$loginsSection = $confContainer->getItem('section', self::SECTION_LOGINS);		
 		$a = $loginsSection->toArray();
+		$role = '';
 		if($a[self::SECTION_LOGINS][$login] === $password){
-			return true;
+			$role = AUTH_ROLE_USER;
 		}else{
 			return false;
 		}
+		
+		return $role;
 		
 	}
 	/**

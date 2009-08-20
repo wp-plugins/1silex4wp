@@ -59,16 +59,19 @@ $logger = new logger("rss_browse_folder");
 $fst = new file_system_tools();
 function orderBy($dirFiles,$tagToSortOn,$sortParam=SORT_REGULAR,$reverseOrder=false)
 {
+	$logger = new logger("rss_browse_folder");
 	//$logger->debug(" orderBy $tagToSortOn - ".print_r($dirFiles,true));
 
     $cwdMod=array(); $whatWeNeed=array();
    
     // Parallel arrays (ignore the ".", ".." and inturn hidden files
+    foreach ($dirFiles as $data)
     {
 		if (!isset($data[$tagToSortOn]))
 		{
 			// error
 			$logger->emerg("orderBy $tagToSortOn error : no such data in the file description");
+			
 			return $dirFiles;
 		}
 		$cwdMod[]=$data[$tagToSortOn];
@@ -214,7 +217,7 @@ if (isset($_GET["orderBy"]) && $_GET["orderBy"]!=""){
 		$folderContent_array=orderBy($folderContent_array,$_GET["orderBy"],null,$reverseOrder);
 }
 // compute url base
-$scriptUrl=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+$scriptUrl=$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
 $server_config = new server_config();
 $lastSlashPos=strrpos($scriptUrl,$server_config->silex_server_ini["CGI_SCRIPTS_FOLDER"]."rss_browse_folder.php");
 $urlBase="http://".substr($scriptUrl,0,$lastSlashPos);
@@ -295,6 +298,7 @@ echo '	</channel>
 </rss>';
 function flattenArray($array,$folder)
 {
+	$logger = new logger("rss_browse_folder");
 	//echo "debug : flattenArray ".print_r($array);
    $flatArray = array();
    foreach( $array as $subElement ) {

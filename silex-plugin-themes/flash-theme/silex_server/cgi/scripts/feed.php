@@ -79,7 +79,7 @@ if ($fst->checkRights($fst->sanitize($websiteContentFolder),constant("file_syste
 	$query=stripslashes(strip_tags(urldecode($_GET['query'])));
 
 	// compute url base
-	$scriptUrl=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+	$scriptUrl=$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
 	$lastSlashPos=strrpos($scriptUrl,$server_config->silex_server_ini["CGI_SCRIPTS_FOLDER"]."feed.php");
 	$urlBase="http://".substr($scriptUrl,0,$lastSlashPos).$id_site."/";
 
