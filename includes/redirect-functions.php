@@ -41,7 +41,8 @@ function get_redirect_url($homeDeeplink,$singleDeeplink,$pageDeeplink,$archiveDe
 	if (isset($query_string) && $query_string != ''){
 		global $websiteConfig;
 		global $paged;
-		$redirect_url = get_option( 'siteurl' ).'/#'.get_option('silex_selected_template').'/'.$websiteConfig['CONFIG_START_SECTION'].'/';
+//		$redirect_url = get_option( 'siteurl' ).'/#'.get_option('silex_selected_template').'/'.$websiteConfig['CONFIG_START_SECTION'].'/';
+		$redirect_url = get_option( 'siteurl' ).'/#/'.$websiteConfig['CONFIG_START_SECTION'].'/';
 		if(is_home()){
 			$redirect_url .= str_replace('%',$paged,$homeDeeplink);
 		}

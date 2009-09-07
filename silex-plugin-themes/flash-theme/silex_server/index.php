@@ -24,6 +24,8 @@ if (version_compare(PHP_VERSION,'5','<')){
 	exit(0);
 }
 */
+// ROOTURL is calculated in rootdir.php
+global $ROOTURL;
 // **
 // includes
 require_once(dirname(__FILE__).'/rootdir.php');
@@ -61,7 +63,6 @@ if($start_pos>0){
 else 
 */
 if (strpos($_SERVER['REQUEST_URI'],'?/')>0){
-	global $ROOTURL;
 /*	if (strpos($_SERVER['REQUEST_URI'],'index.php/')>0){
 		// http://localhost/dev/silex/silex_trunk/silex_server/?bbbbbbbb/ddd/xx
 		$maxlen = strlen($_SERVER['SCRIPT_NAME'])+1;
@@ -73,9 +74,11 @@ if (strpos($_SERVER['REQUEST_URI'],'?/')>0){
 		$ROOTURL = substr($_SERVER['REQUEST_URI'],0,$maxlen-2);
 	}
 	*/
-	$maxlen = strlen($_SERVER['SCRIPT_NAME'])-strlen('index.php')+2;
+	/*
+		ROOTURL is calculated in rootdir.php
 	$ROOTURL = substr($_SERVER['REQUEST_URI'],0,$maxlen-2);
-	
+	*/
+	$maxlen = strlen($_SERVER['SCRIPT_NAME'])-strlen('index.php')+2;
 	// pretty permalinks
 	if (substr($_SERVER['REQUEST_URI'], -1, 1) != '/'){
 		$url = substr($_SERVER['REQUEST_URI'],$maxlen);
@@ -196,9 +199,13 @@ $websiteKeywords=$websiteConfig['htmlKeywords'];
 // get the HTML KEYWORDS, TITLE, ...
 //echo 'getSectionSeoData($id_site,'.$websiteConfig['CONFIG_START_SECTION'].')';
 $seoDataHomePage = $siteEditor->getSectionSeoData($id_site, $websiteConfig['CONFIG_START_SECTION']);
-if ($deeplink && $deeplink!='')
+if (isset($deeplink) && $deeplink!='')
 	$seoData=$siteEditor->getSectionSeoData($id_site,$deeplink);
-
+else
+{
+	$seoData = $seoDataHomePage;
+	$deeplink = '';
+}
 
 // html and SEO init
 // html and SEO init
@@ -207,12 +214,13 @@ $htmlDescription=$seoData['description'];
 $htmlEquivalent='<H4>This page content</H4><br>'.($seoData['htmlEquivalent']);
 $htmlKeywords='<H4>Website keywords</H4><br>'.($seoDataHomePage['description']).'<H4>This page keywords</H4><br>'.($seoData['description']);
 // add a link to the home page
-	if ($server_config->silex_server_ini['USE_URL_REWRITE'] == 'true')
-		$htmlLinks='<h1>navigation</h1>'.$id_site.' > '.$hash.'<h4><a href="'.$ROOTURL.$id_site.'/'.$websiteConfig['CONFIG_START_SECTION'].'/">Home page: '.($seoDataHomePage['title']).'</a></h4>';
-	else
-		$htmlLinks='<h1>navigation</h1>'.$id_site.' > '.$hash.'<h4><a href="'.$ROOTURL.'?/'.$id_site.'/'.$websiteConfig['CONFIG_START_SECTION'].'/">Home page: '.($seoDataHomePage['title']).'</a></h4>';
+if ($serverConfig->silex_server_ini['USE_URL_REWRITE'] == 'true')
+	$htmlLinks='<h1>navigation</h1>'.$id_site.' > '.$deeplink.'<h4><a href="'.$ROOTURL.$id_site.'/'.$websiteConfig['CONFIG_START_SECTION'].'/">Home page: '.($seoDataHomePage['title']).'</a></h4>';
+else
+	$htmlLinks='<h1>navigation</h1>'.$id_site.' > '.$deeplink.'<h4><a href="'.$ROOTURL.'?/'.$id_site.'/'.$websiteConfig['CONFIG_START_SECTION'].'/">Home page: '.($seoDataHomePage['title']).'</a></h4>';
 // links of this page
-$htmlLinks.='<H4>Links of this page ('.($seoData['title']).')</H4>'.($seoData['links']);
+$htmlLinks.='<H4>Links of this page ('.($seoData['title']).')</H4>';
+if (isset($seoData['links'])) $htmlLinks.=$seoData['links'];
 
 
 function call_hooks($hook_name){
@@ -248,12 +256,23 @@ function call_hooks($hook_name){
 			eval("<?php echo $js_str; ?>");
 
 			<?php if($do_redirect==true) { 
+			?>
+				try
+				{
+			<?php
 				// skip id_site for default website
 				if ($isDefaultWebsite == true) { ?>
 					window.location = '<?php echo $ROOTURL.'/#/'.$deeplink; ?>';
 				<?php }else{ ?>
 					window.location = '<?php echo $ROOTURL.'?/'.$id_site.'/#/'.$deeplink; ?>';
 			<?php }
+			?>
+				}
+				catch($e)
+				{
+					// no access to url hash
+				}
+			<?php
 				}else{ ?>
 				function includeSilexScript($fileName,$file_path){
 					if (!$file_path) $file_path = '';

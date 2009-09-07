@@ -23,18 +23,19 @@
 require_once(ABSPATH."wp-content/plugins/".get_option('silex_plugin_name').'/includes/constants.php');
 set_include_path(get_include_path() . PATH_SEPARATOR . "./SILEX_SERVER_DIR");
 
-define( 'ROOTURL' , SILEX_SERVER_URL . '/');
-
+//define( 'ROOTURL' , SILEX_SERVER_URL . '/');
+$ROOTURL = SILEX_SERVER_URL . '/';
 ?>
 <?php
 /**
  * Silex hook for head tag
  */
 function head_hook(){
+	$do_redirect = false;
 ?>
 <!-- head_hook -->
 <script type="text/javascript">
-		$rootUrl = "<?php echo SILEX_SERVER_URL.'/'; ?>";
+		$rootUrl = "<?php echo $ROOTURL; ?>";
 </script>
 
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
@@ -258,7 +259,7 @@ function script_hook(){
 			?>
 			$additional_flashvars = "<?php echo $flashvars_string; ?>";
 			
-			$DEFAULT_WEBSITE="<?php echo get_option('silex_selected_template')?>";
+			$DEFAULT_WEBSITE="<?php echo get_option('silex_selected_template'); ?>";
 			// to do :
 			//		$htmlTitle
 
@@ -288,7 +289,11 @@ function script_hook(){
 function index_body_end_hook(){
 ?>
 <script type="text/javascript">
-	silexJsObj.firebug=true;
+	silexJsObj.firebug=false;
+	
+	// prevent from redirecting - the id_site is not in the url, and it is not after the # (which was the case in silex <v1.5)
+	function compatibility_check(){
+	}
 </script>
 <?php
 	return true;
