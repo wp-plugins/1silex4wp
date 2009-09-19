@@ -408,6 +408,7 @@ function call_hooks($hook_name){
 		<div id="stats"></div>
 		<script type="text/javascript">
 			<?php if($do_redirect==false) { ?>
+				$no_flash_page = undefined;
 				$php_str = '';
 				$additional_flashvars = '';
 				$enableDeeplinking = "<?php if(isset($websiteConfig['ENABLE_DEEPLINKING'])) echo $websiteConfig['ENABLE_DEEPLINKING']; else echo 'true'; ?>";
@@ -451,7 +452,8 @@ function call_hooks($hook_name){
 					$additional_flashvars, // additional flash vars
 					$rootUrl, // rootUrl
 					{<?php echo $fv_js_object ?>},
-					{<?php echo $param_js_object ?>}
+					{<?php echo $param_js_object ?>},
+					$no_flash_page
 					);
 			<?php } ?>
 		</script>

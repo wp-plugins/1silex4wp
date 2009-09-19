@@ -44,14 +44,38 @@ if ( ! defined( 'SILEX_FRAMED_THEME_NAME' ) )
 
 
 // URLs
-if ( ! defined( 'WP_CONTENT_URL' ) )
-      define( 'WP_CONTENT_URL', get_option( 'siteurl' ) . '/wp-content' );
-if ( ! defined( 'WP_PLUGIN_URL' ) )
-      define( 'WP_PLUGIN_URL', WP_CONTENT_URL.'/plugins' );
+if ( ! defined( 'WP_CONTENT_URL_MU_COMPATIBLE' ) ){
+	if (defined('VHOST') && VHOST == 'no'){
+		// wordpress mu with folders instead of subdomains
+		$current_site = get_current_site();
+		define( 'WP_CONTENT_URL_MU_COMPATIBLE',  substr(get_option( 'siteurl' ),0,-(strlen($current_site->domain)+1)) . '/wp-content' );
+	}
+	else{
+		// normal use (no sub folder)
+		define( 'WP_CONTENT_URL_MU_COMPATIBLE', get_option( 'siteurl' ) . '/wp-content' );
+	}
+}
+if ( ! defined( 'WP_CONTENT_URL' ) ){
+	// lets try to define it
+	// it is usually allready defined by wordpress
+	define( 'WP_CONTENT_URL', WP_CONTENT_URL_MU_COMPATIBLE);
+}
+
+if ( ! defined( 'WP_PLUGIN_URL_MU_COMPATIBLE' ) ){
+	define( 'WP_PLUGIN_URL_MU_COMPATIBLE', WP_CONTENT_URL_MU_COMPATIBLE.'/plugins' );
+}
+if ( ! defined( 'WP_PLUGIN_URL' ) ){
+	// lets try to define it
+	// it is usually allready defined by wordpress
+	define( 'WP_PLUGIN_URL', WP_PLUGIN_URL_MU_COMPATIBLE );
+}
+
 if ( ! defined( 'SILEX_THEME_URL' ) )
-	define( 'SILEX_THEME_URL', WP_PLUGIN_URL.'/'.SILEX_PLUGIN_NAME.'/'.SILEX_THEME_DIR_NAME );
+	define( 'SILEX_THEME_URL', WP_PLUGIN_URL_MU_COMPATIBLE.'/'.SILEX_PLUGIN_NAME.'/'.SILEX_THEME_DIR_NAME );
+
 if ( ! defined( 'SILEX_FLASH_THEME_URL' ) )
 	define( 'SILEX_FLASH_THEME_URL', SILEX_THEME_URL.'/'.SILEX_FLASH_THEME_NAME );
+
 if ( ! defined( 'SILEX_SERVER_URL' ) )
 	define( 'SILEX_SERVER_URL', SILEX_FLASH_THEME_URL.'/silex_server' );
 
