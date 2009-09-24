@@ -12,5 +12,5 @@ Provide your visitors a Flash equivalent of your website / Convert your WordPres
 
 **THE PROJECT NAME HAS CHANGED TO FLOG SINCE IT IS NOW PART OF A LARGER PROJECT**
 
-  * [flog/flash blog WordPress plugin is at this adress](http://plugins.svn.wordpress.org/flog/ "flog/flash blog WordPress plugin is at this adress")
+  * [flog/flash blog WordPress plugin is at this adress](http://wordpress.org/extend/plugins/flog/ "flog/flash blog WordPress plugin is at this adress")
   * [flog/flash blog plugins for several bloging systems and CMS are at this adress](http://flog.sourceforge.net "flog/flash blog plugins for several bloging systems and CMS are at this adress")
